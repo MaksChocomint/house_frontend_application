@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { useWindowSize } from "@/utils/useWindowSize";
 
 const menuItems = [
   {
@@ -35,29 +36,6 @@ const menuItems = [
     subItems: [],
   },
 ];
-
-const useWindowSize = () => {
-  const [windowSize, setWindowSize] = useState({
-    width: 0,
-    height: 0,
-  });
-
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowSize({
-        width: window.innerWidth,
-        height: window.innerHeight,
-      });
-    };
-
-    window.addEventListener("resize", handleResize);
-    handleResize();
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  return windowSize;
-};
 
 const Navbar = () => {
   const windowSize = useWindowSize();
@@ -119,7 +97,11 @@ const Navbar = () => {
                 translateY: activeMenu === item.title ? 0 : -10,
               }}
               transition={{ duration: 0.2 }}
-              className={`w-full flex flex-col tablet:block rounded-lg pt-3 z-50 text-center bg-white absolute shadow-md`}
+              className={
+                item.subItems.length > 0
+                  ? `w-full flex flex-col tablet:block rounded-lg pt-3 z-50 text-center bg-white absolute shadow-md`
+                  : ""
+              }
             >
               {item.subItems.length > 0 &&
                 item.subItems.map((subItem) => (
