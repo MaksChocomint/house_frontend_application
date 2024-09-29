@@ -112,32 +112,59 @@ const Navbar = () => {
             </button>
           </Link>
 
-          {/* Custom dropdown menu */}
-          <motion.div
-            variants={{
-              hover: { opacity: 1, translateY: 0 }, // Контент появляется и поднимается при наведении
-              initial: { opacity: 0, translateY: -10 }, // Изначально скрыт и немного сдвинут вниз
-            }}
-            transition={{ duration: 0.2 }}
-          >
-            {item.subItems.length > 0 && activeMenu === item.title && (
-              <div
-                className={`w-full flex flex-col tablet:block rounded-lg pt-3 z-50 text-center ${
-                  !isMobile && "bg-white absolute shadow-md"
-                }`}
-              >
-                {item.subItems.map((subItem) => (
-                  <Link
-                    key={subItem.name}
-                    href={subItem.link}
-                    className="inline-block whitespace-nowrap font-medium tablet:text-[15px] text-center p-2 hover:text-yellow-500"
-                  >
-                    {subItem.name}
-                  </Link>
-                ))}
-              </div>
-            )}
-          </motion.div>
+          {!isMobile ? (
+            <motion.div
+              variants={{
+                hover: { opacity: 1, translateY: 0 }, // Контент появляется и поднимается при наведении
+                initial: { opacity: 0, translateY: -10 }, // Изначально скрыт и немного сдвинут вниз
+              }}
+              transition={{ duration: 0.2 }}
+            >
+              {item.subItems.length > 0 && activeMenu === item.title && (
+                <div
+                  className={`w-full flex flex-col tablet:block rounded-lg pt-3 z-50 text-center ${
+                    !isMobile && "bg-white absolute shadow-md"
+                  }`}
+                >
+                  {item.subItems.map((subItem) => (
+                    <Link
+                      key={subItem.name}
+                      href={subItem.link}
+                      className="inline-block whitespace-nowrap font-medium tablet:text-[15px] text-center p-2 hover:text-yellow-500"
+                    >
+                      {subItem.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </motion.div>
+          ) : (
+            <motion.div
+              variants={{
+                hover: { opacity: 1, translateY: 0 }, // Контент появляется и поднимается при наведении
+                initial: { opacity: 1, translateY: -10 }, // Изначально скрыт и немного сдвинут вниз
+              }}
+              transition={{ duration: 0.2 }}
+            >
+              {item.subItems.length > 0 && activeMenu === item.title && (
+                <div
+                  className={`w-full flex flex-col tablet:block rounded-lg pt-3 z-50 text-center ${
+                    !isMobile && "bg-white absolute shadow-md"
+                  }`}
+                >
+                  {item.subItems.map((subItem) => (
+                    <Link
+                      key={subItem.name}
+                      href={subItem.link}
+                      className="inline-block whitespace-nowrap font-medium tablet:text-[15px] text-center p-2 hover:text-yellow-500"
+                    >
+                      {subItem.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </motion.div>
+          )}
         </motion.div>
       ))}
     </nav>

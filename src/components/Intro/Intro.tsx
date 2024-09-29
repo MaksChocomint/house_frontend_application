@@ -15,7 +15,7 @@ const Intro: React.FC<IntroProps> = ({
 }) => {
   return (
     <Background imageUrl={imageUrl}>
-      <div className="flex flex-col items-center h-full">
+      <div className="flex flex-col items-center w-full h-full justify-between phone:gap-6 tablet:gap-8 laptop:gap-10">
         <Info title={infoTitle} description={infoDescription} />
         <Booking />
       </div>

@@ -1,7 +1,7 @@
 import React from "react";
 
 type Props = {
-  styles: string;
+  styles?: string;
 };
 
 export default function Container({
@@ -12,11 +12,7 @@ export default function Container({
 }> &
   Props) {
   return (
-    <div
-      className={
-        "px-4 phone:px-6 tablet:px-10 laptop:px-40 desktop:px-60 " + styles
-      }
-    >
+    <div className={"px-4 tablet:px-10 laptop:px-40 desktop:px-60 " + styles}>
       {children}
     </div>
   );

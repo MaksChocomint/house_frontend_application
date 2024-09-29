@@ -27,21 +27,21 @@ const Booking = () => {
   registerLocale("ru", ru);
 
   return (
-    <div className="bg-black font-semibold bg-opacity-60 text-white text-sm w-full py-6 px-4 tablet:px-16 shadow-lg flex flex-col tablet:flex-row gap-6 items-center justify-center absolute bottom-0">
-      <div className="flex flex-col gap-1 text-center tablet:text-left">
-        <h3 className="text-xl font-semibold">Бронирование номеров</h3>
+    <div className="bg-black font-semibold bg-opacity-60 text-white text-sm w-full py-4 px-4 tablet:px-12 laptop:px-16 shadow-lg flex flex-col tablet:flex-row gap-6 items-center justify-center relative bottom-0">
+      <div className="flex flex-col gap-1 text-center tablet:text-left tablet:hidden smallLaptop:flex">
+        <h3 className="text-lg tablet:text-xl font-semibold">Бронирование</h3>
         <p className="text-xs text-gray-300 font-semibold">
           Гарантированное заселение
         </p>
       </div>
 
       {/* Заезд */}
-      <div className="relative w-full tablet:w-48">
+      <div className="relative w-56 tablet:w-44 laptop:w-48">
         <DatePicker
           selected={checkIn}
           onChange={(date) => setCheckIn(date as Date)}
           dateFormat="yyyy-MM-dd"
-          className="w-full border rounded-xl pr-10 pl-3 pt-4 text-black cursor-pointer"
+          className="w-full border rounded-xl pr-10 pl-3 pt-4 pb-1 tablet:pt-4 text-black cursor-pointer"
           minDate={new Date()} // Disable past dates
           locale="ru"
         />
@@ -58,12 +58,12 @@ const Booking = () => {
       </div>
 
       {/* Выезд */}
-      <div className="relative w-full tablet:w-48">
+      <div className="relative w-56 tablet:w-44 laptop:w-48">
         <DatePicker
           selected={checkOut}
           onChange={(date) => setCheckOut(date as Date)}
           dateFormat="yyyy-MM-dd"
-          className="w-full border rounded-xl pr-10 pl-3 pt-4 text-black cursor-pointer"
+          className="w-full border rounded-xl pr-10 pl-3 pt-4 pb-1 tablet:pt-4 text-black cursor-pointer"
           minDate={checkIn} // Disable dates before check-in
           locale="ru"
         />
@@ -80,12 +80,12 @@ const Booking = () => {
       </div>
 
       {/* Количество гостей */}
-      <div className="relative w-full tablet:w-48">
+      <div className="relative w-56 tablet:w-44 laptop:w-48">
         <select
           id="guests"
           value={guests}
           onChange={(e) => setGuests(e.target.value)}
-          className="w-full border rounded-xl pr-10 pl-3 pt-4 text-black cursor-pointer appearance-none"
+          className="w-full border rounded-xl pr-10 pl-3 pt-4 pb-1 tablet:pt-4 text-black cursor-pointer appearance-none"
         >
           <option value="1">1</option>
           <option value="2">2</option>
@@ -112,7 +112,7 @@ const Booking = () => {
       {/* Кнопка забронировать */}
       <button
         onClick={handleBooking}
-        className="bg-yellow-500 text-white p-2 rounded-3xl px-8 font-semibold"
+        className="bg-yellow-500 text-white p-3 tablet:p-2 rounded-3xl px-12 tablet:px-8 font-semibold text-[17px] tablet:text-base"
       >
         Забронировать
       </button>
