@@ -7,11 +7,20 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-      },
+    screens: {
+      phone: "320px",
+      // => @media (min-width: 640px) { ... }
+      tablet: "860px",
+
+      largeTablet: "950px",
+
+      smallLaptop: "1100px",
+
+      laptop: "1350px",
+      // => @media (min-width: 1024px) { ... }
+
+      desktop: "1600px",
+      // => @media (min-width: 1280px) { ... }
     },
   },
   plugins: [],
