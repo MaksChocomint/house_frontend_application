@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const menuItems = [
   {
     title: "О компании",
-    link: "/", // Link added here
+    link: "/",
     subItems: [
       { name: "ГринЛаундж", link: "/about/green-lounge" },
       { name: "Москва", link: "/about/moscow" },
@@ -90,8 +90,6 @@ const Navbar = () => {
     <nav className="flex flex-col tablet:flex-wrap tablet:flex-row gap-6 tablet:gap-x-8 tablet:gap-y-0 items-center justify-center text-lg tablet:text-base font-medium">
       {menuItems.map((item) => (
         <motion.div
-          whileHover={"hover"}
-          initial={"initial"}
           key={item.title}
           className="relative"
           onMouseEnter={() => handleMouseEnter(item.title)}
@@ -112,19 +110,43 @@ const Navbar = () => {
             </button>
           </Link>
 
-          {!isMobile ? (
+          {/* Анимация для десктопа */}
+          {!isMobile && (
             <motion.div
-              variants={{
-                hover: { opacity: 1, translateY: 0 }, // Контент появляется и поднимается при наведении
-                initial: { opacity: 0, translateY: -10 }, // Изначально скрыт и немного сдвинут вниз
+              initial={{ opacity: 0, translateY: -10 }}
+              animate={{
+                opacity: activeMenu === item.title ? 1 : 0,
+                translateY: activeMenu === item.title ? 0 : -10,
               }}
               transition={{ duration: 0.2 }}
+              className={`w-full flex flex-col tablet:block rounded-lg pt-3 z-50 text-center bg-white absolute shadow-md`}
+            >
+              {item.subItems.length > 0 &&
+                item.subItems.map((subItem) => (
+                  <Link
+                    key={subItem.name}
+                    href={subItem.link}
+                    className="inline-block whitespace-nowrap font-medium tablet:text-[15px] text-center p-2 hover:text-yellow-500"
+                  >
+                    {subItem.name}
+                  </Link>
+                ))}
+            </motion.div>
+          )}
+
+          {/* Анимация для мобильных устройств */}
+          {isMobile && (
+            <div
+              className={`w-full flex flex-col tablet:block rounded-lg pt-3 z-50 text-center ${
+                !isMobile && "bg-white absolute shadow-md"
+              }`}
             >
               {item.subItems.length > 0 && activeMenu === item.title && (
-                <div
-                  className={`w-full flex flex-col tablet:block rounded-lg pt-3 z-50 text-center ${
-                    !isMobile && "bg-white absolute shadow-md"
-                  }`}
+                <motion.div
+                  initial={{ opacity: 0, translateY: -10 }}
+                  animate={{ opacity: 1, translateY: 0 }}
+                  transition={{ duration: 0.2 }}
+                  className="w-full flex flex-col items-center"
                 >
                   {item.subItems.map((subItem) => (
                     <Link
@@ -135,35 +157,9 @@ const Navbar = () => {
                       {subItem.name}
                     </Link>
                   ))}
-                </div>
+                </motion.div>
               )}
-            </motion.div>
-          ) : (
-            <motion.div
-              variants={{
-                hover: { opacity: 1, translateY: 0 }, // Контент появляется и поднимается при наведении
-                initial: { opacity: 1, translateY: -10 }, // Изначально скрыт и немного сдвинут вниз
-              }}
-              transition={{ duration: 0.2 }}
-            >
-              {item.subItems.length > 0 && activeMenu === item.title && (
-                <div
-                  className={`w-full flex flex-col tablet:block rounded-lg pt-3 z-50 text-center ${
-                    !isMobile && "bg-white absolute shadow-md"
-                  }`}
-                >
-                  {item.subItems.map((subItem) => (
-                    <Link
-                      key={subItem.name}
-                      href={subItem.link}
-                      className="inline-block whitespace-nowrap font-medium tablet:text-[15px] text-center p-2 hover:text-yellow-500"
-                    >
-                      {subItem.name}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </motion.div>
+            </div>
           )}
         </motion.div>
       ))}
