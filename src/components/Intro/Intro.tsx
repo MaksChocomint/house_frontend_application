@@ -1,4 +1,4 @@
-import Background from "./Background";
+import Background from "../Background";
 import Booking from "./Booking";
 import Info from "./Info";
 

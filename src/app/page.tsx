@@ -2,6 +2,7 @@ import Header from "@/components/Home/Header/Header";
 import Intro from "@/components/Intro/Intro";
 import Main from "@/components/Home/Main/Main";
 import ContactButton from "@/components/ContactButton";
+import Footer from "@/components/Home/Footer/Footer";
 
 const Home = () => {
   return (
@@ -17,7 +18,7 @@ const Home = () => {
         </div>
       </div>
       <Main />
-      <div className="h-screen"></div>
+      <Footer />
       <ContactButton />
     </div>
   );
