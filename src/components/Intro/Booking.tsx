@@ -41,7 +41,7 @@ const Booking = () => {
           selected={checkIn}
           onChange={(date) => setCheckIn(date as Date)}
           dateFormat="yyyy-MM-dd"
-          className="w-full border rounded-xl pr-10 pl-3 pt-4 pb-1 tablet:pt-4 text-black cursor-pointer"
+          className="w-full border rounded-xl pr-14 pl-3 pt-4 pb-1 tablet:pt-4 text-black cursor-pointer"
           minDate={new Date()} // Disable past dates
           locale="ru"
         />
@@ -63,7 +63,7 @@ const Booking = () => {
           selected={checkOut}
           onChange={(date) => setCheckOut(date as Date)}
           dateFormat="yyyy-MM-dd"
-          className="w-full border rounded-xl pr-10 pl-3 pt-4 pb-1 tablet:pt-4 text-black cursor-pointer"
+          className="w-full border rounded-xl pr-14 pl-3 pt-4 pb-1 tablet:pt-4 text-black cursor-pointer"
           minDate={checkIn} // Disable dates before check-in
           locale="ru"
         />
