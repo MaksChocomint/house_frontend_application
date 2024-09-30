@@ -3,7 +3,7 @@ import React from "react";
 
 const ContactSection = () => {
   return (
-    <div className="mt-32 w-full text-white">
+    <div className="mt-32 w-full h-screen text-white">
       <Background imageUrl="/contact-section.jpg">
         <div className="flex flex-col items-center justify-center gap-10 w-full">
           <h1 className="font-semibold tracking-wide text-4xl drop-shadow-lg">
@@ -14,7 +14,7 @@ const ContactSection = () => {
           </p>
           <form
             action=""
-            className="flex flex-col gap-4 w-1/3 text-sm font-medium text-black"
+            className="flex flex-col gap-4 px-16 w-full tablet:min-w-[500px] tablet:max-w-[40%] text-sm font-medium text-black"
           >
             <input
               className="p-4 w-full rounded-lg placeholder:font-light shadow-lg shadow-black/40"
@@ -33,7 +33,7 @@ const ContactSection = () => {
               Перезвоните мне
             </button>
           </form>
-          <div className="text-gray-200 font-light text-xs text-center">{`Нажимая на кнопку "Перезвоните мне", Вы соглашаетесь с обработкой персональных данных`}</div>
+          <div className="text-gray-200 font-light text-xs text-center px-10">{`Нажимая на кнопку "Перезвоните мне", Вы соглашаетесь с обработкой персональных данных`}</div>
         </div>
       </Background>
     </div>

@@ -1,12 +1,17 @@
+import Contacts from "./Contacts";
+import YandexMap from "./Map";
+
 const Footer = () => {
   return (
-    <div className="mt-32 w-full flex justify-center items-center h-screen">
-      <div className="w-full h-full"></div>
-      <div className="w-full h-full py-64 px-20 bg-black bg-opacity-80 text-white flex flex-col gap-10 items-start">
-        <h1 className="text-2xl tracking-wide font-semibold">Наши контакты</h1>
-        <div className="text-xl font-light">
-          <div>+7 (925) 143-79-52</div>
-          <div>flatpoint@club-moscow.ru</div>
+    <div className="w-full mt-32">
+      <div className="w-full flex flex-col smallLaptop:flex-row justify-center items-center h-screen">
+        <YandexMap />
+        <Contacts />
+      </div>
+
+      <div className="flex justify-center items-center w-full h-16 text-xs text-center text-gray-200 bg-black">
+        <div className="p-1 border-yellow-500 border-b">
+          © 2024 FlatPoint. Все права защищены.
         </div>
       </div>
     </div>

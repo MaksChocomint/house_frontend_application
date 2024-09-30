@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@headlessui/react": "^2.1.8",
+    "@pbe/react-yandex-maps": "^1.2.5",
     "@prisma/client": "^5.19.1",
     "axios": "^1.7.7",
     "cheerio": "^1.0.0",
