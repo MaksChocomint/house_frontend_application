@@ -17,7 +17,7 @@ const Info = () => {
           </h1>
           <div className="h-0.5 bg-yellow-500 w-1/2"></div>
         </div>
-        <p className="text-lg mt-5 text-justify">
+        <p className="tablet:text-lg mt-5 text-justify">
           Мы - управляющая компания FlatPoint. Уже на протяжении многих лет
           занимаемся посуточной арендой домов и квартир в Москве и Московской
           области. Мы бережно создаём уют и комфорт на наших объектах, чтобы Вы
