@@ -17,7 +17,7 @@ const Background: React.FC<BackgroundProps> = ({ imageUrl, children }) => {
         alt="background"
         fill
         quality={100}
-        className="z-0 object-cover"
+        className="z-0 object-cover object-top"
         priority // Оптимизация: устанавливаем приоритет загрузки
       />
       {/* Контент */}

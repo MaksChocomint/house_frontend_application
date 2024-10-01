@@ -11,7 +11,7 @@ const Home = () => {
         <div className="flex-1 flex flex-col">
           <Header />
           <Intro
-            imageUrl="/home-background.jpg"
+            imageUrl="/home-background.jpeg"
             infoTitle="Добро пожаловать в FlatPoint"
             infoDescription="Мы создаем атмосферу спокойствия и незабываемых впечатлений!"
           />
