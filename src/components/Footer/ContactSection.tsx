@@ -5,8 +5,8 @@ const ContactSection = () => {
   return (
     <div className="mt-32 w-full h-screen text-white">
       <Background imageUrl="/contact-section.jpg">
-        <div className="flex flex-col items-center justify-center gap-10 w-full">
-          <h1 className="font-semibold tracking-wide text-4xl drop-shadow-lg">
+        <div className="flex flex-col items-center justify-center gap-8 tabelt:gap-10 w-full">
+          <h1 className="font-semibold tracking-wide text-3xl tablet:text-4xl drop-shadow-lg">
             Остались вопросы?
           </h1>
           <p className="font-light drop-shadow-lg">

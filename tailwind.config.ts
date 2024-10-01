@@ -9,7 +9,9 @@ const config: Config = {
   theme: {
     screens: {
       phone: "320px",
-      // => @media (min-width: 640px) { ... }
+
+      smallTablet: "600px",
+
       tablet: "860px",
 
       largeTablet: "950px",

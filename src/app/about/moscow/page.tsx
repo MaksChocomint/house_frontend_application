@@ -1,6 +1,9 @@
 import Header from "@/components/Header/Header";
 import Intro from "@/components/Intro/Intro";
 import React from "react";
+import ContactButton from "@/components/ContactButton";
+import Footer from "@/components/Footer/Footer";
+import Main from "@/components/About/Moscow/Main/Main";
 
 const Moscow = () => {
   return (
@@ -9,13 +12,16 @@ const Moscow = () => {
         <div className="flex-1 flex flex-col">
           <Header />
           <Intro
-            imageUrl="/moscow-background.webp"
+            imageUrl="/about/moscow/moscow-background.webp"
             infoTitle="Квартиры и студии в Москве"
             infoDescription="Место, где вы сможете забыть о городе и воссоединиться с природой"
             darker={false}
           />
         </div>
       </div>
+      <Main />
+      <Footer />
+      <ContactButton />
     </div>
   );
 };
