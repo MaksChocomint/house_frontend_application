@@ -22,6 +22,9 @@ const config: Config = {
       desktop: "1600px",
       // => @media (min-width: 1280px) { ... }
     },
+    objectPosition: {
+      lowCenter: "50% 28%",
+    },
   },
   plugins: [],
 };

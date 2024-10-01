@@ -14,6 +14,7 @@ const Home = () => {
             imageUrl="/home-background.jpeg"
             infoTitle="Добро пожаловать в FlatPoint"
             infoDescription="Мы создаем атмосферу спокойствия и незабываемых впечатлений!"
+            darker={true}
           />
         </div>
       </div>
