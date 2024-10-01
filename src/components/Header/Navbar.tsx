@@ -64,6 +64,13 @@ const Navbar = () => {
     }
   };
 
+  // New handler to prevent scroll when clicking on '#'
+  const handleLinkClick = (e: React.MouseEvent, link: string) => {
+    if (link === "#") {
+      e.preventDefault(); // Prevent scrolling for `#` links
+    }
+  };
+
   return (
     <nav className="flex flex-col tablet:flex-wrap tablet:flex-row gap-6 tablet:gap-x-8 tablet:gap-y-0 items-center justify-center text-lg tablet:text-base font-medium">
       {menuItems.map((item) => (
@@ -79,6 +86,7 @@ const Navbar = () => {
                 ? "#"
                 : item.link
             }
+            onClick={(e) => handleLinkClick(e, item.link || "#")} // Attach handler
           >
             <button
               className="flex items-center gap-2 hover:text-yellow-500 transition-colors uppercase"
@@ -108,6 +116,7 @@ const Navbar = () => {
                   <Link
                     key={subItem.name}
                     href={subItem.link}
+                    onClick={(e) => handleLinkClick(e, subItem.link)} // Attach handler to sub-items
                     className="inline-block whitespace-nowrap font-medium tablet:text-[15px] text-center p-2 hover:text-yellow-500"
                   >
                     {subItem.name}
@@ -134,6 +143,7 @@ const Navbar = () => {
                     <Link
                       key={subItem.name}
                       href={subItem.link}
+                      onClick={(e) => handleLinkClick(e, subItem.link)} // Attach handler to sub-items
                       className="inline-block whitespace-nowrap font-medium tablet:text-[15px] text-center p-2 hover:text-yellow-500"
                     >
                       {subItem.name}

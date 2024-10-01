@@ -1,3 +1,6 @@
+import ContactButton from "@/components/ContactButton";
+import Footer from "@/components/Footer/Footer";
+import Main from "@/components/GreenLounge/Main/Main";
 import Header from "@/components/Header/Header";
 import Intro from "@/components/Intro/Intro";
 import React from "react";
@@ -16,6 +19,9 @@ const GreenLounge = () => {
           />
         </div>
       </div>
+      <Main />
+      <Footer />
+      <ContactButton />
     </div>
   );
 };

@@ -2,7 +2,6 @@ import React from "react";
 import Info from "./Info";
 import Gallery from "./Gallery";
 import Link from "next/link";
-import ContactSection from "@/components/Footer/ContactSection";
 
 const Main = () => {
   return (
@@ -28,7 +27,6 @@ const Main = () => {
           </button>
         </Link>
       </div>
-      <ContactSection />
     </div>
   );
 };
