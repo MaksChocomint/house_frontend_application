@@ -17,7 +17,7 @@ const Intro: React.FC<IntroProps> = ({
 }) => {
   return (
     <div>
-      {darker && <div className="absolute inset-0 bg-black opacity-25 z-10" />}
+      {darker && <div className="absolute inset-0 bg-black opacity-15 z-10" />}
       <Background imageUrl={imageUrl}>
         <div className="flex flex-col items-center w-full h-full justify-between phone:gap-6 tablet:gap-8 laptop:gap-10">
           <Info title={infoTitle} description={infoDescription} />
