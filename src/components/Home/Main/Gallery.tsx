@@ -5,12 +5,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 
 const images = [
-  "/green-lounge.jpg",
-  "/home-background.jpg",
-  "/moscow.jpg",
-  "/green-lounge.jpg",
-  "/home-background.jpg",
-  "/moscow.jpg",
+  "/main/green-lounge.jpg",
+
+  "/main/moscow.jpg",
+  "/main/green-lounge.jpg",
+
+  "/main/moscow.jpg",
 ];
 
 const Gallery: React.FC = () => {

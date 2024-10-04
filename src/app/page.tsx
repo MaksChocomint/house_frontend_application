@@ -11,10 +11,10 @@ const Home = () => {
         <div className="flex-1 flex flex-col">
           <Header />
           <Intro
-            imageUrl="/home-background.jpeg"
+            imageUrl="/main/background.jpg"
             infoTitle="Добро пожаловать в FlatPoint"
             infoDescription="Мы создаем атмосферу спокойствия и незабываемых впечатлений!"
-            darker={true}
+            darker={false}
           />
         </div>
       </div>

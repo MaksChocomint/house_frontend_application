@@ -1,4 +1,6 @@
-import Link from "next/link";
+"use client";
+
+import { useRouter } from "next/navigation"; // Импортируем useRouter
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useWindowSize } from "@/utils/useWindowSize";
@@ -41,6 +43,7 @@ const Navbar = () => {
   const windowSize = useWindowSize();
   const isMobile = windowSize.width <= 860;
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
+  const router = useRouter(); // Используем роутер
 
   const handleMouseEnter = (menu: string) => {
     if (!isMobile) {
@@ -64,10 +67,9 @@ const Navbar = () => {
     }
   };
 
-  // New handler to prevent scroll when clicking on '#'
-  const handleLinkClick = (e: React.MouseEvent, link: string) => {
-    if (link === "#") {
-      e.preventDefault(); // Prevent scrolling for `#` links
+  const handleLinkClick = (link: string) => {
+    if (link !== "#") {
+      router.push(link); // Переходим по нужному пути
     }
   };
 
@@ -80,21 +82,15 @@ const Navbar = () => {
           onMouseEnter={() => handleMouseEnter(item.title)}
           onMouseLeave={handleMouseLeave}
         >
-          <Link
-            href={
-              !item.link || (isMobile && !(activeMenu === item.title))
-                ? "#"
-                : item.link
-            }
-            onClick={(e) => handleLinkClick(e, item.link || "#")} // Attach handler
+          <button
+            className="flex items-center gap-2 tablet:hover:text-yellow-500 transition-colors uppercase"
+            onClick={() => {
+              handleLinkClick(item.link || "#");
+              handleMobileClick(item);
+            }}
           >
-            <button
-              className="flex items-center gap-2 hover:text-yellow-500 transition-colors uppercase"
-              onClick={() => handleMobileClick(item)}
-            >
-              <span>{item.title}</span>
-            </button>
-          </Link>
+            <span>{item.title}</span>
+          </button>
 
           {/* Анимация для десктопа */}
           {!isMobile && (
@@ -113,14 +109,13 @@ const Navbar = () => {
             >
               {item.subItems.length > 0 &&
                 item.subItems.map((subItem) => (
-                  <Link
+                  <button
                     key={subItem.name}
-                    href={subItem.link}
-                    onClick={(e) => handleLinkClick(e, subItem.link)} // Attach handler to sub-items
-                    className="inline-block whitespace-nowrap font-medium tablet:text-[15px] text-center p-2 hover:text-yellow-500"
+                    onClick={() => handleLinkClick(subItem.link)}
+                    className="inline-block whitespace-nowrap font-medium tablet:text-[15px] text-center p-2 tablet:hover:text-yellow-500"
                   >
                     {subItem.name}
-                  </Link>
+                  </button>
                 ))}
             </motion.div>
           )}
@@ -140,14 +135,13 @@ const Navbar = () => {
                   className="w-full flex flex-col items-center"
                 >
                   {item.subItems.map((subItem) => (
-                    <Link
+                    <button
                       key={subItem.name}
-                      href={subItem.link}
-                      onClick={(e) => handleLinkClick(e, subItem.link)} // Attach handler to sub-items
-                      className="inline-block whitespace-nowrap font-medium tablet:text-[15px] text-center p-2 hover:text-yellow-500"
+                      onClick={() => handleLinkClick(subItem.link)}
+                      className="inline-block whitespace-nowrap font-medium tablet:text-[15px] text-center p-2 tablet:hover:text-yellow-500"
                     >
                       {subItem.name}
-                    </Link>
+                    </button>
                   ))}
                 </motion.div>
               )}

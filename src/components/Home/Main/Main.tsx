@@ -23,7 +23,7 @@ const Main = () => {
         </Link>
         <Link href="/accommodation/apartments">
           <button className="text-sm py-4 w-72 tablet:w-60 border-2 border-black font-bold rounded-full">
-            Квартиры
+            Квартиры и студии
           </button>
         </Link>
       </div>
