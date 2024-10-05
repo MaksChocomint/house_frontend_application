@@ -25,7 +25,7 @@ const config: Config = {
       // => @media (min-width: 1280px) { ... }
     },
     objectPosition: {
-      lowCenter: "50% 28%",
+      lowCenter: "50% 40%",
     },
   },
   plugins: [],

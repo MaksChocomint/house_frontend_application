@@ -10,18 +10,18 @@ const Main = () => {
       <Gallery />
 
       <div className="flex flex-col tablet:flex-row items-center gap-4 tablet:gap-8 mt-16">
-        <Link href="/accommodation/houses">
+        <Link href="/accommodation/green-lounge">
           <button className="text-sm py-4 w-72 tablet:w-60 border-2 border-black font-bold rounded-full">
             Гостевые дома
           </button>
         </Link>
 
-        <Link href="/accommodation">
+        <Link href="/booking">
           <button className="text-sm py-4 w-72 tablet:w-60 border-2 border-black font-bold rounded-full">
             Доступные апартаменты
           </button>
         </Link>
-        <Link href="/accommodation/apartments">
+        <Link href="/accommodation/moscow">
           <button className="text-sm py-4 w-72 tablet:w-60 border-2 border-black font-bold rounded-full">
             Квартиры и студии
           </button>
