@@ -34,18 +34,18 @@ const Info = () => {
           link="/about/green-lounge"
         />
       </div>
-      <p className="mt-4 tablet:text-lg smallLaptop:row-start-2 text-justify flex flex-col gap-6 font-light">
-        <div>
+      <div className="mt-4 tablet:text-lg smallLaptop:row-start-2 text-justify flex flex-col gap-6 font-light">
+        <p>
           У нас Вы найдете идеальное место как для семейного отдыха, так и для
           деловых поездок. Вы сможете расслабиться или сосредоточиться на важном
           — все остальное мы возьмём на себя. Не упустите возможность
           насладиться красивыми домами и уютными апартаментами, которые мы с
           любовью подготовили для вас.
-        </div>
+        </p>
         <span className="italic font-medium text-base">
           С FlatPoint ваш отдых становится по-настоящему особенным!
         </span>
-      </p>
+      </div>
 
       <CompanyCard
         imageUrl="/main/moscow.jpg" // Укажите правильное изображение для Москвы
