@@ -31,7 +31,7 @@ const Info = () => {
           imageUrl="/main/green-lounge.jpg"
           title="Гостевые дома"
           altText="Уютные и стильные гостевые дома расположены в живописном месте — в КП Грин Лаундж вблизи от Истринского водохранилища. Благодаря великолепному виду и чистому свежему воздуху, вы сможете избавиться от стресса и восстановить внутреннюю энергию."
-          link="/about/green-lounge"
+          link="/accommodation/green-lounge"
         />
       </div>
       <div className="mt-4 tablet:text-lg smallLaptop:row-start-2 text-justify flex flex-col gap-6 font-light">
@@ -51,7 +51,7 @@ const Info = () => {
         imageUrl="/main/moscow.jpg" // Укажите правильное изображение для Москвы
         title="Квартиры и студии в Москве"
         altText="Наши квартиры и студии в Москве — место, где идеально сочетаются современный комфорт и уют. Каждое пространство оформлено с заботой к деталям, оснащено всем необходимым для вашего отдыха и позволит насладиться всеми прелестями столичной жизни."
-        link="/about/moscow"
+        link="/accommodation/moscow"
       />
     </Container>
   );
