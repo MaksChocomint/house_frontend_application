@@ -114,7 +114,9 @@ const CompanyCard: React.FC<CompanyCardProps> = ({
 
         {/* Alt Text и кнопка появляются и исчезают при наведении */}
         <div className="flex flex-col items-center">
-          <p className="text-sm w-2/3 text-center">{altText}</p>
+          <p className="text-sm w-2/3 text-center p-4 bg-black/40 rounded-xl">
+            {altText}
+          </p>
 
           {/* Кнопка "Подробнее" */}
           <button
