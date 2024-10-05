@@ -7,9 +7,9 @@ const Info = () => {
     <Container styles="flex flex-col smallLaptop:flex-row smallLaptop:gap-16 smallLaptop:items-start items-center justify-center w-full">
       <ImageCollage
         images={[
-          "/about/green-lounge/collage/house.jpg",
-          "/about/green-lounge/collage/kitchen.jpg",
-          "/about/green-lounge/collage/bedroom.jpg",
+          "/accommodation/green-lounge/collage/house.jpg",
+          "/accommodation/green-lounge/collage/kitchen.jpg",
+          "/accommodation/green-lounge/collage/bedroom.jpg",
         ]}
       />
       <div className="flex flex-col smallLaptop:justify-start gap-6 w-full smallLaptop:w-1/3">
