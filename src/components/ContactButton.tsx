@@ -62,7 +62,7 @@ const ContactButton = () => {
             </div>
             <div className="flex flex-col items-center gap-2 text-sm">
               <Link
-                href="tel:+79251437952"
+                href="tel:+74951252527"
                 className="text-blue-500 transition-colors"
               >
                 <BiSolidPhoneCall className="text-[54px] drop-shadow-md" />

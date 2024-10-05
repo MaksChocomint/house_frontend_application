@@ -13,7 +13,7 @@ const menuItems = [
   },
   {
     title: "Проживание",
-    link: "/accommodation",
+    link: "",
     subItems: [
       { name: "Москва", link: "/accommodation/moscow" },
       { name: "Московская область", link: "/accommodation/green-lounge" },
@@ -65,7 +65,7 @@ const Navbar = () => {
   };
 
   const handleLinkClick = (link: string) => {
-    if (link !== "#") {
+    if (link !== "") {
       router.push(link); // Переходим по нужному пути
     }
   };
@@ -80,9 +80,9 @@ const Navbar = () => {
           onMouseLeave={handleMouseLeave}
         >
           <button
-            className="flex items-center gap-2 tablet:hover:text-yellow-500 transition-colors uppercase"
+            className="flex items-center text-center mx-auto gap-2 tablet:hover:text-yellow-500 transition-colors uppercase"
             onClick={() => {
-              handleLinkClick(item.link || "#");
+              handleLinkClick(item.link || "");
               handleMobileClick(item);
             }}
           >
@@ -109,7 +109,7 @@ const Navbar = () => {
                   <button
                     key={subItem.name}
                     onClick={() => handleLinkClick(subItem.link)}
-                    className="inline-block whitespace-nowrap font-medium tablet:text-[15px] text-center p-2 tablet:hover:text-yellow-500"
+                    className="inline-block font-medium tablet:text-[15px] text-center p-2 tablet:hover:text-yellow-500"
                   >
                     {subItem.name}
                   </button>
@@ -135,7 +135,7 @@ const Navbar = () => {
                     <button
                       key={subItem.name}
                       onClick={() => handleLinkClick(subItem.link)}
-                      className="inline-block whitespace-nowrap font-medium tablet:text-[15px] text-center p-2 tablet:hover:text-yellow-500"
+                      className="inline-block font-medium tablet:text-[15px] text-center p-2 tablet:hover:text-yellow-500"
                     >
                       {subItem.name}
                     </button>
