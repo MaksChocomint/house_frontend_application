@@ -1,19 +1,19 @@
+import ContactButton from "@/components/ContactButton";
+import Footer from "@/components/Footer/Footer";
+import Main from "@/components/Apartments/GreenLounge/Main/Main";
 import Header from "@/components/Header/Header";
 import Intro from "@/components/Intro/Intro";
 import React from "react";
-import ContactButton from "@/components/ContactButton";
-import Footer from "@/components/Footer/Footer";
-import Main from "@/components/About/Moscow/Main/Main";
 
-const Moscow = () => {
+const GreenLounge = () => {
   return (
     <div className="w-full">
       <div className="h-screen flex flex-col">
         <div className="flex-1 flex flex-col">
           <Header />
           <Intro
-            imageUrl="/about/moscow/moscow-background.webp"
-            infoTitle="Квартиры и студии в Москве"
+            imageUrl="/about/green-lounge/greenlounge-background.jpg"
+            infoTitle="Гостевые дома в КП Грин Лаундж"
             infoDescription="Место, где вы сможете забыть о городе и воссоединиться с природой"
             darker={false}
           />
@@ -26,4 +26,4 @@ const Moscow = () => {
   );
 };
 
-export default Moscow;
+export default GreenLounge;

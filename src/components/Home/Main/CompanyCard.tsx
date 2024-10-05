@@ -48,7 +48,7 @@ const CompanyCard: React.FC<CompanyCardProps> = ({
       >
         <Image
           src={imageUrl}
-          alt={altText}
+          alt={imageUrl}
           fill
           quality={100}
           className="z-0 object-cover"
@@ -78,7 +78,7 @@ const CompanyCard: React.FC<CompanyCardProps> = ({
           }}
           transition={{ duration: 0.3 }}
         >
-          <p className="text-sm w-1/2 text-center">{altText}</p>
+          <p className="text-sm w-2/3 text-center">{altText}</p>
 
           {/* Кнопка "Подробнее" */}
           <motion.button

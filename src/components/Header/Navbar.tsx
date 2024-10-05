@@ -9,17 +9,14 @@ const menuItems = [
   {
     title: "О компании",
     link: "/",
-    subItems: [
-      { name: "ГринЛаундж", link: "/about/green-lounge" },
-      { name: "Москва", link: "/about/moscow" },
-    ],
+    subItems: [],
   },
   {
     title: "Проживание",
     link: "/accommodation",
     subItems: [
-      { name: "Дома", link: "/accommodation/houses" },
-      { name: "Квартиры", link: "/accommodation/apartments" },
+      { name: "Москва", link: "/accommodation/moscow" },
+      { name: "Московская область", link: "/accommodation/green-lounge" },
     ],
   },
   {

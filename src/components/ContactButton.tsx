@@ -71,7 +71,7 @@ const ContactButton = () => {
             </div>
             <div className="flex flex-col items-center gap-2 text-sm">
               <Link
-                href="mailto:example@example.com"
+                href="mailto:info@flatpoint.ru"
                 className="text-yellow-500 transition-colors"
               >
                 <MdEmail className="text-[52px] drop-shadow-md" />
