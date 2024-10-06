@@ -27,7 +27,7 @@ const ApartmentsGrid: React.FC<ApartmentsGridProps> = ({
     <Container
       styles={"grid grid-cols-1 tablet:grid-cols-2 gap-y-10 gap-x-10 mt-32"}
     >
-      <h1 className="text-3xl font-bold text-center col-start-1 col-end-3">
+      <h1 className="text-3xl font-bold text-center col-start-1 col-end-2 tablet:col-end-3">
         {title}
       </h1>
       {apartments.map((apartment) => (

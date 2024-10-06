@@ -72,16 +72,18 @@ const ApartmentCard: React.FC<ApartmentCardProps> = ({
           <p className="text-base text-gray-500">
             Вместимость: до {capacity} человек
           </p>
+        </div>
+        <div>
           <p className="mt-8 text-base font-bold text-gray-800">
             От {price} рублей за сутки {/* Изменён формат отображения цены */}
           </p>
+          <button
+            onClick={onBook}
+            className="mt-6 w-full font-bold bg-yellow-500 text-white py-3 rounded-lg"
+          >
+            Забронировать
+          </button>
         </div>
-        <button
-          onClick={onBook}
-          className="mt-6 w-full bg-yellow-500 text-white py-3 rounded-lg"
-        >
-          Забронировать
-        </button>
       </div>
     </div>
   );
