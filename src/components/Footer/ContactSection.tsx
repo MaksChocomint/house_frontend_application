@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from "react";
 import Background from "@/components/Background";
 import emailjs from "@emailjs/browser";
