@@ -37,7 +37,6 @@ const Info = () => {
           </p>
         </div>
       </div>
-      <div></div>
     </Container>
   );
 };
