@@ -1,76 +1,38 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import ReviewCard from "./ReviewCard";
-
-interface Review {
-  name: string;
-  location: string;
-  text: string;
-}
-
-const reviews: Review[] = [
-  {
-    name: "Алексей",
-    location: "Дом 373",
-    text: "Все понравилось, кондиционер правда желательно помощнее, но не критично.",
-  },
-  {
-    name: "Андрей",
-    location: "Дом 374",
-    text: "Отличное место для спокойного семейного отдыха. Комфортный дом, деревянная веранда и мангальная зона. Свежий воздух, тихие соседи и небольшой водоём, ночью весь поселок буквально светится! Очень приятное место, рекомендую.",
-  },
-  {
-    name: "Мария",
-    location: "Дом 375",
-    text: "Чистый домик, просторная кухня. Все условия для отдыха с детьми. Нам понравилось проводить время на веранде, особенно по утрам. Удобно, что магазин рядом.",
-  },
-  {
-    name: "Сергей",
-    location: "Дом 376",
-    text: "Отдыхали всей семьей, детям особенно понравилась детская площадка и природа вокруг. Дом очень уютный, но интернет иногда подводил. В остальном все супер!",
-  },
-  {
-    name: "Екатерина",
-    location: "Дом 377",
-    text: "Уютное место, отличный дом с красивым интерьером. Порадовала тихая атмосфера и удобства. Единственный минус — сотовая связь немного слабая, но для отдыха это даже плюс.",
-  },
-  {
-    name: "Олег",
-    location: "Дом 378",
-    text: "Все отлично, дом теплый, вода горячая, есть все необходимое. Особенно понравилась мангальная зона, где провели почти все вечера. Вернемся сюда снова!",
-  },
-  {
-    name: "Наталья",
-    location: "Дом 379",
-    text: "Небольшой домик, но уютный и чистый. Отлично провели время вдали от города. Единственное пожелание — улучшить качество подушек, они слишком мягкие.",
-  },
-  {
-    name: "Дмитрий",
-    location: "Дом 380",
-    text: "Тихое, уютное место. Очень понравилось, что есть возможность взять велосипеды напрокат и исследовать окрестности. Вечерами вокруг очень красиво, особенно на закате.",
-  },
-  {
-    name: "Алина",
-    location: "Дом 381",
-    text: "Приятный отдых на природе. Дом комфортный, в нем есть всё для удобства. Единственное, хотелось бы, чтобы баня была доступна в любое время, а не по предварительной записи.",
-  },
-  {
-    name: "Константин",
-    location: "Дом 382",
-    text: "Уютный дом, есть всё необходимое для отдыха с друзьями. Вечером очень понравилось сидеть у костра. Единственное, что хотелось бы — немного больше разнообразия в развлечениях на территории.",
-  },
-];
+import { reviews } from "./reviewsData";
 
 const ReviewsGrid: React.FC = () => {
+  const [visibleReviews, setVisibleReviews] = useState(8); // Изначально показываем 12 отзывов
+
+  const handleShowMore = () => {
+    setVisibleReviews((prev) => prev + 6); // Увеличиваем количество отображаемых отзывов на 6
+  };
+
   return (
-    <div className="w-full grid grid-cols-1 tablet:grid-cols-4 gap-10">
-      {reviews.map((review, index) => (
-        <ReviewCard
-          key={index}
-          name={review.name}
-          location={review.location}
-          text={review.text}
-        />
-      ))}
+    <div className="w-full">
+      <div className="grid grid-cols-1 tablet:grid-cols-2 smallLaptop:grid-cols-4 gap-10">
+        {reviews.slice(0, visibleReviews).map((review, index) => (
+          <ReviewCard
+            key={index}
+            name={review.name}
+            location={review.location}
+            text={review.text}
+          />
+        ))}
+      </div>
+      {visibleReviews < reviews.length && ( // Проверяем, нужно ли показывать кнопку
+        <div className="flex justify-center">
+          <button
+            onClick={handleShowMore}
+            className="mt-6 px-8 py-2 bg-yellow-500 text-white rounded-full text-sm font-bold"
+          >
+            Показать еще
+          </button>
+        </div>
+      )}
     </div>
   );
 };
