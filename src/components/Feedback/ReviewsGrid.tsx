@@ -62,7 +62,7 @@ const reviews: Review[] = [
 
 const ReviewsGrid: React.FC = () => {
   return (
-    <div className="w-full grid grid-cols-2 tablet:grid-cols-4 gap-10">
+    <div className="w-full grid grid-cols-1 tablet:grid-cols-4 gap-10">
       {reviews.map((review, index) => (
         <ReviewCard
           key={index}
