@@ -1,0 +1,44 @@
+.download-button {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  border: 3px solid #eab308;
+  color: #000;
+  background: white;
+  overflow: hidden;
+  border-radius: 40px;
+
+  cursor: pointer;
+}
+
+.download-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 100%;
+  background: #eab308;
+  border-radius: 40px;
+  transition: width 0.4s ease, left 0.4s ease;
+  z-index: 0;
+}
+
+.download-button:hover::before {
+  width: 200%;
+  left: -50%;
+}
+
+.download-button:hover {
+  color: #fff;
+}
+
+.download-button span {
+  position: relative;
+  z-index: 1;
+}
