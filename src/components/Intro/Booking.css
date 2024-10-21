@@ -1,0 +1,16 @@
+#block-search,
+#block-search * {
+  box-sizing: border-box;
+}
+#block-search {
+  background: #11111199;
+  width: 100%;
+}
+#block-search.block-search-mobile {
+  background: #111111;
+}
+.tl-container {
+  padding: 0 25px;
+  max-width: 1250px;
+  margin: 0 auto;
+}
