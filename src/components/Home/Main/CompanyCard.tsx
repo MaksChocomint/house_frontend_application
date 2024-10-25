@@ -110,7 +110,9 @@ const CompanyCard: React.FC<CompanyCardProps> = ({
       {/* Контент */}
       <div className="relative z-20 text-white shadow-lg flex flex-col gap-8 justify-center items-center h-full">
         {/* Тайтл, который виден всегда */}
-        <h1 className="font-bold text-2xl drop-shadow-md">{title}</h1>
+        <h1 className="font-bold text-2xl drop-shadow-md text-center">
+          {title}
+        </h1>
 
         {/* Alt Text и кнопка появляются и исчезают при наведении */}
         <div className="flex flex-col items-center">

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import Background from "@/components/Background";
+import ContactsBackground from "./ContactsBackground";
 import emailjs from "@emailjs/browser";
 
 const ContactSection = () => {
@@ -58,9 +58,9 @@ const ContactSection = () => {
   };
 
   return (
-    <div className="mt-32 w-full h-screen text-white">
-      <Background imageUrl="/contact-section.jpg">
-        <div className="flex flex-col items-center justify-center gap-8 tablet:gap-10 w-full">
+    <div className="mt-32 w-full min-h-screen text-white">
+      <ContactsBackground imageUrl="/contact-section.jpg">
+        <div className="flex flex-col items-center justify-center gap-8 tablet:gap-10 w-full py-10">
           <h1 className="font-semibold tracking-wide text-3xl tablet:text-4xl drop-shadow-lg">
             Остались вопросы?
           </h1>
@@ -111,7 +111,7 @@ const ContactSection = () => {
           )}
           <div className="text-gray-200 font-light text-xs text-center px-10">{`Нажимая на кнопку "Перезвоните мне", Вы соглашаетесь с обработкой персональных данных`}</div>
         </div>
-      </Background>
+      </ContactsBackground>
     </div>
   );
 };

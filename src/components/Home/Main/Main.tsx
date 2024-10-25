@@ -16,11 +16,6 @@ const Main = () => {
           </button>
         </Link>
 
-        <Link href="/booking">
-          <button className="text-sm py-4 w-72 tablet:w-60 border-2 border-black font-bold rounded-full">
-            Доступные апартаменты
-          </button>
-        </Link>
         <Link href="/accommodation/moscow">
           <button className="text-sm py-4 w-72 tablet:w-60 border-2 border-black font-bold rounded-full">
             Квартиры и студии

@@ -1,20 +1,17 @@
-import Background from "@/components/Background";
 import Socials from "@/components/Socials";
 import Link from "next/link";
 import React from "react";
 import { BiSolidPhoneCall } from "react-icons/bi";
+import ContactsBackground from "./ContactsBackground";
 
 const Contacts = () => {
   return (
-    <Background imageUrl="/contact.jpg">
+    <ContactsBackground imageUrl="/contact.jpg">
       <div className="w-full h-full py-64 px-10 bg-black bg-opacity-50 text-white flex flex-col gap-10 items-start">
         <h1 className="text-2xl tracking-wide font-semibold">Наши контакты</h1>
         <div className="text-xl font-light">
           <div>+7 (495) 125-25-27</div>
           <div>info@flatpoint.ru</div>
-        </div>
-        <div className="text-base font-light">
-          Московская область, городской округ Истра, поселок Грин Лаундж
         </div>
         <div className="flex items-center gap-1">
           <Socials />
@@ -26,7 +23,7 @@ const Contacts = () => {
           </Link>
         </div>
       </div>
-    </Background>
+    </ContactsBackground>
   );
 };
 
