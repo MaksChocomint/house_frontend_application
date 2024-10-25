@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter_Tight } from "next/font/google";
 import "./globals.css";
-import ScriptComponent from "@/components/Script";
 
 export const metadata: Metadata = {
   title: "Flatpoint",
@@ -17,8 +16,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <ScriptComponent />
-
       <body className={`${interTight.className} antialiased overflow-x-hidden`}>
         {children}
       </body>
