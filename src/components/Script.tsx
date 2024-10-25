@@ -1,21 +1,10 @@
 "use client";
 import Script from "next/script";
-import React, { useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
+import React from "react";
 
 const ScriptComponent = () => {
-  const pathname = usePathname(); // Get current path
-
-  const [key, setKey] = useState(0); // State to force re-render of <Script>
-
-  useEffect(() => {
-    // Trigger re-render of <Script> whenever the pathname changes
-    setKey((prevKey) => prevKey + 1);
-  }, [pathname]); // Dependency on pathname change
-
   return (
     <Script
-      key={key} // Force a new instance of the <Script> tag whenever the key changes
       id="booking"
       dangerouslySetInnerHTML={{
         __html: `
