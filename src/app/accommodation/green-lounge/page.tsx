@@ -13,7 +13,7 @@ const GreenLounge = () => {
           <Header />
           <Intro
             imageUrl="/accommodation/green-lounge/greenlounge-background.jpg"
-            infoTitle="Гостевые дома в КП Грин Лаундж"
+            infoTitle="Гостевые дома"
             infoDescription="Место, где вы сможете забыть о городе и воссоединиться с природой"
             darker={false}
           />
