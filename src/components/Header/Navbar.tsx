@@ -24,7 +24,7 @@ const menuItems = [
     subItems: [
       { name: "Услуги", link: "/management/services" },
       { name: "Объекты", link: "/management/objects" },
-      { name: "Команда", link: "/management/team" },
+      // { name: "Команда", link: "/management/team" },
       { name: "Вакансии", link: "/management/vacancies" },
     ],
   },
