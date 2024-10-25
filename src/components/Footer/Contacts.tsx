@@ -7,7 +7,7 @@ import ContactsBackground from "./ContactsBackground";
 const Contacts = () => {
   return (
     <ContactsBackground imageUrl="/contact.jpg">
-      <div className="w-full h-full py-64 px-10 bg-black bg-opacity-50 text-white flex flex-col gap-10 items-start">
+      <div className="w-full h-full py-64 px-10 overflow-hidden bg-black/50 text-white flex flex-col gap-10 items-start">
         <h1 className="text-2xl tracking-wide font-semibold">Наши контакты</h1>
         <div className="text-xl font-light">
           <div>+7 (495) 125-25-27</div>

@@ -11,7 +11,7 @@ const ContactsBackground: React.FC<BackgroundProps> = ({
   children,
 }) => {
   return (
-    <div className="relative w-full min-h-screen">
+    <div className="relative w-full min-h-screen overflow-hidden">
       {/* Overlay */}
       <div className="absolute inset-0 bg-black opacity-50 z-10" />
       {/* Background Image */}
