@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 interface ApartmentCardProps {
   images: string[];
@@ -54,13 +55,13 @@ const ApartmentCard: React.FC<ApartmentCardProps> = ({
               onClick={handlePrevImage}
               className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-60 rounded-full p-2"
             >
-              ◀
+              <IoIosArrowBack />
             </button>
             <button
               onClick={handleNextImage}
               className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-60 rounded-full p-2"
             >
-              ▶
+              <IoIosArrowForward />
             </button>
           </>
         )}

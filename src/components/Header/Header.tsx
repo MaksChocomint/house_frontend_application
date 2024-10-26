@@ -41,14 +41,15 @@ const Header = () => {
 
       {/* Мобильное меню */}
       <div
-        className={`fixed top-0 right-0 h-full overflow-y-auto w-full bg-black bg-opacity-90 transform ${
+        className={`fixed top-0 right-0 h-full overflow-y-auto w-full bg-black flex flex-col items-center bg-opacity-90 transform ${
           menuOpen ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-300 tablet:hidden z-40`}
       >
-        {/* Меню и контакты */}
-        <div className="flex flex-col h-full py-8 justify-center items-center text-white text-xl gap-8">
-          <Navbar />
-          <Contacts />
+        <div className="h-min-screen">
+          <div className="flex flex-col h-full py-8 justify-center items-center text-white text-base gap-4">
+            <Navbar />
+            <Contacts />
+          </div>
         </div>
       </div>
     </header>

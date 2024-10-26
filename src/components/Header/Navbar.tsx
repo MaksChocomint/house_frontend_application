@@ -15,8 +15,8 @@ const menuItems = [
     title: "Проживание",
     link: "",
     subItems: [
-      { name: "Москва", link: "/accommodation/moscow" },
-      { name: "Московская область", link: "/accommodation/green-lounge" },
+      { name: "Квартиры и апартаменты", link: "/accommodation/moscow" },
+      { name: "Гостевые дома", link: "/accommodation/green-lounge" },
     ],
   },
   {
@@ -104,14 +104,18 @@ const Navbar = () => {
               }
             >
               {item.subItems.length > 0 &&
-                item.subItems.map((subItem) => (
-                  <button
-                    key={subItem.name}
-                    onClick={() => handleLinkClick(subItem.link)}
-                    className="inline-block font-medium tablet:text-[15px] text-center p-2 tablet:hover:text-yellow-500"
-                  >
-                    {subItem.name}
-                  </button>
+                item.subItems.map((subItem, index) => (
+                  <div key={subItem.name} className="relative">
+                    <button
+                      onClick={() => handleLinkClick(subItem.link)}
+                      className="inline-block font-medium tablet:text-[15px] text-center p-2 tablet:hover:text-yellow-500"
+                    >
+                      {subItem.name}
+                    </button>
+                    {index < item.subItems.length - 1 && (
+                      <div className="absolute bottom-0 left-0 w-full h-px bg-gray-300"></div>
+                    )}
+                  </div>
                 ))}
             </motion.div>
           )}
@@ -130,14 +134,18 @@ const Navbar = () => {
                   transition={{ duration: 0.2 }}
                   className="w-full flex flex-col items-center"
                 >
-                  {item.subItems.map((subItem) => (
-                    <button
-                      key={subItem.name}
-                      onClick={() => handleLinkClick(subItem.link)}
-                      className="inline-block font-medium tablet:text-[15px] text-center p-2 tablet:hover:text-yellow-500"
-                    >
-                      {subItem.name}
-                    </button>
+                  {item.subItems.map((subItem, index) => (
+                    <div key={subItem.name} className="relative">
+                      <button
+                        onClick={() => handleLinkClick(subItem.link)}
+                        className="inline-block font-medium tablet:text-[15px] text-center p-2 tablet:hover:text-yellow-500"
+                      >
+                        {subItem.name}
+                      </button>
+                      {index < item.subItems.length - 1 && (
+                        <div className="absolute bottom-0 left-0 w-full h-px bg-gray-300"></div>
+                      )}
+                    </div>
                   ))}
                 </motion.div>
               )}
