@@ -13,12 +13,12 @@ const Contacts = () => {
           +7 (495) 125-25-27
         </Link>
 
-        <Link
-          href="/booking"
+        <a
+          href="/?tl-booking-open=true"
           className="w-full py-2 text-center px-4 font-semibold text-base tablet-text-sm rounded-2xl border-[3px] border-yellow-500 text-white bg-yellow-500 smallLaptop:w-[175px]"
         >
           Забронировать
-        </Link>
+        </a>
       </div>
     </div>
   );

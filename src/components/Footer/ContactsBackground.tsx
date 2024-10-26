@@ -11,7 +11,7 @@ const ContactsBackground: React.FC<BackgroundProps> = ({
   children,
 }) => {
   return (
-    <div className="relative w-full min-h-screen overflow-hidden">
+    <div className="relative w-full min-h-screen overflow-hidden flex items-center justify-center">
       {/* Overlay */}
       <div className="absolute inset-0 bg-black opacity-50 z-10" />
       {/* Background Image */}
@@ -24,7 +24,7 @@ const ContactsBackground: React.FC<BackgroundProps> = ({
         priority // Оптимизация: устанавливаем приоритет загрузки
       />
       {/* Контент */}
-      <div className="relative z-20 text-white flex justify-center items-center h-full">
+      <div className="relative z-20 text-white flex justify-center items-center h-full w-full">
         {children}
       </div>
     </div>

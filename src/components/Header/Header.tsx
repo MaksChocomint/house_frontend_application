@@ -14,8 +14,10 @@ const Header = () => {
 
   return (
     <header className="flex justify-between items-center px-4 tablet:px-16 py-2 bg-white w-full fixed top-0 z-[200]">
-      {/* Логотип */}
-      <Logo />
+      {/* Логотип слева */}
+      <div className="flex items-center">
+        <Logo />
+      </div>
 
       {/* Кнопка для открытия/закрытия меню на мобильных устройствах */}
       <button
@@ -27,9 +29,13 @@ const Header = () => {
         {menuOpen ? <FaTimes /> : <FaBars />}
       </button>
 
-      {/* Навигация и контакты для больших экранов */}
-      <div className="hidden tablet:flex items-center gap-16">
+      {/* Навигация по центру для больших экранов */}
+      <div className="hidden tablet:flex flex-grow justify-center">
         <Navbar />
+      </div>
+
+      {/* Контакты справа для больших экранов */}
+      <div className="hidden tablet:flex items-center">
         <Contacts />
       </div>
 

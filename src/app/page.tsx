@@ -13,12 +13,7 @@ const Home = () => {
           <Intro
             imageUrl="/main/background.jpg"
             infoTitle="Добро пожаловать во FlatPoint"
-            infoDescription={
-              <>
-                Мы создаем атмосферу спокойствия <br />и незабываемых
-                впечатлений!
-              </>
-            }
+            infoDescription="Мы создаем атмосферу спокойствия и незабываемых впечатлений!"
             darker={false}
           />
         </div>
