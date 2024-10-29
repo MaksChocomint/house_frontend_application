@@ -24,8 +24,21 @@ const config: Config = {
       desktop: "1600px",
       // => @media (min-width: 1280px) { ... }
     },
+
     objectPosition: {
       lowCenter: "50% 40%",
+    },
+
+    extend: {
+      colors: {
+        "clean-space": "#f3f2ed",
+
+        "human-detail": "#e2dbc9",
+
+        "home-coziness": "#b69f80",
+
+        "natural-style": "#53473b",
+      },
     },
   },
   plugins: [],
