@@ -2,32 +2,53 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import { FaTv, FaWifi, FaSnowflake, FaCoffee } from "react-icons/fa";
+import { BiFridge, BiArea } from "react-icons/bi";
+import { MdPeople } from "react-icons/md";
+import { GiBed } from "react-icons/gi";
 
 interface ApartmentCardProps {
   images: string[];
-  title: string;
-  description: string;
+  name: string;
   capacity: number;
-  price: number; // Цена за сутки
-  onBook: () => void; // Функция для бронирования
+  link: string;
+  area: number;
+  rooms: number;
+  features: string[];
 }
 
 const ApartmentCard: React.FC<ApartmentCardProps> = ({
   images,
-  title,
-  description,
+  name,
   capacity,
-  price,
-  onBook,
+  area,
+  link,
+  rooms,
+  features,
 }) => {
   const [currentImage, setCurrentImage] = useState(0);
 
-  const handleNextImage = () => {
+  const handleNextImage = () =>
     setCurrentImage((prev) => (prev + 1) % images.length);
-  };
-
-  const handlePrevImage = () => {
+  const handlePrevImage = () =>
     setCurrentImage((prev) => (prev - 1 + images.length) % images.length);
+
+  // Функция для рендеринга иконок на основе фич
+  const renderIcon = (feature: string) => {
+    switch (feature) {
+      case "Цифровое тв":
+        return <FaTv />;
+      case "Wi-Fi":
+        return <FaWifi />;
+      case "Кондиционер":
+        return <FaSnowflake />;
+      case "Кофемашина":
+        return <FaCoffee />;
+      case "Холодильник":
+        return <BiFridge />;
+      default:
+        return null;
+    }
   };
 
   return (
@@ -38,17 +59,24 @@ const ApartmentCard: React.FC<ApartmentCardProps> = ({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.5 }} // Плавный переход
+          transition={{ duration: 0.5 }}
           className="absolute inset-0"
         >
           <Image
             src={images[currentImage]}
-            alt={title}
+            alt={name}
             fill
             className="object-cover"
-            priority // Предварительная загрузка изображения
+            priority
           />
         </motion.div>
+        <div className="absolute top-0 left-0 p-2 bg-white/80 flex space-x-4 rounded-br-lg">
+          {features.map((feature) => (
+            <span key={feature} className="text-lg text-gray-700">
+              {renderIcon(feature)}
+            </span>
+          ))}
+        </div>
         {images.length > 1 && (
           <>
             <button
@@ -68,23 +96,26 @@ const ApartmentCard: React.FC<ApartmentCardProps> = ({
       </div>
       <div className="p-4 flex-grow flex flex-col justify-between">
         <div>
-          <h2 className="text-2xl font-semibold mb-2">{title}</h2>
-          <p className="text-gray-600 mb-2">{description}</p>
-          <p className="text-base text-gray-500">
-            Вместимость: до {capacity} человек
-          </p>
+          <h2 className="text-xl font-semibold mb-2">{name}</h2>
+          <div className="flex space-x-4 mt-4">
+            <span className="flex items-center text-gray-600">
+              <MdPeople className="mr-1" size={20} /> до {capacity} мест
+            </span>
+            <span className="flex items-center text-gray-600">
+              <BiArea className="mr-1" size={20} /> {area} м²
+            </span>
+            <span className="flex items-center text-gray-600">
+              <GiBed className="mr-1" size={20} /> {rooms} комн.
+            </span>
+          </div>
         </div>
-        <div>
-          <p className="mt-8 text-base font-bold text-gray-800">
-            От {price} рублей за сутки {/* Изменён формат отображения цены */}
-          </p>
-          <button
-            onClick={onBook}
-            className="mt-6 w-full font-bold bg-yellow-500 text-white py-3 rounded-lg"
-          >
-            Забронировать
-          </button>
-        </div>
+
+        <a
+          href={`?tl-booking-open=true&room-type=${link}`}
+          className="mt-2 w-full font-bold bg-yellow-500 text-center text-white py-2 px-4 rounded-lg"
+        >
+          Выбрать
+        </a>
       </div>
     </div>
   );

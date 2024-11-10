@@ -134,7 +134,7 @@ const Navbar = () => {
                   transition={{ duration: 0.2 }}
                   className="w-full flex flex-col items-center"
                 >
-                  {item.subItems.map((subItem, index) => (
+                  {item.subItems.map((subItem) => (
                     <div key={subItem.name} className="relative">
                       <button
                         onClick={() => handleLinkClick(subItem.link)}
@@ -142,9 +142,6 @@ const Navbar = () => {
                       >
                         {subItem.name}
                       </button>
-                      {index < item.subItems.length - 1 && (
-                        <div className="absolute bottom-0 left-0 w-full h-px bg-gray-300"></div>
-                      )}
                     </div>
                   ))}
                 </motion.div>

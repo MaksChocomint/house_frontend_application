@@ -10,5 +10,26 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = env("DATABASE_URL")
+  url = env("POSTGRES_PRISMA_URL") // uses connection pooling
+  directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
+}
+
+
+model Apartment {
+  id          Int       @id @default(autoincrement())
+  name        String
+  capacity    Int       // Количество человек
+  link        String
+  rooms       Int
+  area        Int
+  features    String[]  // Массив особенностей
+  images      String[]  // Массив ссылок на изображения
+  location    Location  @relation(fields: [locationId], references: [id])
+  locationId  Int       // Внешний ключ для связи с местоположением
+}
+
+model Location {
+  id        Int        @id @default(autoincrement())
+  name      String     // Название местоположения (Москва, Московская область и т.д.)
+  apartments Apartment[] // Связь с апартаментами
 }

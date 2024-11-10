@@ -44,13 +44,7 @@ const Booking = () => {
     <div id="block-search">
       <div id="tl-search-form" className="tl-container">
         <noindex>
-          <a
-            href="https://www.travelline.ru/products/tl-hotel/"
-            rel="nofollow"
-            target="_blank"
-          >
-            Загрузка...
-          </a>
+          <div className="loading-spinner"></div>
         </noindex>
       </div>
     </div>

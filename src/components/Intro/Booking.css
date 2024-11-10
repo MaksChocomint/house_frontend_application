@@ -2,15 +2,37 @@
 #block-search * {
   box-sizing: border-box;
 }
+
 #block-search {
   background: #11111199;
   width: 100%;
 }
+
 #block-search.block-search-mobile {
   background: #111111;
 }
+
 .tl-container {
   padding: 0 25px;
   max-width: 1250px;
   margin: 0 auto;
+}
+
+.loading-spinner {
+  border: 4px solid #facc15; /* Желтый цвет */
+  border-top: 4px solid transparent; /* Прозрачный верхний бордер */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto; /* Центрирование */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

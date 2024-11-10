@@ -11,7 +11,7 @@ import { FaBuilding, FaHammer, FaSpa } from "react-icons/fa6";
 
 const ServicesGrid = () => {
   return (
-    <div className="grid grid-cols-1 tablet:grid-cols-3 gap-16 tablet:gap-8">
+    <div className="grid grid-cols-1 tablet:grid-cols-3 gap-16 tablet:gap-8 mt-8">
       <ServiceCard
         icon={<FaHome size={48} />}
         title="Доходное управление городской и загородной недвижимостью"

@@ -8,6 +8,12 @@ const nextConfig = {
         port: "",
         pathname: "/**", // Для загрузки изображений по любым путям
       },
+      {
+        protocol: "https",
+        hostname: "secure.travelline.ru",
+        port: "",
+        pathname: "/**", // Для загрузки изображений по любым путям
+      },
     ],
   },
 };
