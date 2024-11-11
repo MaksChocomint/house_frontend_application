@@ -6,7 +6,7 @@ const Activities = () => {
   return (
     <Container styles={"mt-32"}>
       <h1 className="text-3xl text-center font-bold">Развлечения</h1>
-      <div className="w-full grid grid-cols-2 text-center tablet:grid-cols-4 gap-8 mt-16">
+      <div className="w-full grid grid-cols-1 smallTablet:grid-cols-2 text-center tablet:grid-cols-4 gap-8 mt-16">
         <div className="flex flex-col items-center gap-6">
           <Image
             src="/accommodation/green-lounge/activities/furako-park.png"

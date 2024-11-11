@@ -2,10 +2,40 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-import { FaTv, FaWifi, FaSnowflake, FaCoffee } from "react-icons/fa";
+import {
+  FaTv,
+  FaWifi,
+  FaSnowflake,
+  FaDog,
+  FaShower,
+  FaBed,
+} from "react-icons/fa";
 import { BiFridge, BiArea } from "react-icons/bi";
-import { MdPeople } from "react-icons/md";
-import { GiBed } from "react-icons/gi";
+import {
+  MdPeople,
+  MdCoffeeMaker,
+  MdOutlineBedroomParent,
+  MdWater,
+} from "react-icons/md";
+
+import {
+  MdOutlineSensorWindow,
+  MdFireplace,
+  MdMicrowave,
+  MdBalcony,
+} from "react-icons/md";
+
+import { BsMusicPlayerFill, BsProjectorFill } from "react-icons/bs";
+import { TbIroningFilled } from "react-icons/tb";
+import { GiBroom, GiForest, GiFruitTree } from "react-icons/gi";
+
+import {
+  PiHairDryerFill,
+  PiOvenFill,
+  PiWashingMachineFill,
+} from "react-icons/pi";
+import { IoBed } from "react-icons/io5";
+import { FaUnlock } from "react-icons/fa6";
 
 interface ApartmentCardProps {
   images: string[];
@@ -36,24 +66,75 @@ const ApartmentCard: React.FC<ApartmentCardProps> = ({
   // Функция для рендеринга иконок на основе фич
   const renderIcon = (feature: string) => {
     switch (feature) {
+      case "Телевизор со Smart TV":
       case "Цифровое тв":
-        return <FaTv />;
+      case "Телевизор":
+        return <FaTv title="Телевизор" />;
       case "Wi-Fi":
-        return <FaWifi />;
+        return <FaWifi title="Wi-Fi" />;
       case "Кондиционер":
-        return <FaSnowflake />;
+        return <FaSnowflake title="Кондиционер" />;
       case "Кофемашина":
-        return <FaCoffee />;
+      case "Кофеварка":
+        return <MdCoffeeMaker title="Кофемашина" />;
+      case "Утюг":
+        return <TbIroningFilled title="Утюг" />;
+      case "Фен":
+        return <PiHairDryerFill title="Фен" />;
+      case "Посудомоечная машина":
+        return <PiWashingMachineFill title="Посудомоечная машина" />;
+      case "Микроволновая печь":
+        return <MdMicrowave title="Микроволновая печь" />;
+      case "Проектор":
+        return <BsProjectorFill title="Проектор" />;
+      case "Можно с питомцами":
+      case "Можно с животными":
+        return <FaDog title="Можно с питомцами" />;
+      case "Теплый пол":
+        return <MdFireplace title="Теплый пол" />;
+      case "Сауна":
+        return <MdFireplace title="Сауна" />;
+      case "Электронные замки":
+        return <FaUnlock title="Электронные замки" />;
+      case "Мангал":
+      case "Принадлежности для барбекю":
+        return <MdFireplace title="Мангал" />;
+      case "Вид на сад":
+        return <GiFruitTree title="Вид на сад" />;
+      case "Духовка":
+        return <PiOvenFill title="Духовка" />;
+      case "Умная колонка":
+        return <BsMusicPlayerFill title="Умная колонка" />;
+      case "Банные принадлежности":
+        return <GiBroom title="Банные принадлежности" />;
+      case "Веранда":
+      case "Балкон":
+      case "Терраса":
+        return <MdBalcony title="Балкон/Терраса" />;
+      case "Вид на лес":
+        return <GiForest title="Вид на лес" />;
+      case "Вид на озеро":
+        return <MdWater title="Вид на озеро" />;
+      case "Ортопедический матрас":
+        return <IoBed title="Ортопедический матрас" />;
+      case "Душ":
+        return <FaShower title="Душ" />;
+      case "Двуспальная кровать":
+        return <IoBed title="Двуспальная кровать" />;
+      case "Две полутораспальные кровати":
+        return <FaBed title="Две полутораспальные кровати" />;
+      case "Панорамные окна":
+        return <MdOutlineSensorWindow title="Панорамные окна" />;
       case "Холодильник":
-        return <BiFridge />;
+        return <BiFridge title="Холодильник" />;
       default:
         return null;
     }
   };
 
   return (
-    <div className="border rounded-lg shadow-md overflow-hidden flex flex-col">
-      <div className="relative w-full h-80">
+    <div className="border border-black/30 rounded-lg shadow-md overflow-hidden flex flex-col">
+      <div className="relative w-full h-64">
         <motion.div
           key={currentImage}
           initial={{ opacity: 0 }}
@@ -66,8 +147,12 @@ const ApartmentCard: React.FC<ApartmentCardProps> = ({
             src={images[currentImage]}
             alt={name}
             fill
+            quality={80} // Уменьшает качество до 80 для быстрой загрузки
+            sizes="(max-width: 768px) 100vw, 50vw" // Оптимизация для разных экранов
+            placeholder="blur" // Плавная загрузка с эффектом размытия
+            blurDataURL="/placeholder-image.jpg" // Путь к изображению-заглушке
             className="object-cover"
-            priority
+            priority={currentImage === 0} // Для первой картинки ставим приоритет
           />
         </motion.div>
         <div className="absolute top-0 left-0 p-2 bg-white/80 flex space-x-4 rounded-br-lg">
@@ -96,25 +181,26 @@ const ApartmentCard: React.FC<ApartmentCardProps> = ({
       </div>
       <div className="p-4 flex-grow flex flex-col justify-between">
         <div>
-          <h2 className="text-xl font-semibold mb-2">{name}</h2>
-          <div className="flex space-x-4 mt-4">
-            <span className="flex items-center text-gray-600">
+          <h2 className="text-xl font-semibold mb-2 text-center">{name}</h2>
+          <div className="flex space-x-4 justify-center items-center">
+            <span className="flex items-center text-sm text-gray-600">
               <MdPeople className="mr-1" size={20} /> до {capacity} мест
             </span>
-            <span className="flex items-center text-gray-600">
+            <span className="flex items-center text-sm text-gray-600">
               <BiArea className="mr-1" size={20} /> {area} м²
             </span>
-            <span className="flex items-center text-gray-600">
-              <GiBed className="mr-1" size={20} /> {rooms} комн.
+            <span className="flex items-center text-sm text-gray-600">
+              <MdOutlineBedroomParent className="mr-1" size={20} /> {rooms}{" "}
+              комн.
             </span>
           </div>
         </div>
 
         <a
           href={`?tl-booking-open=true&room-type=${link}`}
-          className="mt-2 w-full font-bold bg-yellow-500 text-center text-white py-2 px-4 rounded-lg"
+          className="mt-4 w-full font-bold bg-yellow-500 text-center text-white py-2 px-4 rounded-lg"
         >
-          Выбрать
+          Забронировать
         </a>
       </div>
     </div>
