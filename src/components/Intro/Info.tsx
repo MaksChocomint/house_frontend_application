@@ -1,3 +1,6 @@
+"use client";
+
+import { usePathname } from "next/navigation";
 import React from "react";
 
 interface InfoProps {
@@ -23,6 +26,8 @@ const Info: React.FC<InfoProps> = ({ title, description }) => {
     "от",
   ];
 
+  const pathname = usePathname();
+
   // Function to split the title based on prepositions and insert line breaks
   const formatTitle = (title: string) => {
     const words = title.split(" ");
@@ -44,7 +49,11 @@ const Info: React.FC<InfoProps> = ({ title, description }) => {
       <h2 className="text-4xl tablet:text-5xl laptop:text-6xl tracking-wider font-semibold mb-2 phone:mb-4">
         {formatTitle(title)}
       </h2>
-      <p className="text-lg tablet:text-2xl text-center w-[428px] text-pretty text-gray-200 hidden smallTablet:block">
+      <p
+        className={`text-lg tablet:text-2xl text-center ${
+          pathname === "/" ? "w-[410px]" : "w-[428px]"
+        } text-pretty text-gray-200 hidden smallTablet:block`}
+      >
         {formatTitle(description)}
       </p>
     </div>
