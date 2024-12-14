@@ -7,7 +7,7 @@ type Props = {
 
 const Title = ({ upperText, lowerText }: Props) => {
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4 text-nowrap">
       <div className="text-home-coziness uppercase text-lg">{upperText}</div>
       <div
         className="text-4xl text-black uppercase font-medium"

@@ -20,7 +20,7 @@ const Pallete = () => {
         <div className="uppercase text-natural-style font-medium text-2xl">
           ВЫБЕРИ ДОМ И/ИЛИ КВАРТИРУ В ПАЛИТРЕ СВОЕГО НАСТРОЕНИЯ!
         </div>
-        <div className="flex items-center justify-between mt-8">
+        <div className="flex items-center gap-4 flex-wrap mt-8">
           {colors.map((color) => (
             <ColorCard key={color} color={color} />
           ))}

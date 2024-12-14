@@ -8,7 +8,7 @@ import Image from "next/image";
 
 const Info = () => {
   return (
-    <Container styles="flex items-start justify-between mr-52">
+    <Container styles="flex items-start gap-10 justify-between flex-col smallLaptop:flex-row desktop:mr-40">
       <Title upperText="О нас" lowerText="Что такое<br>Flatpoint" />
       <div className="flex flex-col gap-8 w-[692px] text-lg">
         <div className="text-justify">
