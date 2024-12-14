@@ -30,6 +30,9 @@ const config: Config = {
     },
 
     extend: {
+      fontFamily: {
+        montserrat: "var(--font-montserrat)", 
+      },
       colors: {
         "clean-space": "#F3F2ED",
 
