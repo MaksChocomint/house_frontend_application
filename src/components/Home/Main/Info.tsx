@@ -10,7 +10,7 @@ const Info = () => {
   return (
     <Container styles="flex items-start justify-between mr-52">
       <Title upperText="О нас" lowerText="Что такое<br>Flatpoint" />
-      <div className="flex flex-col gap-8 w-[60%] text-lg">
+      <div className="flex flex-col gap-8 w-[692px] text-lg">
         <div className="text-justify">
           FLATPOINT — это управляющая компания, специализирующаяся на посуточной
           аренде домов в Подмосковье и квартир в Москве. Наша миссия —
