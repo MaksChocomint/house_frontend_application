@@ -31,32 +31,33 @@ const config: Config = {
 
     extend: {
       colors: {
-        "clean-space": "#f3f2ed",
+        "clean-space": "#F3F2ED",
 
-        "human-detail": "#e2dbc9",
+        "human-detail": "#E2DBC9",
 
-        "home-coziness": "#b69f80",
+        "home-coziness": "#B69F80",
 
-        "natural-style": "#53473b",
+        "natural-style": "#53473B",
 
-        "blue-heaven": "",
+        "blue-heaven": "#779DD0",
 
-        "mint": "", 
+        "mint": "#64B48E", 
 
-        "softwood": "",
+        "softwood": "#345042",
 
-        "olive": "",
+        "olive": "#616741",
 
-        "sand": "",
+        "sand": "#B4AB64",
 
-        "wheat": "",
+        "wheat": "#E9DA79",
 
-        "moonlight": "",
+        "moonlight": "#0B0C57",
 
-        "rowan": "",
+        "rowan": "#C15E46",
 
-        "custom-black": ""
+        "soft-black": "#1D1D1D",
 
+        "honey": "#D9AC59"
       },
     },
   },

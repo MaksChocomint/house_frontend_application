@@ -54,7 +54,7 @@ const ContactButton = () => {
                 href="https://api.whatsapp.com/send/?phone=79251437952"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-green-500 transition-colors"
+                className="text-black transition-colors"
               >
                 <RiWhatsappFill className="text-[56px] drop-shadow-md" />
               </Link>
@@ -63,7 +63,7 @@ const ContactButton = () => {
             <div className="flex flex-col items-center gap-2 text-sm">
               <Link
                 href="tel:+74951252527"
-                className="text-blue-500 transition-colors"
+                className="text-black transition-colors"
               >
                 <BiSolidPhoneCall className="text-[54px] drop-shadow-md" />
               </Link>
@@ -72,7 +72,7 @@ const ContactButton = () => {
             <div className="flex flex-col items-center gap-2 text-sm">
               <Link
                 href="mailto:info@flatpoint.ru"
-                className="text-yellow-500 transition-colors"
+                className="text-black transition-colors"
               >
                 <MdEmail className="text-[52px] drop-shadow-md" />
               </Link>
