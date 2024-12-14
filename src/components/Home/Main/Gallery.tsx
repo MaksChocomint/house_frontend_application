@@ -23,15 +23,13 @@ const Gallery: React.FC = () => {
   return (
     <div className="w-full mt-32">
       <Container>
-        <div className="font-medium text-3xl text-natural-style">
+        <div className="font-medium text-xl tablet:text-2xl smallLaptop:text-3xl text-natural-style">
           МИНИМАЛИСТИЧНЫЙ ДИЗАЙН, НАТУРАЛЬНЫЕ МАТЕРИАЛЫ <br /> И ВНИМАНИЕ К
           КАЖДОЙ ДЕТАЛИ — <br /> МЫ СТАРАЛИСЬ УЧЕСТЬ ВСЕ (ДЛЯ ВАШЕГО КОМФОРТА)
         </div>
       </Container>
       <div className="relative w-full mt-16">
         <Swiper
-          slidesPerView={3}
-          spaceBetween={30}
           loop={true}
           pagination={{
             clickable: true,
@@ -39,10 +37,25 @@ const Gallery: React.FC = () => {
           }}
           modules={[Pagination]}
           className="mySwiper"
+          spaceBetween={30} // Пространство между слайдами
+          breakpoints={{
+            // Для мобильных устройств: 1 слайд
+            0: {
+              slidesPerView: 1,
+            },
+            // Для планшетов: 2 слайда
+            768: {
+              slidesPerView: 2,
+            },
+            // Для десктопов: 3 слайда
+            1024: {
+              slidesPerView: 3,
+            },
+          }}
         >
           {images.map((image, index) => (
             <SwiperSlide key={index}>
-              <div className="relative w-full h-[500px]">
+              <div className="relative w-full h-[468px]">
                 <Image
                   src={image}
                   alt={`Slide ${index + 1}`}

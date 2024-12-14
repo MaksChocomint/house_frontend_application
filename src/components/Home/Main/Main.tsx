@@ -1,7 +1,7 @@
 import React from "react";
 import Info from "./Info";
 import Gallery from "./Gallery";
-import Pallete from "./Pallete";
+import Palette from "./Palette";
 // import Gallery from "./Gallery";
 // import Link from "next/link";
 // import Container from "@/components/Container";
@@ -11,7 +11,7 @@ const Main = () => {
     <div className="mt-32 w-full flex flex-col">
       <Info />
       <Gallery />
-      <Pallete />
+      <Palette />
     </div>
   );
 };

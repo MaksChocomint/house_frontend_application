@@ -12,15 +12,15 @@ interface InfoProps {
 const Info: React.FC<InfoProps> = ({ title, description, hasButton }) => {
   return (
     <Container styles="w-full flex flex-col items-start gap-4 mt-32">
-      <h2 className="text-4xl tablet:text-5xl laptop:text-6xl font-medium uppercase mb-2 phone:mb-4">
+      <h2 className="text-5xl smallLaptop:text-6xl font-medium uppercase mb-2 phone:mb-4">
         {title}
       </h2>
       <p
-        className={`text-lg tablet:text-2xl text-pretty text-black hidden smallTablet:block`}
+        className={`text-lg smallLaptop:text-2xl text-pretty text-black`}
         dangerouslySetInnerHTML={{ __html: description }} // Безопасное использование для разметки
       ></p>
       {hasButton && (
-        <button className="mt-10 text-xl uppercase bg-home-coziness rounded-full text-white py-5 px-16">
+        <button className="mt-10 text-lg smallLaptop:text-xl uppercase bg-home-coziness rounded-full text-white py-3 px-10 smallLaptop:py-5 smallLaptop:px-16">
           Забронировать
         </button>
       )}
