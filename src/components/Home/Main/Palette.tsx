@@ -19,8 +19,8 @@ const colors = [
 
 const Palette = () => {
   return (
-    <div className="w-full mt-32 bg-human-detail py-10">
-      <Container styles="mt-10">
+    <div className="w-full mt-32 bg-human-detail py-10 h-60">
+      <Container styles="mt-4">
         <div className="uppercase text-natural-style font-medium text-2xl">
           ВЫБЕРИ ДОМ И/ИЛИ КВАРТИРУ В ПАЛИТРЕ СВОЕГО НАСТРОЕНИЯ!
         </div>
