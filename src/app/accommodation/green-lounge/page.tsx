@@ -16,6 +16,7 @@ const GreenLounge = () => {
             infoTitle="Гостевые дома"
             infoDescription="Место, где вы сможете забыть о городе и воссоединиться с природой"
             darker={false}
+            hasButton={false}
           />
         </div>
       </div>

@@ -16,6 +16,7 @@ const Moscow = () => {
             infoTitle="Квартиры и студии в Москве"
             infoDescription="У нас идеально сочетаются современный комфорт и уют"
             darker={false}
+            hasButton={false}
           />
         </div>
       </div>
