@@ -69,7 +69,7 @@ const ColorCard = ({ color }: Props) => {
 
   return (
     <div
-      className={`flex flex-col gap-2 p-1 pb-3 rounded-xl bg-white font-montserrat`}
+      className={`flex w-[136px] flex-col gap-2 p-1 pb-3 rounded-xl bg-white font-montserrat`}
     >
       <div className={`w-32 h-28 rounded-xl ${paletteColor}`}></div>
       <div className="flex flex-col gap-0 text-start mx-0.5">
