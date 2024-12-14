@@ -1,58 +1,52 @@
 "use client";
 import React from "react";
-import CompanyCard from "./CompanyCard";
+
 import Container from "@/components/Container";
+import Title from "@/components/Title";
+import Link from "next/link";
+import Image from "next/image";
 
 const Info = () => {
   return (
-    <Container
-      styles={
-        "grid place-items-center grid-cols-1 smallLaptop:grid-cols-2 gap-8"
-      }
-    >
-      <div className="smallLaptop:col-start-2">
-        <div className="flex flex-col items-end">
-          <h1 className="font-semibold tracking-wider text-2xl text-yellow-500">
-            FlatPoint
-          </h1>
-          <div className="h-0.5 bg-yellow-500 w-1/2"></div>
+    <Container styles="flex items-start justify-between mr-52">
+      <Title upperText="О нас" lowerText="Что такое<br>Flatpoint" />
+      <div className="flex flex-col gap-8 w-[60%] text-lg">
+        <div className="text-justify">
+          FLATPOINT — это управляющая компания, специализирующаяся на посуточной
+          аренде домов в Подмосковье и квартир в Москве. Наша миссия —
+          предоставить вам комфортное жильё, где каждая деталь продумана с
+          любовью и заботой. Уже много лет мы создаем атмосферу уюта, чтобы Вы
+          могли полноценно насладиться отдыхом. Мы тщательно подбираем каждый
+          объект размещения, чтобы обеспечить высокие стандарты качества.
         </div>
-        <p className="tablet:text-lg mt-5 text-justify font-light">
-          Мы — управляющая компания, специализирующаяся на посуточной аренде
-          домов и квартир в Москве и Подмосковье. Наша миссия — предоставить вам
-          комфортное жильё, где каждая деталь продумана с любовью и заботой. Уже
-          много лет команда FlatPoint создает атмосферу уюта, чтобы Вы могли
-          полноценно насладиться отдыхом. Мы тщательно подбираем каждый объект
-          размещения, чтобы обеспечить высочайшие стандарты качества.
-        </p>
+        <div className="flex gap-16 items-start justify-between text-justify">
+          <div className="w-1/2">
+            Вы сможете расслабиться в доме загородом или сосредоточиться на
+            важном в квартирах — все остальное мы берем на себя. В домах и
+            квартирах есть все необходимые атрибуты для современного человека,
+            которые сравнимы с сервисом отеля высокого класса.
+          </div>
+          <div className="flex flex-col gap-4 text-justify w-1/2">
+            <div className="">
+              Дома и квартиры FLATPOINT выполнены в минималистичном стиле с
+              использованием только натуральных материалов, в основе которых —
+              дерево. Атмосфера и интерьер каждого дома, квартиры уникален.
+            </div>
+            <Link
+              href="#"
+              className="uppercase font-medium flex gap-2 text-lg text-home-coziness text-nowrap"
+            >
+              <div>(Больше о копании)</div>
+              <Image
+                src="/main/arrow-right.svg"
+                alt={"arrow"}
+                width={100}
+                height={100}
+              />
+            </Link>
+          </div>
+        </div>
       </div>
-      <div className="smallLaptop:row-start-1">
-        <CompanyCard
-          imageUrl="/main/green-lounge.jpg"
-          title="Гостевые дома"
-          altText="Уютные и стильные гостевые дома расположены в живописном месте — в КП Грин Лаундж вблизи от Истринского водохранилища. Избавьтесь от стресса и восстановите внутреннюю энергию!"
-          link="/accommodation/green-lounge"
-        />
-      </div>
-      <div className="mt-4 tablet:text-lg smallLaptop:row-start-2 text-justify flex flex-col gap-6 font-light">
-        <p>
-          У нас Вы найдете идеальное место как для семейного отдыха, так и для
-          деловых поездок. Вы сможете расслабиться или сосредоточиться на важном
-          — все остальное мы возьмём на себя. Не упустите возможность
-          насладиться красивыми домами и уютными апартаментами, которые мы с
-          любовью подготовили для вас.
-        </p>
-        <span className="italic font-medium text-base">
-          С FlatPoint ваш отдых становится по-настоящему особенным!
-        </span>
-      </div>
-
-      <CompanyCard
-        imageUrl="/main/moscow.jpg" // Укажите правильное изображение для Москвы
-        title="Квартиры и студии в Москве"
-        altText="Наши квартиры и студии в Москве — место, где идеально сочетаются современный комфорт и уют. Насладитесь всеми прелестями столичной жизни!"
-        link="/accommodation/moscow"
-      />
     </Container>
   );
 };

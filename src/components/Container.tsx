@@ -12,7 +12,7 @@ export default function Container({
 }> &
   Props) {
   return (
-    <div className={"px-4 tablet:px-10 laptop:px-40 desktop:px-60 " + styles}>
+    <div className={"px-6 tablet:px-24 laptop:px-56 desktop:px-72 " + styles}>
       {children}
     </div>
   );

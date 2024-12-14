@@ -1,62 +1,30 @@
 "use client";
 
-import { usePathname } from "next/navigation";
 import React from "react";
+import Container from "../Container";
 
 interface InfoProps {
   title: string;
-  description: string;
+  description: string; // Ожидается текст с <br> для переноса строк
+  hasButton: boolean;
 }
 
-const Info: React.FC<InfoProps> = ({ title, description }) => {
-  // List of Russian prepositions (you can expand this list as needed)
-  const prepositions = [
-    "в",
-    "во",
-    "на",
-    "за",
-    "к",
-    "по",
-    "о",
-    "об",
-    "из",
-    "под",
-    "у",
-    "при",
-    "от",
-  ];
-
-  const pathname = usePathname();
-
-  // Function to split the title based on prepositions and insert line breaks
-  const formatTitle = (title: string) => {
-    const words = title.split(" ");
-    return words.map((word, index) => {
-      if (prepositions.includes(word.toLowerCase()) && index !== 0) {
-        return (
-          <React.Fragment key={index}>
-            <br />
-            {word}
-          </React.Fragment>
-        );
-      }
-      return ` ${word}`;
-    });
-  };
-
+const Info: React.FC<InfoProps> = ({ title, description, hasButton }) => {
   return (
-    <div className="text-center max-w-3xl mx-auto flex flex-col items-center gap-4 mt-48 tablet:mt-40 laptop:mt-52 px-4">
-      <h2 className="text-4xl tablet:text-5xl laptop:text-6xl tracking-wider font-semibold mb-2 phone:mb-4">
-        {formatTitle(title)}
+    <Container styles="w-full flex flex-col items-start gap-4 mt-32">
+      <h2 className="text-4xl tablet:text-5xl laptop:text-6xl font-medium uppercase mb-2 phone:mb-4">
+        {title}
       </h2>
       <p
-        className={`text-lg tablet:text-2xl text-center ${
-          pathname === "/" ? "w-[410px]" : "w-[428px]"
-        } text-pretty text-gray-200 hidden smallTablet:block`}
-      >
-        {formatTitle(description)}
-      </p>
-    </div>
+        className={`text-lg tablet:text-2xl text-pretty text-black hidden smallTablet:block`}
+        dangerouslySetInnerHTML={{ __html: description }} // Безопасное использование для разметки
+      ></p>
+      {hasButton && (
+        <button className="mt-10 text-xl uppercase bg-home-coziness rounded-full text-white py-5 px-16">
+          Забронировать
+        </button>
+      )}
+    </Container>
   );
 };
 

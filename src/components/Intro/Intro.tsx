@@ -7,23 +7,29 @@ interface IntroProps {
   infoTitle: string;
   infoDescription: string;
   darker: boolean;
+  hasButton: boolean;
 }
 
 const Intro: React.FC<IntroProps> = ({
   imageUrl,
   infoTitle,
   infoDescription,
+  hasButton,
   darker,
 }) => {
   return (
     <div>
       {darker && <div className="absolute inset-0 bg-black opacity-15 z-10" />}
       <Background imageUrl={imageUrl}>
-        <div className="flex flex-col items-center w-full h-full justify-between gap-4tablet:gap-8 laptop:gap-10 overflow-y-auto">
-          <Info title={infoTitle} description={infoDescription} />
-          <Booking />
+        <div className="flex flex-col items-center w-full h-full justify-between gap-4 tablet:gap-8 laptop:gap-10">
+          <Info
+            hasButton={hasButton}
+            title={infoTitle}
+            description={infoDescription}
+          />
         </div>
       </Background>
+      <Booking />
     </div>
   );
 };

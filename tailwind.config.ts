@@ -26,7 +26,7 @@ const config: Config = {
     },
 
     objectPosition: {
-      lowCenter: "50% 40%",
+      lowCenter: "50% 30%",
     },
 
     extend: {
@@ -38,6 +38,25 @@ const config: Config = {
         "home-coziness": "#b69f80",
 
         "natural-style": "#53473b",
+
+        "blue-heaven": "",
+
+        "mint": "", 
+
+        "softwood": "",
+
+        "olive": "",
+
+        "sand": "",
+
+        "wheat": "",
+
+        "moonlight": "",
+
+        "rowan": "",
+
+        "custom-black": ""
+
       },
     },
   },

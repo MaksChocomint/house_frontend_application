@@ -6,15 +6,16 @@ import Footer from "@/components/Footer/Footer";
 
 const Home = () => {
   return (
-    <div className="w-full">
-      <div className="h-screen flex flex-col">
-        <div className="flex-1 flex flex-col">
+    <div className="w-full bg-clean-space">
+      <div className="flex flex-col">
+        <div className="flex flex-col">
           <Header />
           <Intro
             imageUrl="/main/background.jpg"
-            infoTitle="Добро пожаловать во FlatPoint"
-            infoDescription="Мы создаем атмосферу спокойствия и незабываемых впечатлений!"
+            infoTitle="Раскрась момент"
+            infoDescription="В эстетичном доме в Подмосковье<br>или в комфортабельных апартаментах в Москве"
             darker={false}
+            hasButton={true}
           />
         </div>
       </div>

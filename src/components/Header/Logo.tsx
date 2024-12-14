@@ -6,11 +6,11 @@ const Logo = () => {
     <div className="flex justify-center mb-2 tablet:mb-0 cursor-pointer">
       <Link href="/">
         <Image
-          src="/logo.png"
+          src="/logo.svg"
           alt="logo"
-          width={100}
-          height={100}
-          className="tablet:w-[120px] "
+          width={160}
+          height={160}
+          className="tablet:w-[160px] "
         />
       </Link>
     </div>

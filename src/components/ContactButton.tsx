@@ -18,8 +18,8 @@ const ContactButton = () => {
     <div className="relative z-100">
       <motion.div
         onClick={toggleMenu}
-        className={`select-none fixed bottom-4 right-4 tablet:bottom-14 tablet:right-14 drop-shadow-md shadow-black cursor-pointer z-[100] border-yellow-500 border-[3px] rounded-full p-3 tablet:p-4 ${
-          isOpen ? "bg-white text-black" : "bg-yellow-500 text-white"
+        className={`select-none fixed bottom-4 right-4 tablet:bottom-14 bg-human-detail tablet:right-14 drop-shadow-md shadow-black cursor-pointer z-[100] border-human-detail border-[3px] rounded-full p-3 tablet:p-4 
+          
         }`}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -39,7 +39,7 @@ const ContactButton = () => {
       </motion.div>
       {isOpen && (
         <motion.div
-          className="fixed text-center right-3 tablet:right-14 bottom-24 tablet:bottom-[136px] z-[100] bg-white shadow-md shadow-black/30 border border-black/20 rounded-lg p-6"
+          className="fixed text-center bg-human-detail right-3 tablet:right-14 bottom-24 tablet:bottom-[136px] z-[100] bg-space-white shadow-md shadow-black/30 border border-black/20 rounded-lg p-6"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}

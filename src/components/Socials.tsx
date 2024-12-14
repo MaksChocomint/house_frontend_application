@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { AiFillInstagram } from "react-icons/ai";
-import { FaVk } from "react-icons/fa6";
-import { RiWhatsappFill } from "react-icons/ri";
+import { SiInstagram } from "react-icons/si";
+import { IoLogoVk } from "react-icons/io";
+import { FaWhatsapp } from "react-icons/fa";
 
 const Socials = () => {
   return (
@@ -10,25 +10,25 @@ const Socials = () => {
         href="https://api.whatsapp.com/send/?phone=79251437952"
         target="_blank"
         rel="noopener noreferrer"
-        className="hover:text-yellow-500 transition-colors"
+        className="rounded-full p-[6px] bg-black text-human-detail"
       >
-        <RiWhatsappFill className="text-[40px] tablet:text-[28px]" />
-      </Link>
-      <Link
-        href="https://vk.com/posytochnodom1"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="hover:text-yellow-500 transition-colors"
-      >
-        <FaVk className="text-[40px] tablet:text-[28px]" />
+        <FaWhatsapp className="text-[40px] tablet:text-[20px]" />
       </Link>
       <Link
         href="https://www.instagram.com/invites/contact/?i=1fc31qwirhj3u&utm_content=sxjyxvl"
         target="_blank"
         rel="noopener noreferrer"
-        className="hover:text-yellow-500 transition-colors"
+        className="rounded-full p-[6px] bg-black text-human-detail"
       >
-        <AiFillInstagram className="text-[42px] tablet:text-[30px]" />
+        <SiInstagram className="text-[40px] tablet:text-[20px]" />
+      </Link>
+      <Link
+        href="https://vk.com/posytochnodom1"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="rounded-full p-[6px] bg-black text-human-detail"
+      >
+        <IoLogoVk className="text-[40px] tablet:text-[20px]" />
       </Link>
     </div>
   );
