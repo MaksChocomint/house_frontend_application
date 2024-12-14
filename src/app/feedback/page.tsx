@@ -16,6 +16,7 @@ const Feedback = () => {
             infoTitle="Отзывы"
             infoDescription="Flatpoint"
             darker={false}
+            hasButton={false}
           />
         </div>
       </div>
