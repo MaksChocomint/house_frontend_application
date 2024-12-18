@@ -31,9 +31,9 @@ const ContactButton = () => {
           transition={{ duration: 0.1 }}
         >
           {isOpen ? (
-            <AiOutlineClose size={28} />
+            <AiOutlineClose size={28} className="text-natural-style" />
           ) : (
-            <AiOutlineMessage size={28} />
+            <AiOutlineMessage size={28} className="text-natural-style" />
           )}
         </motion.div>
       </motion.div>
@@ -54,7 +54,7 @@ const ContactButton = () => {
                 href="https://api.whatsapp.com/send/?phone=79251437952"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-black transition-colors"
+                className="text-natural-style transition-colors"
               >
                 <RiWhatsappFill className="text-[56px] drop-shadow-md" />
               </Link>
@@ -63,7 +63,7 @@ const ContactButton = () => {
             <div className="flex flex-col items-center gap-2 text-sm">
               <Link
                 href="tel:+74951252527"
-                className="text-black transition-colors"
+                className="text-natural-style transition-colors"
               >
                 <BiSolidPhoneCall className="text-[54px] drop-shadow-md" />
               </Link>
@@ -72,7 +72,7 @@ const ContactButton = () => {
             <div className="flex flex-col items-center gap-2 text-sm">
               <Link
                 href="mailto:info@flatpoint.ru"
-                className="text-black transition-colors"
+                className="text-natural-style transition-colors"
               >
                 <MdEmail className="text-[52px] drop-shadow-md" />
               </Link>

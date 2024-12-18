@@ -34,7 +34,7 @@ const Info = () => {
             </div>
             <Link
               href="#"
-              className="uppercase font-medium flex gap-2 text-lg text-home-coziness text-nowrap"
+              className="uppercase font-medium flex gap-2 text-xl text-home-coziness text-nowrap"
             >
               <div>(Больше о копании)</div>
               <Image

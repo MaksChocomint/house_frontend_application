@@ -2,6 +2,7 @@ import React from "react";
 import Info from "./Info";
 import Gallery from "./Gallery";
 import Palette from "./Palette";
+import Apartments from "./Apartments";
 // import Gallery from "./Gallery";
 // import Link from "next/link";
 // import Container from "@/components/Container";
@@ -12,6 +13,7 @@ const Main = () => {
       <Info />
       <Gallery />
       <Palette />
+      <Apartments />
     </div>
   );
 };

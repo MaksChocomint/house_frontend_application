@@ -10,10 +10,14 @@ const Booking = () => {
     script.innerHTML = `
       (function(w) {
         var q = [
-          ['setContext', 'TL-INT-flat-point-ru_2024-10-18', 'ru'],
-          ['embed', 'search-form', {
-              container: 'tl-search-form'
-          }],
+            ['setContext', 'TL-INT-flat-point-ru_2024-10-18', 'ru'],
+            ['embed', 'search-form', {
+                container: 'tl-search-form'
+            }],
+            ['setContext', 'TL-INT-flat-point-ru_2024-10-18.new', 'ru'],
+            ['embed', 'search-form', {
+                container: 'tl-search-form-new'
+            }],
         ];
         var h=["ru-ibe.tlintegration.ru","ibe.tlintegration.ru","ibe.tlintegration.com"];
         var t = w.travelline = (w.travelline || {}),
@@ -42,10 +46,10 @@ const Booking = () => {
 
   return (
     <div id="block-search">
-      <div id="tl-search-form" className="tl-container">
-        <noindex>
+      <div id="tl-search-form-new" className="tl-container">
+        <div className="h-24 py-2 bg-human-detail">
           <div className="loading-spinner"></div>
-        </noindex>
+        </div>
       </div>
     </div>
   );
