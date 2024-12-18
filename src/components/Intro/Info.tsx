@@ -20,9 +20,12 @@ const Info: React.FC<InfoProps> = ({ title, description, hasButton }) => {
         dangerouslySetInnerHTML={{ __html: description }} // Безопасное использование для разметки
       ></p>
       {hasButton && (
-        <button className="mt-10 text-lg smallLaptop:text-xl uppercase bg-home-coziness rounded-full text-white py-3 px-10 smallLaptop:py-5 smallLaptop:px-16">
+        <a
+          href="?tl-booking-open=true"
+          className="mt-10 text-lg smallLaptop:text-xl uppercase bg-home-coziness rounded-full text-white py-3 px-10 smallLaptop:py-5 smallLaptop:px-16"
+        >
           Забронировать
-        </button>
+        </a>
       )}
     </Container>
   );

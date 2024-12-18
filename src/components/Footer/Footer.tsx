@@ -27,7 +27,7 @@ const Footer = () => {
 
       <Container styles="flex w-full bg-human-detail py-24 h-[380px] font-medium">
         <div className="h-full w-full flex flex-col gap-16 smallTablet:flex-row justify-between">
-          <div className="flex flex-col justify-between">
+          <div className="flex flex-col justify-between gap-4">
             <Logo />
             <div className="font-medium">
               2024. Все права защищены
@@ -41,7 +41,7 @@ const Footer = () => {
             <Link href="/accommodation/moscow">Апартаменты</Link>
             <Link href="/contacts">Контакты</Link>
           </div>
-          <div className="flex flex-col justify-between">
+          <div className="flex flex-col justify-between gap-2">
             <div>+7 (495) 125 25 27</div>
             <Socials />
             <div className="flex gap-4">
