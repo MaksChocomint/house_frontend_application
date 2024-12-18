@@ -2,8 +2,8 @@
   width: 12px;
   height: 12px;
   margin: 0 6px;
-  opacity: 0.8;
-  @apply bg-human-detail;
+  opacity: 0.5;
+  @apply bg-home-coziness;
 }
 
 .custom-pagination .swiper-pagination-bullet-active {

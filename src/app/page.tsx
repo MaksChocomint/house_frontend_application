@@ -14,7 +14,7 @@ const Home = () => {
             imageUrl="/main/background.jpg"
             infoTitle="Раскрась момент"
             infoDescription="В эстетичном доме в Подмосковье<br>или в комфортабельных апартаментах в Москве"
-            darker={false}
+            hasFilmtape={true}
             hasButton={true}
           />
         </div>

@@ -24,7 +24,7 @@ const Header = () => {
         {/* Кнопка для открытия/закрытия меню на мобильных устройствах */}
         <button
           className={`tablet:hidden text-2xl z-50 focus:outline-none ${
-            menuOpen ? "text-white" : "text-black"
+            menuOpen ? "text-human-detail" : "text-black"
           }`}
           onClick={toggleMenu}
         >
@@ -48,7 +48,7 @@ const Header = () => {
           } transition-transform duration-300 tablet:hidden z-40`}
         >
           <div className="h-min-screen">
-            <div className="flex flex-col h-full py-8 justify-center items-center text-white text-base gap-4">
+            <div className="flex flex-col h-full mt-16 py-8 justify-center items-center text-human-detail text-base gap-4">
               <Navbar />
               <Contacts />
             </div>

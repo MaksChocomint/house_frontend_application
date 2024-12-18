@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Logo = () => {
   return (
-    <div className="flex justify-center mb-2 tablet:mb-0 cursor-pointer">
+    <div className="flex mb-2 tablet:mb-0 cursor-pointer">
       <Link href="/">
         <Image
           src="/logo.svg"

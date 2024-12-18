@@ -59,9 +59,9 @@ const YandexMap = () => {
           >
             <Clusterer
               options={{
-                preset: "islands#invertedYellowClusterIcons",
+                preset: "islands#invertedBrownClusterIcons",
                 groupByCoordinates: false,
-                iconColor: "#ffd408",
+                iconColor: "#b69f80",
               }}
             >
               {placemarks.map((placemark, index) => (
@@ -72,8 +72,8 @@ const YandexMap = () => {
                     iconCaption: placemark.id, // Название метки
                   }}
                   options={{
-                    preset: "islands#yellowDotIcon", // Желтая метка
-                    iconColor: "#ffd408",
+                    preset: "islands#brownDotIcon", // Желтая метка
+                    iconColor: "#b69f80",
                   }}
                 />
               ))}

@@ -1,12 +1,13 @@
 import Background from "../Background";
 import Booking from "./Booking";
 import Info from "./Info";
+import Image from "next/image";
 
 interface IntroProps {
   imageUrl: string;
   infoTitle: string;
   infoDescription: string;
-  darker: boolean;
+  hasFilmtape?: boolean;
   hasButton: boolean;
 }
 
@@ -15,11 +16,10 @@ const Intro: React.FC<IntroProps> = ({
   infoTitle,
   infoDescription,
   hasButton,
-  darker,
+  hasFilmtape,
 }) => {
   return (
     <div>
-      {darker && <div className="absolute inset-0 bg-black opacity-15 z-10" />}
       <Background imageUrl={imageUrl}>
         <div className="flex flex-col items-center w-full h-full justify-between gap-4 tablet:gap-8 laptop:gap-10">
           <Info
@@ -28,6 +28,15 @@ const Intro: React.FC<IntroProps> = ({
             description={infoDescription}
           />
         </div>
+        {hasFilmtape && (
+          <Image
+            src="/main/filmtape.png"
+            alt="Кинопленка"
+            width={400}
+            height={800}
+            className="absolute hidden largeTablet:block  top-[15%] smallLaptop:top-[13%] right-4 smallLaptop:right-36 tablet:w-[300px] laptop:w-[350px] desktop:w-[400px]"
+          />
+        )}
       </Background>
       <Booking />
     </div>

@@ -5,14 +5,14 @@ import { FaWhatsapp } from "react-icons/fa";
 
 const Socials = () => {
   return (
-    <div className="flex gap-2 justify-center">
+    <div className="flex gap-2">
       <Link
         href="https://api.whatsapp.com/send/?phone=79251437952"
         target="_blank"
         rel="noopener noreferrer"
         className="rounded-full p-[6px] bg-black text-human-detail"
       >
-        <FaWhatsapp className="text-[40px] tablet:text-[20px]" />
+        <FaWhatsapp className="text-[32px] tablet:text-[20px]" />
       </Link>
       <Link
         href="https://www.instagram.com/invites/contact/?i=1fc31qwirhj3u&utm_content=sxjyxvl"
@@ -20,7 +20,7 @@ const Socials = () => {
         rel="noopener noreferrer"
         className="rounded-full p-[6px] bg-black text-human-detail"
       >
-        <SiInstagram className="text-[40px] tablet:text-[20px]" />
+        <SiInstagram className="text-[32px] tablet:text-[20px]" />
       </Link>
       <Link
         href="https://vk.com/posytochnodom1"
@@ -28,7 +28,7 @@ const Socials = () => {
         rel="noopener noreferrer"
         className="rounded-full p-[6px] bg-black text-human-detail"
       >
-        <IoLogoVk className="text-[40px] tablet:text-[20px]" />
+        <IoLogoVk className="text-[32px] tablet:text-[20px]" />
       </Link>
     </div>
   );

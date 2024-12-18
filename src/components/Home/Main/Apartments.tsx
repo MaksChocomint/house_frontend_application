@@ -20,7 +20,7 @@ const Apartments = () => {
             "до 6 человек",
           ]}
           description="Это уголок, где природа и уют тесно переплетаются, создавая идеальные условия для спокойного отдыха. Этот стильный дом, вдохновлённый золотыми полями пшеницы, предлагает Вам насладиться атмосферой уюта, тепла и щедрости природы."
-          link="308326"
+          link="/accommodation/green-lounge"
           images={[
             "/accommodation/honey/pic1.jpg",
             "/accommodation/honey/pic2.jpg",
@@ -34,6 +34,7 @@ const Apartments = () => {
           ]}
           paletteImage="/accommodation/honey/pic10.png"
           isMirrored={false}
+          booking={false}
         />
       </div>
       <div className="flex flex-col gap-16">
@@ -51,7 +52,7 @@ const Apartments = () => {
             "до 3 человек",
           ]}
           description="Это пространство, где простота и стиль встречаются в гармонии. Студия создана для тех, кто ценит минимализм и безупречный дизайн, который отражает утончённый вкус и современные тенденции. Оформлена в классическом черно-белом цвете, создающем атмосферу строгости и одновременно уюта. Чистые линии, геометрические формы и стильные акценты придают пространству уникальный характер."
-          link="308648"
+          link="/accommodation/moscow"
           images={[
             "/accommodation/blacknwhite/pic1.jpg",
             "/accommodation/blacknwhite/pic2.jpg",
@@ -65,6 +66,7 @@ const Apartments = () => {
           ]}
           paletteImage="/accommodation/blacknwhite/pic10.png"
           isMirrored={true}
+          booking={false}
         />
       </div>
     </Container>

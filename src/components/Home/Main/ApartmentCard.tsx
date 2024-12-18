@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
 import { useWindowSize } from "@/utils/useWindowSize";
+import Link from "next/link";
 
 interface ApartmentCardProps {
   title: string;
@@ -15,6 +16,7 @@ interface ApartmentCardProps {
   link: string;
   isMirrored: boolean;
   paletteImage: string;
+  booking: boolean;
 }
 
 const ApartmentCard: React.FC<ApartmentCardProps> = ({
@@ -25,6 +27,7 @@ const ApartmentCard: React.FC<ApartmentCardProps> = ({
   link,
   isMirrored,
   paletteImage,
+  booking,
 }) => {
   const [imageList, setImageList] = useState(images);
   const { width } = useWindowSize();
@@ -68,21 +71,39 @@ const ApartmentCard: React.FC<ApartmentCardProps> = ({
           <div className="text-sm desktop:text-base text-justify">
             {description}
           </div>
-          <a
-            href={`?tl-booking-open=true&room-type=${link}`}
-            className="uppercase font-medium flex gap-4 text-lg desktop:text-xl text-home-coziness items-center"
-          >
-            <div>(Подробнее)</div>
-            <div className="w-full">
-              <Image
-                src="/main/arrow-right-long.svg"
-                alt="arrow"
-                width={200}
-                height={200}
-                className="object-cover smallLaptop:w-full h-full"
-              />
-            </div>
-          </a>
+          {booking ? (
+            <a
+              href={`?tl-booking-open=true&room-type=${link}`}
+              className="uppercase font-medium flex gap-4 text-lg desktop:text-xl text-home-coziness items-center"
+            >
+              <div>(Подробнее)</div>
+              <div className="w-full">
+                <Image
+                  src="/main/arrow-right-long.svg"
+                  alt="arrow"
+                  width={200}
+                  height={200}
+                  className="object-cover smallLaptop:w-full h-full"
+                />
+              </div>
+            </a>
+          ) : (
+            <Link
+              href={link}
+              className="uppercase font-medium flex gap-4 text-lg desktop:text-xl text-home-coziness items-center"
+            >
+              <div>(Подробнее)</div>
+              <div className="w-full">
+                <Image
+                  src="/main/arrow-right-long.svg"
+                  alt="arrow"
+                  width={200}
+                  height={200}
+                  className="object-cover smallLaptop:w-full h-full"
+                />
+              </div>
+            </Link>
+          )}
         </div>
       </div>
 

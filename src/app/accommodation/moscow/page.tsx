@@ -15,7 +15,7 @@ const Moscow = () => {
             imageUrl="/accommodation/moscow/moscow-background.webp"
             infoTitle="Квартиры и студии в Москве"
             infoDescription="У нас идеально сочетаются современный комфорт и уют"
-            darker={false}
+            hasFilmtape={false}
             hasButton={false}
           />
         </div>

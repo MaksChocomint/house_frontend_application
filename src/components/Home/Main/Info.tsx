@@ -33,7 +33,7 @@ const Info = () => {
               дерево. Атмосфера и интерьер каждого дома, квартиры уникален.
             </div>
             <Link
-              href="#"
+              href="/about"
               className="uppercase font-medium flex gap-2 text-xl text-home-coziness text-nowrap"
             >
               <div>(Больше о копании)</div>

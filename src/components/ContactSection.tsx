@@ -1,8 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
-import ContactsBackground from "./ContactsBackground";
+import Background from "./Background";
 import emailjs from "@emailjs/browser";
+import Title from "./Title";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -59,21 +60,19 @@ const ContactSection = () => {
 
   return (
     <div className="mt-32 w-full min-h-screen text-white">
-      <ContactsBackground imageUrl="/contact-section.jpg">
-        <div className="flex flex-col items-center justify-center gap-8 tablet:gap-10 w-full py-10">
-          <h1 className="font-semibold tracking-wide text-3xl tablet:text-4xl drop-shadow-lg">
-            Остались вопросы?
-          </h1>
-          <p className="font-light drop-shadow-lg">
-            Мы с удовольствием на них ответим!
-          </p>
+      <Background imageUrl="/contact.jpg">
+        <div className="absolute top-1/2 -translate-y-1/2 smallLaptop:right-56 flex flex-col justify-center gap-5 py-14 px-8 bg-clean-space smallLaptop:w-[580px]">
+          <Title
+            upperText="Контакты"
+            lowerText="Оставьте заявку<br>Мы свяжемся с Вами"
+          />
           <form
             onSubmit={handleSubmit}
-            className="flex flex-col gap-4 px-16 w-full tablet:min-w-[500px] tablet:max-w-[40%] text-sm font-medium text-black"
+            className="flex flex-col gap-4 w-full tablet:min-w-[500px] tablet:max-w-[40%] text-lg text-black mt-4"
             noValidate
           >
             <input
-              className="p-4 w-full rounded-lg placeholder:font-light shadow-lg shadow-black/40"
+              className="py-4 w-full border-b border-home-coziness bg-clean-space placeholder:text-black"
               placeholder="Ваше имя"
               name="name"
               value={formData.name}
@@ -81,37 +80,35 @@ const ContactSection = () => {
               required
             />
             <input
-              className="p-4 w-full rounded-lg placeholder:font-light shadow-lg shadow-black/40"
-              placeholder="Телефон"
+              className="py-4 w-full border-b border-home-coziness bg-clean-space placeholder:text-black"
+              placeholder="Ваш номер телефона"
               name="phone"
               value={formData.phone}
               onChange={handleChange}
               required
             />
-            <textarea
-              className="p-4 w-full rounded-lg min-h-24 resize-none overflow-x-hidden placeholder:font-light shadow-lg shadow-black/40"
-              placeholder="Напишите Ваш вопрос"
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              required
-            />
+
             <button
               type="submit"
-              className="p-4 w-full rounded-xl bg-yellow-500 font-medium text-white mt-2"
+              className="p-6 rounded-full bg-home-coziness uppercase w-full text-2xl text-white mt-12"
               disabled={isSending}
             >
-              {isSending ? "Отправка..." : "Перезвоните мне"}
+              {isSending ? "Отправка..." : "Отправить"}
             </button>
           </form>
           {successMessage && (
-            <div className="text-gray-200 font-light text-sm mt-4">
+            <div className="text-home-coziness text-sm mt-4">
               {successMessage}
             </div>
           )}
-          <div className="text-gray-200 font-light text-xs text-center px-10">{`Нажимая на кнопку "Перезвоните мне", Вы соглашаетесь с обработкой персональных данных`}</div>
+          <div className="text-black text-start w-full mb-4">
+            Нажимая на кнопку, вы соглашаетесь <br />с условиями{" "}
+            <span className="text-home-coziness">
+              Политики конфидициальности
+            </span>
+          </div>
         </div>
-      </ContactsBackground>
+      </Background>
     </div>
   );
 };

@@ -15,7 +15,7 @@ const GreenLounge = () => {
             imageUrl="/accommodation/green-lounge/greenlounge-background.jpg"
             infoTitle="Гостевые дома"
             infoDescription="Место, где вы сможете забыть о городе и воссоединиться с природой"
-            darker={false}
+            hasFilmtape={false}
             hasButton={false}
           />
         </div>
