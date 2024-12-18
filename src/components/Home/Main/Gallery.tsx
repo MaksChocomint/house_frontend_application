@@ -67,9 +67,9 @@ const Gallery: React.FC = () => {
               </div>
             </SwiperSlide>
           ))}
+          <div className="custom-pagination flex justify-center mt-4"></div>
         </Swiper>
         {/* Кастомные индикаторы */}
-        <div className="custom-pagination flex justify-center mt-4"></div>
       </div>
     </div>
   );
