@@ -21,14 +21,9 @@ const MapContainer = ({ largeMap }: Props) => {
       >
         <h1 className="text-3xl uppercase font-medium">Flatpoint</h1>
         <div className="tablet:text-xl tablet:text-start text-center">
-          +7 (980) 697 73 81
+          +7 (495) 125-25-27
           <br />
           info@flatpoint.ru
-        </div>
-        <div className="w-[255px] text-base text-center smallTablet:text-start">
-          46 км от МКАД <br /> городской округ Истра, <br /> деревня Якунино,
-          <br />
-          центральная улица, 377
         </div>
         <Socials />
       </div>
