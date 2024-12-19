@@ -14,8 +14,6 @@ const images = [
   "/about/scroll-3.jpg",
   "/about/scroll-4.jpg",
   "/about/scroll-5.jpg",
-  "/about/scroll-6.jpg",
-  "/about/scroll-7.jpg",
 ];
 
 const Gallery: React.FC = () => {
