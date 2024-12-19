@@ -22,17 +22,17 @@ const Apartments = () => {
           description="Это уголок, где природа и уют тесно переплетаются, создавая идеальные условия для спокойного отдыха. Этот стильный дом, вдохновлённый золотыми полями пшеницы, предлагает Вам насладиться атмосферой уюта, тепла и щедрости природы."
           link="/accommodation/green-lounge"
           images={[
-            "/accommodation/honey/pic1.jpg",
-            "/accommodation/honey/pic2.jpg",
-            "/accommodation/honey/pic3.jpg",
-            "/accommodation/honey/pic4.jpg",
-            "/accommodation/honey/pic5.jpg",
-            "/accommodation/honey/pic6.jpg",
-            "/accommodation/honey/pic7.jpg",
-            "/accommodation/honey/pic8.jpg",
-            "/accommodation/honey/pic9.jpg",
+            "/accommodation/green-lounge/honey/pic1.jpg",
+            "/accommodation/green-lounge/honey/pic2.jpg",
+            "/accommodation/green-lounge/honey/pic3.jpg",
+            "/accommodation/green-lounge/honey/pic4.jpg",
+            "/accommodation/green-lounge/honey/pic5.jpg",
+            "/accommodation/green-lounge/honey/pic6.jpg",
+            "/accommodation/green-lounge/honey/pic7.jpg",
+            "/accommodation/green-lounge/honey/pic8.jpg",
+            "/accommodation/green-lounge/honey/pic9.jpg",
           ]}
-          paletteImage="/accommodation/honey/pic10.png"
+          paletteImage="/accommodation/green-lounge/honey/pic10.png"
           isMirrored={false}
           booking={false}
         />
@@ -54,17 +54,17 @@ const Apartments = () => {
           description="Это пространство, где простота и стиль встречаются в гармонии. Студия создана для тех, кто ценит минимализм и безупречный дизайн, который отражает утончённый вкус и современные тенденции. Оформлена в классическом черно-белом цвете, создающем атмосферу строгости и одновременно уюта. Чистые линии, геометрические формы и стильные акценты придают пространству уникальный характер."
           link="/accommodation/moscow"
           images={[
-            "/accommodation/blacknwhite/pic1.jpg",
-            "/accommodation/blacknwhite/pic2.jpg",
-            "/accommodation/blacknwhite/pic3.jpg",
-            "/accommodation/blacknwhite/pic4.jpg",
-            "/accommodation/blacknwhite/pic5.jpg",
-            "/accommodation/blacknwhite/pic6.jpg",
-            "/accommodation/blacknwhite/pic7.jpg",
-            "/accommodation/blacknwhite/pic8.jpg",
-            "/accommodation/blacknwhite/pic9.jpg",
+            "/accommodation/moscow/blacknwhite/pic1.jpg",
+            "/accommodation/moscow/blacknwhite/pic2.jpg",
+            "/accommodation/moscow/blacknwhite/pic3.jpg",
+            "/accommodation/moscow/blacknwhite/pic4.jpg",
+            "/accommodation/moscow/blacknwhite/pic5.jpg",
+            "/accommodation/moscow/blacknwhite/pic6.jpg",
+            "/accommodation/moscow/blacknwhite/pic7.jpg",
+            "/accommodation/moscow/blacknwhite/pic8.jpg",
+            "/accommodation/moscow/blacknwhite/pic9.jpg",
           ]}
-          paletteImage="/accommodation/blacknwhite/pic10.png"
+          paletteImage="/accommodation/moscow/blacknwhite/pic10.png"
           isMirrored={true}
           booking={false}
         />
