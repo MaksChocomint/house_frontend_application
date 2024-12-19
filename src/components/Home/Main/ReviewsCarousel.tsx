@@ -64,7 +64,7 @@ const ReviewsCarousel = () => {
       >
         {reviews.map((review) => (
           <SwiperSlide key={review.id}>
-            <div className="bg-human-detail py-10 px-6 h-[500px] flex flex-col justify-start">
+            <div className="bg-human-detail select-none py-10 px-6 h-[500px] flex flex-col justify-start">
               <h2 className="text-3xl">{`(${review.number})`}</h2>
               <h3 className="text-xl text-home-coziness mt-12">
                 {review.name}
