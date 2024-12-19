@@ -59,9 +59,9 @@ const ContactSection = () => {
   };
 
   return (
-    <div className="mt-32 w-full min-h-screen text-white">
+    <div className="mt-32 w-full">
       <Background imageUrl="/contact.jpg">
-        <div className="absolute top-1/2 -translate-y-1/2 smallLaptop:right-56 flex flex-col justify-center gap-5 py-14 px-8 bg-clean-space smallLaptop:w-[580px]">
+        <div className="absolute top-1/2 -translate-y-1/2 smallLaptop:right-56 flex flex-col justify-center gap-5 py-14 px-8 bg-clean-space w-full tablet:w-[580px]">
           <Title
             upperText="Контакты"
             lowerText="Оставьте заявку<br>Мы свяжемся с Вами"
