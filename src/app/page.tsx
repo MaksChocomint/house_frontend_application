@@ -4,6 +4,7 @@ import Main from "@/components/Home/Main/Main";
 import ContactButton from "@/components/ContactButton";
 import Footer from "@/components/Footer/Footer";
 import MapContainer from "@/components/Footer/MapContainer";
+import Booking from "@/components/Intro/Booking";
 
 const Home = () => {
   return (

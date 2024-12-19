@@ -4,7 +4,7 @@ import Main from "@/components/About/Main";
 import ContactButton from "@/components/ContactButton";
 import Footer from "@/components/Footer/Footer";
 
-const Home = () => {
+const About = () => {
   return (
     <div className="w-full bg-clean-space">
       <div className="flex flex-col">
@@ -20,10 +20,11 @@ const Home = () => {
         </div>
       </div>
       <Main />
+
       <Footer />
       <ContactButton />
     </div>
   );
 };
 
-export default Home;
+export default About;
