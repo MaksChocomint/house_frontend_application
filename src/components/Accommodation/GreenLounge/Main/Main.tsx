@@ -8,7 +8,7 @@ const Main = () => {
     <div className="mt-32 w-full flex flex-col items-center">
       <Info />
       <Activities />
-      <ApartmentsGrid title="Гостевые дома" />
+      <ApartmentsGrid />
     </div>
   );
 };

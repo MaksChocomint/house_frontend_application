@@ -6,7 +6,7 @@ const Main = () => {
   return (
     <div className="mt-32 w-full flex flex-col items-center">
       <Info />
-      <ApartmentsGrid title="Квартиры и студии" />
+      <ApartmentsGrid />
     </div>
   );
 };
