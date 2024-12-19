@@ -8,15 +8,15 @@ import Main from "@/components/Accommodation/Moscow/Main/Main";
 const Moscow = () => {
   return (
     <div className="w-full">
-      <div className="h-screen flex flex-col">
-        <div className="flex-1 flex flex-col">
+      <div className="flex flex-col">
+        <div className="flex flex-col">
           <Header />
           <Intro
             imageUrl="/accommodation/moscow/moscow-background.webp"
             infoTitle="Квартиры и студии в Москве"
             infoDescription="У нас идеально сочетаются современный комфорт и уют"
             hasFilmtape={false}
-            hasButton={false}
+            hasButton={true}
           />
         </div>
       </div>

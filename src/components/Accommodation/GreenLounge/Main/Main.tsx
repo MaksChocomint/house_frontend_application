@@ -1,13 +1,13 @@
 import React from "react";
 import Info from "./Info";
-import Activities from "./Activities";
 import ApartmentsGrid from "../../ApartmentsGrid";
+import Entertainment from "./Entertainment";
 
 const Main = () => {
   return (
-    <div className="mt-32 w-full flex flex-col items-center">
+    <div className="mt-32 w-full flex flex-col">
       <Info />
-      <Activities />
+      <Entertainment />
       <ApartmentsGrid />
     </div>
   );

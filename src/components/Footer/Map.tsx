@@ -20,6 +20,7 @@ const placemarks = [
   { id: "Point 377 Черемуховый", coordinates: [56.062499, 36.761163] },
   { id: "Point 382 Оливковый", coordinates: [56.062394, 36.760292] },
   { id: "Point 383 Березовый", coordinates: [56.06262, 36.760274] },
+  { id: "Point 392 Соломенный", coordinates: [56.064248, 36.761702] },
   { id: "Point 400 Кедровый", coordinates: [56.065097, 36.763634] },
   { id: "Point 483 Хвойный", coordinates: [56.05983, 36.756905] },
   { id: "Point 484 Рябиновый", coordinates: [56.059966, 36.756627] },

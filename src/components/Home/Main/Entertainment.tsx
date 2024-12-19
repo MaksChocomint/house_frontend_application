@@ -5,6 +5,7 @@ import Image from "next/image";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import "swiper/css/pagination";
 import { useWindowSize } from "@/utils/useWindowSize";
 import { Pagination } from "swiper/modules";
 import { motion } from "framer-motion";
@@ -18,49 +19,49 @@ const Entertainment = () => {
   const items = [
     {
       id: 1,
-      src: "/main/entertaiment/moscow.png",
+      src: "/main/entertainment/moscow.png",
       title: "Москва",
       textColor: "text-white",
     },
     {
       id: 2,
-      src: "/main/entertaiment/horse.png",
+      src: "/main/entertainment/horse.png",
       title: "Конно-спортивный клуб Primo Posto",
       textColor: "text-white",
     },
     {
       id: 3,
-      src: "/main/entertaiment/furako.png",
+      src: "/main/entertainment/furako.png",
       title: "Фурако парк",
       textColor: "text-white",
     },
     {
       id: 4,
-      src: "/main/entertaiment/vdnh.png",
+      src: "/main/entertainment/vdnh.png",
       title: "ВДНХ",
       textColor: "text-white",
     },
     {
       id: 5,
-      src: "/main/entertaiment/spa.png",
+      src: "/main/entertainment/spa.png",
       title: "Spa-комплекс La Sours d'Istra",
       textColor: "text-white",
     },
     {
       id: 6,
-      src: "/main/entertaiment/banya.png",
+      src: "/main/entertainment/banya.png",
       title: "Банный комплекс",
       textColor: "text-white",
     },
     {
       id: 7,
-      src: "/main/entertaiment/monastery.png",
+      src: "/main/entertainment/monastery.png",
       title: "Воскресенский Ново-Иерусалимский монастырь",
       textColor: "text-white",
     },
     {
       id: 8,
-      src: "/main/entertaiment/ostankino.png",
+      src: "/main/entertainment/ostankino.png",
       title: "Останкинский парк",
       textColor: "text-white",
     },

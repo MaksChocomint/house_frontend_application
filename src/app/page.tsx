@@ -7,7 +7,7 @@ import MapContainer from "@/components/Footer/MapContainer";
 
 const Home = () => {
   return (
-    <div className="w-full bg-clean-space">
+    <div className="w-full">
       <div className="flex flex-col">
         <div className="flex flex-col">
           <Header />
