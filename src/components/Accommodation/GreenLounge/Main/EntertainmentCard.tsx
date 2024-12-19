@@ -10,13 +10,13 @@ type Props = {
 
 const EntertainmentCard = ({ image, title, text }: Props) => {
   return (
-    <div className="w-full rounded-2xl flex flex-col tablet:flex-row tablet:gap-16 h-screen overflow-y-auto tablet:h-[500px] relative bg-human-detail items-center">
+    <div className="w-full rounded-2xl flex flex-col tablet:flex-row tablet:gap-16 tablet:h-[500px] relative bg-human-detail items-center">
       <Image
         src={image}
         alt="gallery_element"
         height={500}
         width={410}
-        className="rounded-2xl object-cover w-full h-[500px] tablet:h-full"
+        className="rounded-2xl object-cover h-[500px] tablet:h-full"
       />
       <div className="flex flex-col gap-8 tablet:mr-24 pt-4 pb-8 items-center tablet:items-start tablet:py-12 px-4 tablet:px-0">
         <div
@@ -38,8 +38,8 @@ const EntertainmentCard = ({ image, title, text }: Props) => {
       </div>
       <div className="absolute right-8 text-center top-1/2 -translate-y-1/2 cursor-pointer tablet:block hidden">
         <IoIosArrowForward
-          size={52}
-          className="rounded-full border-2 border-black"
+          size={72}
+          className="rounded-full border-2 border-natural-style text-natural-style p-4"
         />
       </div>
     </div>
