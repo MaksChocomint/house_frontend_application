@@ -1,10 +1,12 @@
 import React from "react";
-import ImageCollage from "../../ImageCollage";
+
 import Container from "@/components/Container";
 
 const Info = () => {
   return (
-    <Container styles="flex flex-col smallLaptop:flex-row smallLaptop:gap-16 smallLaptop:items-start items-center justify-center w-full"></Container>
+    <Container styles="flex flex-col smallLaptop:flex-row smallLaptop:gap-16 smallLaptop:items-start items-center justify-center w-full">
+      <div></div>
+    </Container>
   );
 };
 

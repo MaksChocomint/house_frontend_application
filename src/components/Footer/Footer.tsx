@@ -2,7 +2,6 @@ import Link from "next/link";
 import Container from "../Container";
 import Logo from "../Header/Logo";
 import Socials from "../Socials";
-import YandexMap from "./Map";
 
 const Footer = () => {
   return (

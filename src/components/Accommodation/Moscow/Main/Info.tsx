@@ -1,5 +1,5 @@
 import React from "react";
-import ImageCollage from "../../ImageCollage";
+
 import Container from "@/components/Container";
 
 const Info = () => {

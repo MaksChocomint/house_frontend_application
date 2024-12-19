@@ -1,7 +1,4 @@
 "use client";
-
-import React, { useEffect, useState } from "react";
-import ApartmentCard from "./ApartmentCard";
 import Container from "../Container";
 
 interface Apartment {
@@ -17,9 +14,6 @@ interface Apartment {
 }
 
 const ApartmentsGrid: React.FC<{ title: string }> = ({ title }) => {
-  const [apartments, setApartments] = useState<Apartment[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-
   return (
     <Container styles="w-full grid smallTablet:grid-cols-2 smallLaptop:grid-cols-3 gap-y-10 gap-x-10 mt-32">
       <div></div>
