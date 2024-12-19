@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation"; // Импортируем useRouter
 const menuItems = [
   {
     title: "О нас",
-    link: "/",
+    link: "/about",
   },
   {
     title: "Гостевые дома",
