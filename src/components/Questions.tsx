@@ -61,7 +61,7 @@ const Questions = () => {
       </div>
 
       {/* Правая колонка */}
-      <div className="flex-1 w-full">
+      <div className="flex-1 w-full select-none">
         {faqItems.map((item, index) => (
           <div key={item.id} className="border-b border-home-coziness">
             <div
