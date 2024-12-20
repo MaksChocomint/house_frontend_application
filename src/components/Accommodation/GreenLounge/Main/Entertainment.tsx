@@ -1,25 +1,28 @@
 "use client";
 import Container from "@/components/Container";
 import Title from "@/components/Title";
-import React from "react";
+import React, { useState } from "react";
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import EntertainmentCard from "./EntertainmentCard";
 import "@/components/Home/Main/Gallery.css";
 import "swiper/css";
+import "swiper/css/pagination";
 
 const Entertainment = () => {
+  const [swiperInstance, setSwiperInstance] = useState<any>(null);
+
   const entertainments = [
     {
       id: 1,
       title: "ВОСКРЕСЕНСКИЙ<br>НОВО-ИЕРУСАЛИМСКИЙ МОНАСТЫРЬ",
-      text: "Исторические памятники на территории монастыря:<br>Палаты царевны Татьяны Михайловны<br>Скит Патриарха Никона<br>Подземная церковь Константина и Елены<br>Гефсиманская часовня и др.",
+      text: "Исторические памятники на территории монастыря:<ul><li>Палаты царевны Татьяны Михайловны</li><li>Скит Патриарха Никона</li><li>Подземная церковь Константина и Елены</li><li>Гефсиманская часовня и др.</li></ul>",
       image: "/main/entertainment/monastery.png",
     },
     {
       id: 2,
       title: "СПА-КОМПЛЕКС «LA SOURS D'ISTRA»",
-      text: "СПА-комплекс Подмосковья «La Source d’Istra» подарит Вам незабываемое путешествие в мир неги и блаженства ухода за лицом и телом, где предусмотрен индивидуальный подход к каждому гостю.<br>Среди услуг: <br>Тренажерный зал<br>Бассейн<br>Термальная зона<br>Велнес-клиника и др.",
+      text: "СПА-комплекс Подмосковья «La Source d’Istra» подарит Вам незабываемое путешествие в мир неги и блаженства ухода за лицом и телом, где предусмотрен индивидуальный подход к каждому гостю.<br><br>Среди услуг: <ul><li>Тренажерный зал</li><li>Бассейн</li><li>Термальная зона</li><li>Велнес-клиника и др.</li></ul>",
       image: "/main/entertainment/spa.png",
     },
     {
@@ -31,13 +34,13 @@ const Entertainment = () => {
     {
       id: 4,
       title: "БАННЫЙ КОМПЛЕКС «БАННИКУМ»",
-      text: "Авторские программы парения<br>Звукотерапия на музыкальных инструментах<br>Индивидуальный подход к банному отдыху<br>Полный комплекс услуг",
+      text: "<ul><li>Авторские программы парения</li><li>Звукотерапия на музыкальных инструментах</li><li>Индивидуальный подход к банному отдыху</li><li>Полный комплекс услуг</li></ul>",
       image: "/main/entertainment/banya.png",
     },
     {
       id: 5,
       title: "ФУРАКО ПАРК ",
-      text: "Чан на 4-6 человек с горячей водой (растопка к нужному времени). На 7-8 человек бронируется два чана с двумя беседками<br>Теплая беседка-купол с мебелью на четыре персоны<br>Набор полотенец и халатов на четыре персоны<br>За дополнительную плату сервируется сырная тарелка с сыром, мёдом, орехами<br>В услугу входят дрова для дотопки, травяной чай и банная шапка из войлока",
+      text: "<ul><li>Чан на 4-6 человек с горячей водой (растопка к нужному времени). На 7-8 человек бронируется два чана с двумя беседками</li><li>Теплая беседка-купол с мебелью на четыре персоны</li><li>Набор полотенец и халатов на четыре персоны</li><li>За дополнительную плату сервируется сырная тарелка с сыром, мёдом, орехами</li><li>В услугу входят дрова для дотопки, травяной чай и банная шапка из войлока</li></ul>",
       image: "/main/entertainment/furako.png",
     },
   ];
@@ -49,6 +52,7 @@ const Entertainment = () => {
         <Swiper
           loop={true}
           slidesPerView={1}
+          onSwiper={setSwiperInstance}
           pagination={{
             clickable: true,
             el: ".custom-pagination", // Кастомный класс для стилизации пагинации
@@ -62,6 +66,7 @@ const Entertainment = () => {
                 image={ent.image}
                 title={ent.title}
                 text={ent.text}
+                onNext={() => swiperInstance?.slideNext()}
               />
             </SwiperSlide>
           ))}

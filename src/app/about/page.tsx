@@ -20,7 +20,6 @@ const About = () => {
         </div>
       </div>
       <Main />
-
       <Footer />
       <ContactButton />
     </div>
