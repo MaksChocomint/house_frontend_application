@@ -11,6 +11,7 @@ import "swiper/css/pagination";
 
 const Entertainment = () => {
   const [swiperInstance, setSwiperInstance] = useState<any>(null);
+  // eslint-disable-next-line  @typescript-eslint/no-explicit-any
 
   const entertainments = [
     {
