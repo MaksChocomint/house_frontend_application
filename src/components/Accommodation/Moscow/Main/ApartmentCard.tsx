@@ -14,7 +14,7 @@ interface ApartmentCardProps {
   images: string[];
   link: string;
   description: string;
-  isMirrored: boolean;
+
   paletteImage: string;
   booking: boolean;
 }
@@ -24,7 +24,7 @@ const ApartmentCard: React.FC<ApartmentCardProps> = ({
   propsList,
   images,
   link,
-  isMirrored,
+
   description,
   paletteImage,
   booking,

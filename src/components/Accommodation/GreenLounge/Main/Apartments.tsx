@@ -23,7 +23,6 @@ const Apartments = () => {
             "/accommodation/green-lounge/wheat/pic9.jpg",
           ]}
           paletteImage="/accommodation/green-lounge/wheat/pic10.png"
-          isMirrored={true}
           booking={true}
         />
 
@@ -44,7 +43,6 @@ const Apartments = () => {
             "/accommodation/green-lounge/rowan/pic9.jpg",
           ]}
           paletteImage="/accommodation/green-lounge/rowan/pic10.png"
-          isMirrored={true}
           booking={true}
         />
 
@@ -65,7 +63,6 @@ const Apartments = () => {
             "/accommodation/green-lounge/softwood/pic9.jpg",
           ]}
           paletteImage="/accommodation/green-lounge/softwood/pic10.png"
-          isMirrored={true}
           booking={true}
         />
 
@@ -86,7 +83,6 @@ const Apartments = () => {
             "/accommodation/green-lounge/cedar/pic9.jpg",
           ]}
           paletteImage="/accommodation/green-lounge/cedar/pic10.png"
-          isMirrored={true}
           booking={true}
         />
 
@@ -107,7 +103,6 @@ const Apartments = () => {
             "/accommodation/green-lounge/straw/pic9.jpg",
           ]}
           paletteImage="/accommodation/green-lounge/straw/pic10.png"
-          isMirrored={true}
           booking={true}
         />
 
@@ -128,7 +123,6 @@ const Apartments = () => {
             "/accommodation/green-lounge/birch/pic9.jpg",
           ]}
           paletteImage="/accommodation/green-lounge/birch/pic10.png"
-          isMirrored={true}
           booking={true}
         />
 
@@ -149,7 +143,6 @@ const Apartments = () => {
             "/accommodation/green-lounge/olive/pic9.jpg",
           ]}
           paletteImage="/accommodation/green-lounge/olive/pic10.png"
-          isMirrored={true}
           booking={true}
         />
 
@@ -170,7 +163,6 @@ const Apartments = () => {
             "/accommodation/green-lounge/cherem/pic9.jpg",
           ]}
           paletteImage="/accommodation/green-lounge/cherem/pic10.png"
-          isMirrored={true}
           booking={true}
         />
 
@@ -191,7 +183,6 @@ const Apartments = () => {
             "/accommodation/green-lounge/lake/pic9.jpg",
           ]}
           paletteImage="/accommodation/green-lounge/lake/pic10.png"
-          isMirrored={true}
           booking={true}
         />
 
@@ -212,7 +203,6 @@ const Apartments = () => {
             "/accommodation/green-lounge/taiga/pic9.jpg",
           ]}
           paletteImage="/accommodation/green-lounge/taiga/pic10.png"
-          isMirrored={true}
           booking={true}
         />
 
@@ -233,7 +223,6 @@ const Apartments = () => {
             "/accommodation/green-lounge/emerald/pic9.jpg",
           ]}
           paletteImage="/accommodation/green-lounge/emerald/pic10.png"
-          isMirrored={true}
           booking={true}
         />
 
@@ -254,7 +243,6 @@ const Apartments = () => {
             "/accommodation/green-lounge/lavanda/pic9.jpg",
           ]}
           paletteImage="/accommodation/green-lounge/lavanda/pic10.png"
-          isMirrored={true}
           booking={true}
         />
 
@@ -275,7 +263,6 @@ const Apartments = () => {
             "/accommodation/green-lounge/sunny/pic9.jpg",
           ]}
           paletteImage="/accommodation/green-lounge/sunny/pic10.png"
-          isMirrored={true}
           booking={true}
         />
 
@@ -296,7 +283,6 @@ const Apartments = () => {
             "/accommodation/green-lounge/nuts/pic9.jpg",
           ]}
           paletteImage="/accommodation/green-lounge/nuts/pic10.png"
-          isMirrored={true}
           booking={true}
         />
 
@@ -317,7 +303,6 @@ const Apartments = () => {
             "/accommodation/green-lounge/mint/pic9.jpg",
           ]}
           paletteImage="/accommodation/green-lounge/mint/pic10.png"
-          isMirrored={true}
           booking={true}
         />
 
@@ -338,7 +323,6 @@ const Apartments = () => {
             "/accommodation/green-lounge/sand/pic9.jpg",
           ]}
           paletteImage="/accommodation/green-lounge/sand/pic10.png"
-          isMirrored={true}
           booking={true}
         />
 
@@ -359,7 +343,6 @@ const Apartments = () => {
             "/accommodation/green-lounge/aqua/pic9.jpg",
           ]}
           paletteImage="/accommodation/green-lounge/aqua/pic10.png"
-          isMirrored={true}
           booking={true}
         />
 
@@ -380,7 +363,6 @@ const Apartments = () => {
             "/accommodation/green-lounge/blueberry/pic9.jpg",
           ]}
           paletteImage="/accommodation/green-lounge/blueberry/pic10.png"
-          isMirrored={true}
           booking={true}
         />
       </div>

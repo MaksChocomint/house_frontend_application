@@ -24,7 +24,6 @@ const Apartments = () => {
             "/accommodation/moscow/blackpearl/pic9.jpg",
           ]}
           paletteImage="/accommodation/moscow/blackpearl/pic10.png"
-          isMirrored={true}
           booking={true}
         />
 
@@ -46,7 +45,6 @@ const Apartments = () => {
             "/accommodation/moscow/greengarden/pic9.jpg",
           ]}
           paletteImage="/accommodation/moscow/greengarden/pic10.png"
-          isMirrored={true}
           booking={true}
         />
 
@@ -67,7 +65,6 @@ const Apartments = () => {
             "/accommodation/moscow/springdawn/pic9.jpg",
           ]}
           paletteImage="/accommodation/moscow/springdawn/pic10.png"
-          isMirrored={true}
           booking={true}
         />
 
@@ -89,7 +86,6 @@ const Apartments = () => {
             "/accommodation/moscow/moonlight/pic9.jpg",
           ]}
           paletteImage="/accommodation/moscow/moonlight/pic10.png"
-          isMirrored={true}
           booking={true}
         />
 
@@ -110,7 +106,6 @@ const Apartments = () => {
             "/accommodation/moscow/botanica/pic9.jpg",
           ]}
           paletteImage="/accommodation/moscow/botanica/pic10.png"
-          isMirrored={true}
           booking={true}
         />
 
@@ -132,7 +127,6 @@ const Apartments = () => {
             "/accommodation/moscow/mintochocoreto/pic9.jpg",
           ]}
           paletteImage="/accommodation/moscow/mintochocoreto/pic10.png"
-          isMirrored={true}
           booking={true}
         />
 
@@ -153,7 +147,6 @@ const Apartments = () => {
             "/accommodation/moscow/blueheaven/pic9.jpg",
           ]}
           paletteImage="/accommodation/moscow/blueheaven/pic10.png"
-          isMirrored={true}
           booking={true}
         />
 
@@ -174,7 +167,6 @@ const Apartments = () => {
             "/accommodation/moscow/aquamarine/pic9.jpg",
           ]}
           paletteImage="/accommodation/moscow/aquamarine/pic10.png"
-          isMirrored={true}
           booking={true}
         />
       </div>
