@@ -5,7 +5,11 @@ import Background from "./Background";
 import emailjs from "@emailjs/browser";
 import Title from "./Title";
 
-const ContactSection = () => {
+type Props = {
+  imageUrl: string;
+};
+
+const ContactSection = ({ imageUrl }: Props) => {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -60,7 +64,7 @@ const ContactSection = () => {
 
   return (
     <div className="mt-32 w-full">
-      <Background imageUrl="/contact.jpg">
+      <Background imageUrl={imageUrl}>
         <div className="absolute top-1/2 -translate-y-1/2 smallLaptop:right-56 flex flex-col justify-center gap-5 py-14 px-8 bg-clean-space w-full tablet:w-[580px]">
           <Title
             upperText="Контакты"

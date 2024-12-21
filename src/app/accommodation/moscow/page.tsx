@@ -12,9 +12,9 @@ const Moscow = () => {
         <div className="flex flex-col">
           <Header />
           <Intro
-            imageUrl="/accommodation/moscow/moscow-background.webp"
-            infoTitle="Квартиры и студии в Москве"
-            infoDescription="У нас идеально сочетаются современный комфорт и уют"
+            imageUrl="/accommodation/moscow/background.jpg"
+            infoTitle="Апартаменты"
+            infoDescription="У нас идеально сочетаются современный комфорт<br>и уюта в Москве"
             hasFilmtape={false}
             hasButton={true}
           />

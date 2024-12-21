@@ -19,7 +19,7 @@ const EntertainmentCard = ({ image, title, text, onNext }: Props) => {
         width={410}
         className="rounded-2xl object-cover h-[400px] w-full largeTablet:w-[410px] largeTablet:h-full"
       />
-      <div className="flex flex-col gap-6 desktop:gap-8 smallLaptop:mr-24 pt-4 pb-8 items-center justify-center largeTablet:justify-start h-full largeTablet:items-start largeTablet:py-12 px-4 largeTablet:px-0">
+      <div className="flex flex-col gap-6 desktop:gap-8 smallLaptop:mr-24 pt-4 pb-8 items-center h-full largeTablet:items-start largeTablet:py-12 px-4 largeTablet:px-0">
         <div
           className="text-2xl smallLaptop:text-3xl text-natural-style text-center largeTablet:text-start uppercase font-medium"
           dangerouslySetInnerHTML={{ __html: title }}
@@ -31,7 +31,7 @@ const EntertainmentCard = ({ image, title, text, onNext }: Props) => {
             __html: text.replace(/<ul>/g, '<ul class="custom-list">'),
           }}
         ></div>
-        <div className="mt-5 largeTablet:mt-10">
+        <div className="mt-auto">
           <a
             href="?tl-booking-open=true"
             className="text-lg uppercase bg-home-coziness rounded-full text-white py-5 px-10 smallTablet:px-16"
