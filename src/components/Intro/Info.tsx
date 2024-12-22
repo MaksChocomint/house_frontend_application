@@ -12,7 +12,11 @@ interface InfoProps {
 const Info: React.FC<InfoProps> = ({ title, description, hasButton }) => {
   return (
     <Container styles="w-full flex flex-col items-start gap-4 mt-32">
-      <h2 className="text-5xl smallLaptop:text-6xl font-medium uppercase mb-2 phone:mb-4">
+      <h2
+        className={`${
+          title === "Апартаменты" ? "text-4xl" : "text-5xl"
+        } smallLaptop:text-6xl font-medium uppercase mb-2 phone:mb-4`}
+      >
         {title}
       </h2>
       <p
