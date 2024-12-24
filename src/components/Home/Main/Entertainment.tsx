@@ -29,12 +29,7 @@ const Entertainment = () => {
       title: "Конно-спортивный клуб Primo Posto",
       textColor: "text-white",
     },
-    {
-      id: 3,
-      src: "/main/entertainment/furako.png",
-      title: "Фурако парк",
-      textColor: "text-white",
-    },
+
     {
       id: 4,
       src: "/main/entertainment/vdnh.png",
@@ -78,30 +73,30 @@ const Entertainment = () => {
       )}
 
       {!isMobile && (
-        <div className="grid grid-cols-[2fr_1.5fr_1.3fr_1fr] grid-rows-[1fr_1fr_1fr_1.5fr] gap-[6px] smallLaptop:gap-4 h-[750px]">
+        <div className="grid grid-cols-[2fr_1.5fr_1.5fr_1fr] grid-rows-[1fr_1fr_1fr_1.5fr] gap-[6px] smallLaptop:gap-4 h-[750px]">
           <Title
             upperText="Досуг"
             lowerText="Точки притяжения"
             styles="col-start-1 col-end-2 row-start-1 row-end-2 self-center text-wrap break-words"
           />
-          {items.map((item, index) => (
+          {items.map((item) => (
             <motion.div
               key={item.id}
               className={`relative rounded-lg overflow-hidden shadow-lg ${
-                index === 0
+                item.id === 1
                   ? "row-start-2 row-end-4 col-start-1 col-end-2"
-                  : index === 1
+                  : item.id === 2
                   ? "col-start-2 col-end-3 row-start-1 row-end-3"
-                  : index === 2
+                  : item.id === 3
                   ? "row-start-1 row-end-3 col-start-3 col-end-5"
-                  : index === 3
+                  : item.id === 4
                   ? "row-start-4 row-end-5 col-start-1 col-end-2"
-                  : index === 4
+                  : item.id === 5
                   ? "row-start-3 row-end-5 col-start-2 col-end-3"
-                  : index === 5
-                  ? "row-start-3 row-end-4 col-start-3 col-end-4"
-                  : index === 6
-                  ? "row-start-4 row-end-5 col-start-3 col-end-4"
+                  : item.id === 6
+                  ? "row-start-1 row-end-3 col-start-3 col-end-5"
+                  : item.id === 7
+                  ? "row-start-3 row-end-5 col-start-3 col-end-4"
                   : "row-start-3 row-end-5 col-start-4 col-end-5"
               }`}
               whileHover={{ scale: 1.05 }}
