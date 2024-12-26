@@ -59,7 +59,7 @@ const Gallery: React.FC = () => {
                   src={image}
                   alt={`Slide ${index + 1}`}
                   fill
-                  className="object-cover"
+                  className="object-cover select-none"
                   sizes="100vw"
                   priority={index === 0}
                 />

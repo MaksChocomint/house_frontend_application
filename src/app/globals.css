@@ -103,7 +103,3 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   margin-left: 24px;
   margin-bottom: 6px;
 }
-
-.mySwiper {
-  user-select: none;
-}
