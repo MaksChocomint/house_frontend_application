@@ -71,7 +71,7 @@ const ContactSection = ({ imageUrl }: Props) => {
           <form
             onSubmit={handleSubmit}
             className="flex flex-col gap-4 w-full tablet:min-w-[500px] tablet:max-w-[40%] text-lg text-black mt-4"
-            autoComplete="false"
+            autoComplete="off"
             noValidate
           >
             <input
@@ -80,7 +80,7 @@ const ContactSection = ({ imageUrl }: Props) => {
               name="name"
               value={formData.name}
               onChange={handleChange}
-              autoComplete="false"
+              autoComplete="off"
               required
             />
             <input
@@ -89,7 +89,7 @@ const ContactSection = ({ imageUrl }: Props) => {
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-              autoComplete="false"
+              autoComplete="off"
               required
             />
 
