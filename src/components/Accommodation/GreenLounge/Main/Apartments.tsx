@@ -227,6 +227,26 @@ const Apartments = () => {
         />
 
         <ApartmentCard
+          title="POINT 369 Восточный"
+          propsList={["65 м²", "5 990 ₽/сутки", "до 6 человек"]}
+          description="В доме: одна двуспальная кровать и две односпальные кровати  с белоснежным постельным бельем и ортопедическими матрасами, раскладной диван, кондиционер, банные полотенца, набор косметической продукции, тапочки, фен, холодильник с морозильной камерой, кофемашина, чайник и чайные принадлежности, посудомоечная машина, зона барбекю с мангалом и шампура, парковочное место на 2 машины, телевизор и Wi-Fi"
+          link="315162"
+          images={[
+            "/accommodation/green-lounge/east/pic1.jpg",
+            "/accommodation/green-lounge/east/pic2.jpg",
+            "/accommodation/green-lounge/east/pic3.jpg",
+            "/accommodation/green-lounge/east/pic4.jpg",
+            "/accommodation/green-lounge/east/pic5.jpg",
+            "/accommodation/green-lounge/east/pic6.jpg",
+            "/accommodation/green-lounge/east/pic7.jpg",
+            "/accommodation/green-lounge/east/pic8.jpg",
+            "/accommodation/green-lounge/east/pic9.jpg",
+          ]}
+          paletteImage="/accommodation/green-lounge/east/pic10.png"
+          booking={true}
+        />
+
+        <ApartmentCard
           title="POINT 367 Лавандовый"
           propsList={["60 м²", "5 900 ₽/сутки", "до 6 человек"]}
           description="В доме: одна двуспальная кровать и две односпальные кровати  с белоснежным постельным бельем и ортопедическими матрасами, кондиционер, банные полотенца, набор косметической продукции, тапочки, фен, холодильник с морозильной камерой, кофемашина, чайник и чайные принадлежности, посудомоечная машина, зона барбекю с мангалом и шампура, парковочное место на 2 машины, телевизор и Wi-Fi"
@@ -303,6 +323,46 @@ const Apartments = () => {
             "/accommodation/green-lounge/mint/pic9.jpg",
           ]}
           paletteImage="/accommodation/green-lounge/mint/pic10.png"
+          booking={true}
+        />
+
+        <ApartmentCard
+          title="POINT 230 Лимонный"
+          propsList={["65 м²", "6 990 ₽/сутки", "до 6 человек"]}
+          description="В доме: одна двуспальная кровать и две односпальные кровати  с белоснежным постельным бельем и ортопедическими матрасами, раскладной диван, кондиционер, банные полотенца, набор косметической продукции, тапочки, фен, холодильник с морозильной камерой, кофемашина, чайник и чайные принадлежности, посудомоечная машина, зона барбекю с мангалом и шампура, парковочное место на 2 машины, телевизор и Wi-Fi"
+          link="315409"
+          images={[
+            "/accommodation/green-lounge/lemon/pic1.jpg",
+            "/accommodation/green-lounge/lemon/pic2.jpg",
+            "/accommodation/green-lounge/lemon/pic3.jpg",
+            "/accommodation/green-lounge/lemon/pic4.jpg",
+            "/accommodation/green-lounge/lemon/pic5.jpg",
+            "/accommodation/green-lounge/lemon/pic6.jpg",
+            "/accommodation/green-lounge/lemon/pic7.jpg",
+            "/accommodation/green-lounge/lemon/pic8.jpg",
+            "/accommodation/green-lounge/lemon/pic9.jpg",
+          ]}
+          paletteImage="/accommodation/green-lounge/lemon/pic10.png"
+          booking={true}
+        />
+
+        <ApartmentCard
+          title="POINT 194 Карамельный"
+          propsList={["65 м²", "8 249 ₽/сутки", "до 6 человек"]}
+          description="В доме: одна двуспальная кровать и две односпальные кровати  с белоснежным постельным бельем и ортопедическими матрасами, раскладной диван, кондиционер, банные полотенца, набор косметической продукции, тапочки, фен, холодильник с морозильной камерой, кофемашина, чайник и чайные принадлежности, посудомоечная машина, зона барбекю с мангалом и шампура, парковочное место на 2 машины, телевизор и Wi-FiВ доме: одна двуспальная кровать и две односпальные кровати  с белоснежным постельным бельем и ортопедическими матрасами, раскладной диван, кондиционер, банные полотенца, набор косметической продукции, тапочки, фен, холодильник с морозильной камерой, кофемашина, чайник и чайные принадлежности, посудомоечная машина, зона барбекю с мангалом и шампура, парковочное место на 2 машины, телевизор и Wi-Fi"
+          link="316934"
+          images={[
+            "/accommodation/green-lounge/caramel/pic1.jpg",
+            "/accommodation/green-lounge/caramel/pic2.jpg",
+            "/accommodation/green-lounge/caramel/pic3.jpg",
+            "/accommodation/green-lounge/caramel/pic4.jpg",
+            "/accommodation/green-lounge/caramel/pic5.jpg",
+            "/accommodation/green-lounge/caramel/pic6.jpg",
+            "/accommodation/green-lounge/caramel/pic7.jpg",
+            "/accommodation/green-lounge/caramel/pic8.jpg",
+            "/accommodation/green-lounge/caramel/pic9.jpg",
+          ]}
+          paletteImage="/accommodation/green-lounge/caramel/pic10.png"
           booking={true}
         />
 
