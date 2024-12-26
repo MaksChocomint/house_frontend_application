@@ -13,7 +13,6 @@ const ContactSection = ({ imageUrl }: Props) => {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
-    message: "",
   });
 
   const [isSending, setIsSending] = useState(false);
@@ -42,7 +41,6 @@ const ContactSection = ({ imageUrl }: Props) => {
         {
           name: formData.name,
           phone: formData.phone,
-          message: formData.message,
         },
         "KHUXT0O9xljwixgMC" // Замените на ваш Public Key
       );
@@ -50,7 +48,7 @@ const ContactSection = ({ imageUrl }: Props) => {
       // Проверяем статус ответа
       if (result.status === 200) {
         setSuccessMessage("Сообщение успешно отправлено!");
-        setFormData({ name: "", phone: "", message: "" });
+        setFormData({ name: "", phone: "" });
       } else {
         setSuccessMessage("Ошибка при отправке сообщения.");
       }
@@ -73,6 +71,7 @@ const ContactSection = ({ imageUrl }: Props) => {
           <form
             onSubmit={handleSubmit}
             className="flex flex-col gap-4 w-full tablet:min-w-[500px] tablet:max-w-[40%] text-lg text-black mt-4"
+            autoComplete="false"
             noValidate
           >
             <input
@@ -81,6 +80,7 @@ const ContactSection = ({ imageUrl }: Props) => {
               name="name"
               value={formData.name}
               onChange={handleChange}
+              autoComplete="false"
               required
             />
             <input
@@ -89,6 +89,7 @@ const ContactSection = ({ imageUrl }: Props) => {
               name="phone"
               value={formData.phone}
               onChange={handleChange}
+              autoComplete="false"
               required
             />
 
