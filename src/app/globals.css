@@ -32,14 +32,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 ::-webkit-scrollbar {
-  width: 6px; /* Толщина ползунка */
+  width: 10px; /* Толщина ползунка */
 }
 ::-webkit-scrollbar-track {
   background: #53473b; /* Цвет заднего фона */
 }
 ::-webkit-scrollbar-thumb {
   background: #e2dbc9; /* Цвет ползунка */
-  border-radius: 3px; /* Скругление углов */
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #e2dbc9; /* Цвет ползунка при наведении */
@@ -83,4 +82,24 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   color: #333; /* Цвет точки */
   font-size: 1.5rem; /* Размер точки */
   line-height: 1; /* Выравнивание точки */
+}
+
+.faq-ul-list {
+  margin-top: 6px;
+  list-style: disc;
+}
+
+.faq-ol-list {
+  margin-top: 6px;
+  list-style: decimal;
+}
+
+.faq-ul-list li {
+  margin-left: 12px;
+  margin-bottom: 6px;
+}
+
+.faq-ol-list li {
+  margin-left: 24px;
+  margin-bottom: 6px;
 }

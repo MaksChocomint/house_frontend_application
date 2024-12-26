@@ -17,7 +17,7 @@ const Questions = ({ faqItems }: Props) => {
   };
 
   return (
-    <Container styles="mt-32 flex flex-col tablet:flex-row gap-12 items-start">
+    <Container styles="mt-32 flex flex-col tablet:flex-row gap-6 items-start">
       {/* Левая колонка */}
       <div className="flex flex-col gap-8">
         <Title
@@ -55,7 +55,14 @@ const Questions = ({ faqItems }: Props) => {
                   exit={{ opacity: 0, height: 0 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <p className="text-black mb-4">{item.answer}</p>
+                  <p
+                    className="text-black mb-4 text-sm text-justify"
+                    dangerouslySetInnerHTML={{
+                      __html: item.answer
+                        .replace(/<ul>/g, '<ul class="faq-ul-list">')
+                        .replace(/<ol>/g, '<ol class="faq-ol-list">'),
+                    }}
+                  ></p>
                 </motion.div>
               )}
             </AnimatePresence>
