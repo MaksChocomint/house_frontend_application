@@ -14,7 +14,7 @@ const Moscow = () => {
           <Intro
             imageUrl="/accommodation/moscow/background.jpg"
             infoTitle="Апартаменты"
-            infoDescription="У нас идеально сочетаются современный комфорт<br>и уют в Москве"
+            infoDescription="Идеальное сочетание современного комфорта<br>и уюта в Москве"
             hasFilmtape={false}
             hasButton={true}
           />
