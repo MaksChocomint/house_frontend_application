@@ -8,6 +8,7 @@ interface IntroProps {
   infoTitle: string;
   infoDescription: string;
   hasFilmtape?: boolean;
+  isAboutPage?: boolean;
   hasButton: boolean;
 }
 
@@ -17,11 +18,12 @@ const Intro: React.FC<IntroProps> = ({
   infoDescription,
   hasButton,
   hasFilmtape,
+  isAboutPage,
 }) => {
   return (
     <div>
       <Background imageUrl={imageUrl}>
-        <div className="flex flex-col items-center w-full h-full justify-between gap-4 tablet:gap-8 laptop:gap-10">
+        <div className="flex flex-col items-center w-full h-full justify-between gap-4 tablet:gap-8 laptop:gap-10 relative z-[100]">
           <Info
             hasButton={hasButton}
             title={infoTitle}
@@ -35,6 +37,15 @@ const Intro: React.FC<IntroProps> = ({
             width={400}
             height={800}
             className="absolute hidden largeTablet:block  top-[15%] smallLaptop:top-[12%] right-4 smallLaptop:right-36 tablet:w-[300px] laptop:w-[350px] desktop:w-[400px]"
+          />
+        )}
+        {isAboutPage && (
+          <Image
+            src="/about/background.png"
+            alt="Flatpoint"
+            width={800}
+            height={800}
+            className="absolute top-[54%] left-1/2 -translate-x-1/2 -translate-y-1/2 px-2 desktop:w-[800px]"
           />
         )}
       </Background>

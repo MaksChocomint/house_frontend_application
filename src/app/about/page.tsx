@@ -15,6 +15,7 @@ const About = () => {
             infoTitle="О нас"
             infoDescription=""
             hasFilmtape={false}
+            isAboutPage={true}
             hasButton={false}
           />
         </div>
