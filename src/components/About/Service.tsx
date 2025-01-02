@@ -86,6 +86,8 @@ const Service = () => {
                   src="/about/service.jpg"
                   alt="service-img"
                   fill
+                  sizes="100vw"
+                  quality={100}
                   className="object-cover"
                 />
               </div>

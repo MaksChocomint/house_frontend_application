@@ -141,7 +141,7 @@ const Entertainment = () => {
                 />
                 <div className="absolute bg-natural-style bg-opacity-60 bottom-0 h-1/6 w-full flex items-center justify-center">
                   <div
-                    className={`text-center font-bold text-xl ${item.textColor}`}
+                    className={`text-center font-medium text-xl ${item.textColor}`}
                   >
                     {item.title}
                   </div>

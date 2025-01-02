@@ -110,6 +110,7 @@ const Gallery: React.FC = () => {
                   fill
                   className="object-cover select-none"
                   sizes="100vw"
+                  quality={100}
                   priority={index === 0}
                 />
               </div>
