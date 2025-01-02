@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Background from "./Background";
 import emailjs from "@emailjs/browser";
 import Title from "./Title";
+import Link from "next/link";
 
 type Props = {
   imageUrl: string;
@@ -64,6 +65,7 @@ const ContactSection = ({ imageUrl }: Props) => {
     <div className="mt-32 w-full">
       <Background imageUrl={imageUrl}>
         <div className="absolute top-1/2 -translate-y-1/2 smallLaptop:right-56 flex flex-col justify-center gap-5 py-14 px-8 bg-clean-space w-full tablet:w-[580px]">
+        <div className="absolute top-1/2 -translate-y-1/2 smallLaptop:right-56 flex flex-col justify-center gap-5 py-10 px-8 bg-clean-space w-full tablet:w-[510px]">
           <Title
             upperText="Контакты"
             lowerText="Оставьте заявку<br>Мы свяжемся с Вами"
@@ -71,6 +73,7 @@ const ContactSection = ({ imageUrl }: Props) => {
           <form
             onSubmit={handleSubmit}
             className="flex flex-col gap-4 w-full tablet:min-w-[500px] tablet:max-w-[40%] text-lg text-black mt-4"
+            className="flex flex-col gap-4 w-full tablet:min-w-[440px] tablet:max-w-[40%] text-base text-black mt-4"
             autoComplete="off"
             noValidate
           >
@@ -96,6 +99,7 @@ const ContactSection = ({ imageUrl }: Props) => {
             <button
               type="submit"
               className="p-6 rounded-full bg-home-coziness uppercase w-full text-2xl text-white mt-12"
+              className="p-5 rounded-full bg-home-coziness uppercase w-full text-xl text-white mt-12"
               disabled={isSending}
             >
               {isSending ? "Отправка..." : "Отправить"}
@@ -107,10 +111,19 @@ const ContactSection = ({ imageUrl }: Props) => {
             </div>
           )}
           <div className="text-black text-start w-full mb-4">
+          <div className="text-black text-start w-full mb-4 text-sm">
             Нажимая на кнопку, вы соглашаетесь <br />с условиями{" "}
             <span className="text-home-coziness">
               Политики конфидициальности
             </span>
+            <Link
+              href="/privacy-policy"
+              className="text-home-coziness "
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Политика конфиденциальности
+            </Link>
           </div>
         </div>
       </Background>

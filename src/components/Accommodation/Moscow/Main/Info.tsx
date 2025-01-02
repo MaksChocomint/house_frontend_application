@@ -16,7 +16,7 @@ const Info = () => {
           ключевой точки города.
         </div>
         <div className="flex flex-col tablet:flex-row gap-8 tablet:gap-16 items-start justify-between text-justify">
-          <div className="tablet:w-1/2">
+          <div className="tablet:w-1/2 text-base">
             Мы обеспечиваем удобный и беспроблемный процесс бронирования, чтобы
             вы могли сосредоточиться на своих планах и впечатлениях.
           </div>

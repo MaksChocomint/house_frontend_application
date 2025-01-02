@@ -2,6 +2,7 @@
 
 import React from "react";
 import Container from "../Container";
+import { useWindowSize } from "@/utils/useWindowSize";
 
 interface InfoProps {
   title: string;
@@ -10,6 +11,10 @@ interface InfoProps {
 }
 
 const Info: React.FC<InfoProps> = ({ title, description, hasButton }) => {
+  const { width } = useWindowSize();
+  const processedDescription =
+    width <= 450 ? description.replace(/<br\s*\/?>/gi, " ") : description;
+
   return (
     <Container styles="w-full flex flex-col items-start gap-4 mt-32">
       <h2
@@ -19,9 +24,10 @@ const Info: React.FC<InfoProps> = ({ title, description, hasButton }) => {
       >
         {title}
       </h2>
+
       <p
         className={`text-lg smallLaptop:text-2xl text-pretty text-black`}
-        dangerouslySetInnerHTML={{ __html: description }} // Безопасное использование для разметки
+        dangerouslySetInnerHTML={{ __html: processedDescription }} // Безопасное использование для разметки
       ></p>
       {hasButton && (
         <a

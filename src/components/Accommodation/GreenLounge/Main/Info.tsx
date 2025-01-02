@@ -14,7 +14,7 @@ const Info = () => {
           насладиться чистым воздухом, тишиной и спокойствием.
         </div>
         <div className="flex flex-col tablet:flex-row gap-8 tablet:gap-16 items-start justify-between text-justify">
-          <div className="tablet:w-1/2">
+          <div className="tablet:w-[53%] text-base">
             Каждый дом имеет уникальный интерьер, который вы можете подобрать
             под свое настроение и провести в нем время с семьей или устроить
             мероприятие. В каждом доме расположена двуспальная широкая кровать c
@@ -22,7 +22,7 @@ const Info = () => {
             полотенцами и одноразовыми зубными наборами.
           </div>
           <div className="flex tablet:w-1/2 flex-col gap-4 text-justify">
-            <div className="">
+            <div className="text-base">
               Мы продумали каждую деталь с заботой о вашем комфорте. Круглый год
               в домах тепло и уютно, продумана вентиляция и есть большие
               панорамные окна с видом на настоящую природу. Здесь не будет
