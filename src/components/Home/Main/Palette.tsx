@@ -23,7 +23,9 @@ const Palette = () => {
       <Container styles="mt-4">
         <div className="uppercase text-natural-style font-medium text-2xl flex gap-x-4 flex-wrap items-center">
           ВЫБЕРИ ДОМ И/ИЛИ КВАРТИРУ В ПАЛИТРЕ СВОЕГО НАСТРОЕНИЯ!
-          <span className="text-base text-home-coziness ">(листай)</span>
+          <div className="text-base text-home-coziness block desktop:hidden">
+            (листай)
+          </div>
         </div>
 
         <div className="mt-8">
