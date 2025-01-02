@@ -107,7 +107,7 @@ const Entertainment = () => {
                 whileHover={{ opacity: 1 }}
               >
                 <div
-                  className={`text-center font-bold text-base smallLaptop:text-xl cursor-default ${item.textColor}`}
+                  className={`text-center font-medium text-base smallLaptop:text-xl cursor-default ${item.textColor}`}
                 >
                   {item.title}
                 </div>

@@ -21,9 +21,11 @@ const Palette = () => {
   return (
     <div className="w-full mt-32 bg-human-detail py-10 h-60">
       <Container styles="mt-4">
-        <div className="uppercase text-natural-style font-medium text-2xl">
+        <div className="uppercase text-natural-style font-medium text-2xl flex gap-x-4 flex-wrap items-center">
           ВЫБЕРИ ДОМ И/ИЛИ КВАРТИРУ В ПАЛИТРЕ СВОЕГО НАСТРОЕНИЯ!
+          <span className="text-base text-home-coziness ">(листай)</span>
         </div>
+
         <div className="mt-8">
           <Swiper
             spaceBetween={5}
