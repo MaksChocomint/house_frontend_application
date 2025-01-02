@@ -45,7 +45,7 @@ const ApartmentCard: React.FC<ApartmentCardProps> = ({
 
   return (
     <div
-      className={`flex flex-col smallLaptop:flex-row gap-16 desktop:gap-24 items-stretch ${
+      className={`flex flex-col-reverse smallLaptop:flex-row gap-16 desktop:gap-24 items-stretch ${
         isMirrored ? "smallLaptop:flex-row-reverse" : ""
       }`}
     >

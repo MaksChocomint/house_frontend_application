@@ -75,7 +75,7 @@ const Gallery: React.FC = () => {
       <div className="relative w-full mt-16">
         <Swiper
           onSwiper={(swiper) => (swiperRef.current = swiper)}
-          loop={true}
+          loop={false}
           pagination={{
             clickable: true,
             el: ".custom-pagination", // Кастомный класс для стилизации пагинации
