@@ -19,44 +19,44 @@ const Entertainment = () => {
   const items = [
     {
       id: 1,
-      src: "/main/entertainment/moscow.png",
+      src: "/main/entertainment/moscow.jpeg",
       title: "Москва",
       textColor: "text-white",
     },
     {
       id: 2,
-      src: "/main/entertainment/horse.png",
+      src: "/main/entertainment/horse.jpeg",
       title: "Конно-спортивный клуб Primo Posto",
       textColor: "text-white",
     },
 
     {
       id: 4,
-      src: "/main/entertainment/vdnh.png",
+      src: "/main/entertainment/vdnh.jpeg",
       title: "ВДНХ",
       textColor: "text-white",
     },
     {
       id: 5,
-      src: "/main/entertainment/spa.png",
+      src: "/main/entertainment/spa.jpeg",
       title: "Spa-комплекс La Sours d'Istra",
       textColor: "text-white",
     },
     {
       id: 6,
-      src: "/main/entertainment/banya.png",
+      src: "/main/entertainment/banya.jpeg",
       title: "Банный комплекс",
       textColor: "text-white",
     },
     {
       id: 7,
-      src: "/main/entertainment/monastery.png",
+      src: "/main/entertainment/monastery.jpeg",
       title: "Воскресенский Ново-Иерусалимский монастырь",
       textColor: "text-white",
     },
     {
       id: 8,
-      src: "/main/entertainment/ostankino.png",
+      src: "/main/entertainment/ostankino.jpeg",
       title: "Останкинский парк",
       textColor: "text-white",
     },
@@ -82,7 +82,7 @@ const Entertainment = () => {
           {items.map((item) => (
             <motion.div
               key={item.id}
-              className={`relative rounded-lg overflow-hidden shadow-lg ${
+              className={`relative rounded-2xl overflow-hidden shadow-lg ${
                 item.id === 1
                   ? "row-start-2 row-end-4 col-start-1 col-end-2"
                   : item.id === 2
@@ -101,7 +101,13 @@ const Entertainment = () => {
               }`}
               whileHover={{ scale: 1.05 }}
             >
-              <Image src={item.src} alt={item.title} fill objectFit="cover" />
+              <Image
+                src={item.src}
+                alt={item.title}
+                fill
+                objectFit="cover"
+                className="rounded-2xl"
+              />
               <motion.div
                 className="absolute inset-0 bg-natural-style bg-opacity-60 flex items-center justify-center opacity-0"
                 whileHover={{ opacity: 1 }}
@@ -131,13 +137,13 @@ const Entertainment = () => {
         >
           {items.map((item) => (
             <SwiperSlide key={item.id}>
-              <div className="relative mt-10 h-[450px] rounded-lg overflow-hidden shadow-lg">
+              <div className="relative mt-10 h-[450px] rounded-2xl overflow-hidden shadow-lg">
                 <Image
                   src={item.src}
                   alt={item.title}
                   fill
                   objectFit="cover"
-                  className="rounded-lg"
+                  className="rounded-2xl"
                 />
                 <div className="absolute bg-natural-style bg-opacity-60 bottom-0 h-1/6 w-full flex items-center justify-center">
                   <div
