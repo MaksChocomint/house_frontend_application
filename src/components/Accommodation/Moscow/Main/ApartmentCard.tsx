@@ -106,7 +106,7 @@ const ApartmentCard: React.FC<ApartmentCardProps> = ({
             ))}
           </Swiper>
         ) : (
-          <div className="flex gap-2 desktop:gap-4">
+          <div className="flex gap-2 desktop:gap-4 justify-between">
             {imageList.slice(1).map((image, index) => (
               <motion.div
                 key={index + 1}
