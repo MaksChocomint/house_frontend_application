@@ -12,7 +12,7 @@ const Home = () => {
         <div className="flex flex-col">
           <Header />
           <Intro
-            imageUrl="/main/background.jpg"
+            imageUrl="/main/background.jpeg"
             infoTitle="Раскрась момент"
             infoDescription="В эстетичном доме в Подмосковье<br>или в комфортабельных апартаментах в Москве"
             hasFilmtape={true}

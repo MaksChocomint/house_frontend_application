@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { IoIosArrowForward } from "react-icons/io";
 
@@ -6,10 +7,11 @@ type Props = {
   image: string;
   title: string;
   text: string;
+  link: string;
   onNext: () => void;
 };
 
-const EntertainmentCard = ({ image, title, text, onNext }: Props) => {
+const EntertainmentCard = ({ image, title, text, link, onNext }: Props) => {
   return (
     <div className="w-full rounded-2xl flex flex-col largeTablet:flex-row largeTablet:gap-8 smallLaptop:gap-12 h-[850px] largeTablet:h-[550px] relative bg-human-detail items-center">
       <Image
@@ -32,12 +34,14 @@ const EntertainmentCard = ({ image, title, text, onNext }: Props) => {
           }}
         ></div>
         <div className="mt-auto">
-          <a
-            href="?tl-booking-open=true"
+          <Link
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-lg uppercase bg-home-coziness rounded-full text-white py-5 px-10 smallTablet:px-16"
           >
             Забронировать
-          </a>
+          </Link>
         </div>
       </div>
       <div
