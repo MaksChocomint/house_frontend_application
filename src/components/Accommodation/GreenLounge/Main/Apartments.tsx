@@ -347,6 +347,45 @@ const Apartments = () => {
         />
 
         <ApartmentCard
+          title="POINT 226 Альпийский"
+          propsList={["65 м²", "6 990 ₽/сутки", "до 6 человек"]}
+          description="В доме: одна двуспальная кровать и две односпальные кровати  с белоснежным постельным бельем и ортопедическими матрасами, раскладной диван, кондиционер, банные полотенца, набор косметической продукции, тапочки, фен, холодильник с морозильной камерой, кофемашина, чайник и чайные принадлежности, посудомоечная машина, зона барбекю с мангалом и шампура, парковочное место на 2 машины, телевизор и Wi-Fi"
+          link="326087"
+          images={[
+            "/accommodation/green-lounge/aplic/pic1.jpg",
+            "/accommodation/green-lounge/aplic/pic2.jpg",
+            "/accommodation/green-lounge/aplic/pic3.jpg",
+            "/accommodation/green-lounge/aplic/pic4.jpg",
+            "/accommodation/green-lounge/aplic/pic5.jpg",
+            "/accommodation/green-lounge/aplic/pic6.jpg",
+            "/accommodation/green-lounge/aplic/pic7.jpg",
+            "/accommodation/green-lounge/aplic/pic8.jpg",
+            "/accommodation/green-lounge/aplic/pic9.jpg",
+          ]}
+          paletteImage="/accommodation/green-lounge/aplic/pic10.png"
+          booking={true}
+        />
+        <ApartmentCard
+          title="POINT 221 Алтайский"
+          propsList={["65 м²", "6 990 ₽/сутки", "до 6 человек"]}
+          description="В доме: одна двуспальная кровать и две односпальные кровати  с белоснежным постельным бельем и ортопедическими матрасами, раскладываемый диван, кондиционер, банные полотенца, набор косметической продукции, тапочки, фен, холодильник с морозильной камерой, кофемашина, чайник и чайные принадлежности, посудомоечная машина, зона барбекю с мангалом и шампура, парковочное место на 2 машины, телевизор и Wi-Fi, настольные игры"
+          link="326080"
+          images={[
+            "/accommodation/green-lounge/altai/pic1.jpg",
+            "/accommodation/green-lounge/altai/pic2.jpg",
+            "/accommodation/green-lounge/altai/pic3.jpg",
+            "/accommodation/green-lounge/altai/pic4.jpg",
+            "/accommodation/green-lounge/altai/pic5.jpg",
+            "/accommodation/green-lounge/altai/pic6.jpg",
+            "/accommodation/green-lounge/altai/pic7.jpg",
+            "/accommodation/green-lounge/altai/pic8.jpg",
+            "/accommodation/green-lounge/altai/pic9.jpg",
+          ]}
+          paletteImage="/accommodation/green-lounge/altai/pic10.png"
+          booking={true}
+        />
+
+        <ApartmentCard
           title="POINT 194 Карамельный"
           propsList={["65 м²", "8 249 ₽/сутки", "до 6 человек"]}
           description="В доме: одна двуспальная кровать и две односпальные кровати  с белоснежным постельным бельем и ортопедическими матрасами, раскладной диван, кондиционер, банные полотенца, набор косметической продукции, тапочки, фен, холодильник с морозильной камерой, кофемашина, чайник и чайные принадлежности, посудомоечная машина, зона барбекю с мангалом и шампура, парковочное место на 2 машины, телевизор и Wi-FiВ доме: одна двуспальная кровать и две односпальные кровати  с белоснежным постельным бельем и ортопедическими матрасами, раскладной диван, кондиционер, банные полотенца, набор косметической продукции, тапочки, фен, холодильник с морозильной камерой, кофемашина, чайник и чайные принадлежности, посудомоечная машина, зона барбекю с мангалом и шампура, парковочное место на 2 машины, телевизор и Wi-Fi"
