@@ -352,17 +352,17 @@ const Apartments = () => {
           description="В доме: одна двуспальная кровать и две односпальные кровати  с белоснежным постельным бельем и ортопедическими матрасами, раскладной диван, кондиционер, банные полотенца, набор косметической продукции, тапочки, фен, холодильник с морозильной камерой, кофемашина, чайник и чайные принадлежности, посудомоечная машина, зона барбекю с мангалом и шампура, парковочное место на 2 машины, телевизор и Wi-Fi"
           link="326087"
           images={[
-            "/accommodation/green-lounge/aplic/pic1.jpg",
-            "/accommodation/green-lounge/aplic/pic2.jpg",
-            "/accommodation/green-lounge/aplic/pic3.jpg",
-            "/accommodation/green-lounge/aplic/pic4.jpg",
-            "/accommodation/green-lounge/aplic/pic5.jpg",
-            "/accommodation/green-lounge/aplic/pic6.jpg",
-            "/accommodation/green-lounge/aplic/pic7.jpg",
-            "/accommodation/green-lounge/aplic/pic8.jpg",
-            "/accommodation/green-lounge/aplic/pic9.jpg",
+            "/accommodation/green-lounge/alpic/pic1.jpg",
+            "/accommodation/green-lounge/alpic/pic2.jpg",
+            "/accommodation/green-lounge/alpic/pic3.jpg",
+            "/accommodation/green-lounge/alpic/pic4.jpg",
+            "/accommodation/green-lounge/alpic/pic5.jpg",
+            "/accommodation/green-lounge/alpic/pic6.jpg",
+            "/accommodation/green-lounge/alpic/pic7.jpg",
+            "/accommodation/green-lounge/alpic/pic8.jpg",
+            "/accommodation/green-lounge/alpic/pic9.jpg",
           ]}
-          paletteImage="/accommodation/green-lounge/aplic/pic10.png"
+          paletteImage="/accommodation/green-lounge/alpic/pic10.png"
           booking={true}
         />
         <ApartmentCard
