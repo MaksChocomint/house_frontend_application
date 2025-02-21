@@ -56,13 +56,21 @@ const ApartmentCard: React.FC<ApartmentCardProps> = ({
             alt="paletteImg"
           />
         </div>
-        <motion.div className="w-full overflow-hidden" layout>
+        <motion.div
+          className="w-full overflow-hidden relative"
+          layout
+          style={{
+            aspectRatio: "940/625", // Соотношение оригинальных размеров изображения
+            maxWidth: 940,
+            maxHeight: 625,
+          }}
+        >
           <Image
             src={imageList[0]}
             alt="main-image"
-            width={940}
-            height={625}
-            className="object-cover w-full h-full"
+            fill // Автоматически заполняет родительский контейнер
+            className="object-cover"
+            priority
           />
         </motion.div>
 
