@@ -35,7 +35,7 @@ const Info = () => {
               href="/about"
               className="uppercase font-medium flex gap-2 text-xl text-home-coziness text-nowrap"
             >
-              <div>(Больше о копании)</div>
+              <div>(Больше о компании)</div>
               <Image
                 src="/main/arrow-right.svg"
                 alt={"arrow"}
