@@ -2,6 +2,7 @@ import Link from "next/link";
 import Container from "../Container";
 import Logo from "../Header/Logo";
 import Socials from "../Socials";
+import { FaTelegram } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -9,8 +10,19 @@ const Footer = () => {
       <div className="h-full w-full flex flex-col gap-16 smallTablet:flex-row justify-between">
         <div className="flex flex-col justify-between gap-4">
           <Logo />
+
+          <Link
+            href="https://t.me/maksim_blackholchik"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full text-black w-full flex items-center gap-2"
+          >
+            <div>Разработчик сайта</div>
+            <FaTelegram className="text-[35px] tablet:text-[25px]" />
+          </Link>
+
           <div className="font-medium">
-            2024. Все права защищены
+            2025. Все права защищены
             <br />
             <Link
               href="/privacy-policy"
