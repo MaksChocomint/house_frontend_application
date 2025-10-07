@@ -6,7 +6,7 @@ import { FaTelegram } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <Container styles="flex w-full bg-human-detail py-24 h-[360px] font-medium">
+    <Container styles="flex w-full bg-human-detail py-24 h-[400px] font-medium">
       <div className="h-full w-full flex flex-col gap-16 smallTablet:flex-row justify-between">
         <div className="flex flex-col justify-between gap-4">
           <Logo />
