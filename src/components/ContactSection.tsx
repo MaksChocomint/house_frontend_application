@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Background from "./Background";
-import emailjs from "@emailjs/browser";
+// import emailjs from "@emailjs/browser";
 import Title from "./Title";
 import Link from "next/link";
 
