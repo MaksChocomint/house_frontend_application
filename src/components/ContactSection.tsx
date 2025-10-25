@@ -45,14 +45,13 @@ const ContactSection = ({ imageUrl }: Props) => {
       //   },
       //   "KHUXT0O9xljwixgMC" // Замените на ваш Public Key
       // );
-
       // Проверяем статус ответа
-      if (result.status === 200) {
-        setSuccessMessage("Сообщение успешно отправлено!");
-        setFormData({ name: "", phone: "" });
-      } else {
-        setSuccessMessage("Ошибка при отправке сообщения.");
-      }
+      // if (result.status === 200) {
+      //   setSuccessMessage("Сообщение успешно отправлено!");
+      //   setFormData({ name: "", phone: "" });
+      // } else {
+      //   setSuccessMessage("Ошибка при отправке сообщения.");
+      // }
     } catch (error) {
       console.error("Ошибка при отправке сообщения:", error);
       setSuccessMessage(
