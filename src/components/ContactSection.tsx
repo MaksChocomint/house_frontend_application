@@ -36,15 +36,15 @@ const ContactSection = ({ imageUrl }: Props) => {
 
     // Попробуем отправить данные через EmailJS
     try {
-      const result = await emailjs.send(
-        "service_xt5o30w", // Замените на ваш Service ID
-        "template_u0337f7", // Замените на ваш Template ID
-        {
-          name: formData.name,
-          phone: formData.phone,
-        },
-        "KHUXT0O9xljwixgMC" // Замените на ваш Public Key
-      );
+      // const result = await emailjs.send(
+      //   "service_xt5o30w", // Замените на ваш Service ID
+      //   "template_u0337f7", // Замените на ваш Template ID
+      //   {
+      //     name: formData.name,
+      //     phone: formData.phone,
+      //   },
+      //   "KHUXT0O9xljwixgMC" // Замените на ваш Public Key
+      // );
 
       // Проверяем статус ответа
       if (result.status === 200) {
@@ -55,7 +55,9 @@ const ContactSection = ({ imageUrl }: Props) => {
       }
     } catch (error) {
       console.error("Ошибка при отправке сообщения:", error);
-      setSuccessMessage("Произошла ошибка. Попробуйте снова.");
+      setSuccessMessage(
+        "К сожалению, сейчас мы не можем доставить Ваше сообщение."
+      );
     } finally {
       setIsSending(false); // Снимаем статус отправки
     }
