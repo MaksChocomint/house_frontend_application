@@ -1,7 +1,6 @@
 import Background from "../Background";
 import Booking from "./Booking";
 import Info from "./Info";
-import Image from "next/image";
 
 interface IntroProps {
   imageUrl: string;
@@ -31,20 +30,16 @@ const Intro: React.FC<IntroProps> = ({
           />
         </div>
         {hasFilmtape && (
-          <Image
+          <img
             src="/main/filmtape.png"
             alt="Кинопленка"
-            width={400}
-            height={800}
-            className="absolute hidden largeTablet:block  top-[15%] smallLaptop:top-[12%] right-4 smallLaptop:right-36 tablet:w-[300px] laptop:w-[350px] desktop:w-[400px]"
+            className="absolute hidden largeTablet:block top-[15%] smallLaptop:top-[12%] right-4 smallLaptop:right-36 tablet:w-[300px] laptop:w-[350px] desktop:w-[400px]"
           />
         )}
         {isAboutPage && (
-          <Image
+          <img
             src="/about/background.png"
             alt="Flatpoint"
-            width={800}
-            height={800}
             className="absolute top-[54%] left-1/2 -translate-x-1/2 -translate-y-1/2 px-2 desktop:w-[800px]"
           />
         )}
