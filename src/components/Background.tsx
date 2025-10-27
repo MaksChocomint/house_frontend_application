@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ReactNode } from "react";
 
 interface BackgroundProps {
@@ -8,13 +9,18 @@ interface BackgroundProps {
 const Background: React.FC<BackgroundProps> = ({ imageUrl, children }) => {
   return (
     <div className="relative w-full h-screen overflow-hidden">
+      {/* Overlay */}
+
       {/* Background Image */}
-      <img
+      <Image
         src={imageUrl}
         alt="background"
-        className="z-0 object-cover w-full h-full absolute top-0 left-0"
+        fill
+        quality={100}
+        sizes="200wv"
+        className="z-0 object-cover"
+        priority // Оптимизация: устанавливаем приоритет загрузки
       />
-
       {/* Контент */}
       <div className="relative z-20 text-black flex justify-center items-center h-full">
         {children}
