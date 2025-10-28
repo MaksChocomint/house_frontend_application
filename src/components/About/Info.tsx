@@ -14,7 +14,7 @@ const Info = () => {
           alt="основатели flatpoint"
           width={360}
           height={427}
-          className="smallLaptop:w-auto h-[427px]"
+          className="smallLaptop:w-auto h-[427px] w-[360px]"
         />
       </div>
       <div className="flex flex-col gap-8 smallLaptop:w-[652px] text-lg text-justify">
