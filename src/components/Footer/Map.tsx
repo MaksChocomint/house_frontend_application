@@ -26,15 +26,15 @@ const placemarks = [
   { id: "Point 484 Рябиновый", coordinates: [56.059966, 36.756627] },
   { id: "Point 485 Пшеничный", coordinates: [56.060092, 36.756501] },
   { id: "Point 486 Медовый", coordinates: [56.060207, 36.756366] },
-  { id: "Студия Spring Dawn на ВДНХ", coordinates: [55.837414, 37.636392] },
-  { id: "Студия Moonlight на ВДНХ", coordinates: [55.837414, 37.636392] },
-  { id: "Лофт Green Garden на ВДНХ", coordinates: [55.838061, 37.633293] },
-  { id: "Студия Black Pearl на ВДНХ", coordinates: [55.838061, 37.633293] },
-  { id: "Студия Botanica", coordinates: [55.704986, 37.670277] },
-  { id: "Студия White&Black", coordinates: [55.704986, 37.670277] },
-  { id: "Студия Minto Chokoreto", coordinates: [55.821593, 37.592905] },
-  { id: "Студия Aquamarine", coordinates: [55.858705, 37.515964] },
-  { id: "Апартаменты Blue Heaven", coordinates: [55.956995, 37.451079] },
+  // { id: "Студия Spring Dawn на ВДНХ", coordinates: [55.837414, 37.636392] },
+  // { id: "Студия Moonlight на ВДНХ", coordinates: [55.837414, 37.636392] },
+  // { id: "Лофт Green Garden на ВДНХ", coordinates: [55.838061, 37.633293] },
+  // { id: "Студия Black Pearl на ВДНХ", coordinates: [55.838061, 37.633293] },
+  // { id: "Студия Botanica", coordinates: [55.704986, 37.670277] },
+  // { id: "Студия White&Black", coordinates: [55.704986, 37.670277] },
+  // { id: "Студия Minto Chokoreto", coordinates: [55.821593, 37.592905] },
+  // { id: "Студия Aquamarine", coordinates: [55.858705, 37.515964] },
+  // { id: "Апартаменты Blue Heaven", coordinates: [55.956995, 37.451079] },
 ];
 
 const YandexMap = () => {
@@ -45,8 +45,8 @@ const YandexMap = () => {
   }, []);
 
   const mapState = {
-    center: [55.859953, 37.120445], // Coordinates for Moscow
-    zoom: 9, // Adjust zoom level to your liking
+    center: [56.063163, 36.760651], // Coordinates for Moscow
+    zoom: 16, // Adjust zoom level to your liking
     controls: [],
   };
 

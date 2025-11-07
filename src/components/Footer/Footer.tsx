@@ -37,7 +37,7 @@ const Footer = () => {
         <div className="flex-col h-full justify-between font-medium uppercase tablet:mr-32 hidden tablet:flex">
           <Link href="/about">О нас</Link>
           <Link href="/accommodation/green-lounge">Гостевые дома</Link>
-          <Link href="/accommodation/moscow">Апартаменты</Link>
+          {/* <Link href="/accommodation/moscow">Апартаменты</Link> */}
           <Link href="/contacts">Контакты</Link>
         </div>
         <div className="flex flex-col justify-between gap-2">

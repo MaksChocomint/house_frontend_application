@@ -10,10 +10,10 @@ const ColorCard = ({ color }: Props) => {
   let paletteColor = "";
 
   switch (color) {
-    case "blue-heaven":
-      title = "BLUE HEAVEN";
-      subtitle = "Апартаменты";
-      paletteColor = "bg-blue-heaven";
+    case "emerald":
+      title = "POINT 371";
+      subtitle = "Изумрудный";
+      paletteColor = "bg-emerald";
       break;
     case "mint":
       title = "POINT 242";
@@ -40,15 +40,15 @@ const ColorCard = ({ color }: Props) => {
       subtitle = "Пшеничный";
       paletteColor = "bg-wheat";
       break;
-    case "moonlight":
-      title = "MOONLIGHT";
-      subtitle = "Апартаменты";
-      paletteColor = "bg-moonlight";
-      break;
     case "rowan":
       title = "POINT 484";
       subtitle = "Рябиновый";
       paletteColor = "bg-rowan";
+      break;
+    case "blueberry":
+      title = "POINT 177";
+      subtitle = "Черничный";
+      paletteColor = "bg-blueberry";
       break;
     case "soft-black":
       title = "SOFT BLACK";

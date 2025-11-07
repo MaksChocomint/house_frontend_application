@@ -7,13 +7,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
 const colors = [
-  "blue-heaven",
+  "emerald",
   "mint",
   "softwood",
   "olive",
   "sand",
   "wheat",
-  "moonlight",
+  "blueberry",
   "rowan",
 ];
 
@@ -22,7 +22,7 @@ const Palette = () => {
     <div className="w-full mt-32 bg-human-detail py-10 h-60">
       <Container styles="mt-4">
         <div className="uppercase text-natural-style font-medium text-2xl flex gap-x-4 flex-wrap items-center">
-          ВЫБЕРИ ДОМ И/ИЛИ КВАРТИРУ В ПАЛИТРЕ СВОЕГО НАСТРОЕНИЯ!
+          ВЫБЕРИ ДОМ В ПАЛИТРЕ СВОЕГО НАСТРОЕНИЯ!
           <div className="text-base text-home-coziness block desktop:hidden">
             (листай)
           </div>

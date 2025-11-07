@@ -11,7 +11,7 @@ import "./Gallery.css";
 
 const images = [
   "/main/scroll-1.jpg",
-  "/main/scroll-2.jpg",
+  // "/main/scroll-2.jpg",
   "/main/scroll-3.jpg",
   "/main/scroll-4.jpg",
   "/main/scroll-5.jpg",

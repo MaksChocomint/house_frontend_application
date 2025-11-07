@@ -14,7 +14,7 @@ const Home = () => {
           <Intro
             imageUrl="/main/background.jpeg"
             infoTitle="Раскрась момент"
-            infoDescription="В эстетичном доме в Подмосковье<br>или в комфортабельных апартаментах в Москве"
+            infoDescription="В эстетичном доме в Подмосковье"
             hasFilmtape={true}
             hasButton={true}
           />

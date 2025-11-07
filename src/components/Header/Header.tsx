@@ -14,7 +14,7 @@ const Header = () => {
   };
 
   return (
-    <header className="">
+    <header>
       {/* Логотип слева */}
       <Container styles="flex justify-between items-center py-4 w-full fixed top-0 z-[200] bg-human-detail">
         <div className="flex items-center">
@@ -47,9 +47,14 @@ const Header = () => {
             menuOpen ? "translate-x-0" : "translate-x-full"
           } transition-transform duration-300 tablet:hidden z-40`}
         >
-          <div className="h-min-screen">
-            <div className="flex flex-col h-full mt-16 py-8 justify-center items-center text-human-detail text-base gap-4">
+          <div className="flex flex-col h-full w-full justify-center items-center py-8">
+            {/* Navbar по центру */}
+            <div className="flex flex-col text-human-detail items-center justify-center flex-grow w-full">
               <Navbar />
+            </div>
+
+            {/* Контакты внизу */}
+            <div className="w-full flex justify-center pb-8">
               <Contacts />
             </div>
           </div>

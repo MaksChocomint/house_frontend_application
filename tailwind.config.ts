@@ -31,7 +31,7 @@ const config: Config = {
 
     extend: {
       fontFamily: {
-        montserrat: "var(--font-montserrat)", 
+        montserrat: "var(--font-montserrat)",
       },
       colors: {
         "clean-space": "#F3F2ED",
@@ -44,23 +44,27 @@ const config: Config = {
 
         "blue-heaven": "#779DD0",
 
-        "mint": "#64B48E", 
+        mint: "#64B48E",
 
-        "softwood": "#345042",
+        softwood: "#345042",
 
-        "olive": "#616741",
+        olive: "#616741",
 
-        "sand": "#B4AB64",
+        sand: "#B4AB64",
 
-        "wheat": "#E9DA79",
+        wheat: "#E9DA79",
 
-        "moonlight": "#0B0C57",
+        moonlight: "#0B0C57",
 
-        "rowan": "#C15E46",
+        rowan: "#C15E46",
 
         "soft-black": "#1D1D1D",
 
-        "honey": "#D9AC59"
+        honey: "#D9AC59",
+
+        emerald: "#006850",
+
+        blueberry: "#644D8B",
       },
     },
   },

@@ -38,7 +38,7 @@ const Apartments = () => {
         />
       </div>
       <div className="flex flex-col gap-16">
-        <div className="flex smallLaptop:gap-16 desktop:gap-24">
+        {/* <div className="flex smallLaptop:gap-16 desktop:gap-24">
           <div className="w-0 smallLaptop:w-[60%]"></div>
           <Title upperText="Проживание" lowerText="Апартаменты" />
         </div>
@@ -67,7 +67,7 @@ const Apartments = () => {
           paletteImage="/accommodation/moscow/blacknwhite/pic10.png"
           isMirrored={true}
           booking={false}
-        />
+        /> */}
       </div>
     </Container>
   );
