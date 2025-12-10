@@ -16,7 +16,7 @@ const Header = () => {
   return (
     <header>
       {/* Логотип слева */}
-      <Container styles="flex justify-between items-center py-4 w-full fixed top-0 z-[200] bg-human-detail">
+      <Container styles="flex justify-between items-center py-4 w-full fixed top-0 z-[10000] bg-human-detail">
         <div className="flex items-center">
           <Logo />
         </div>

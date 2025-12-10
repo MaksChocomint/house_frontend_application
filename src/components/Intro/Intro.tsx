@@ -1,3 +1,5 @@
+// @/components/Intro.tsx
+
 import Background from "../Background";
 import Booking from "./Booking";
 import Info from "./Info";
@@ -36,7 +38,7 @@ const Intro: React.FC<IntroProps> = ({
             alt="Кинопленка"
             width={400}
             height={800}
-            className="absolute hidden largeTablet:block  top-[15%] smallLaptop:top-[12%] right-4 smallLaptop:right-36 tablet:w-[300px] laptop:w-[350px] desktop:w-[400px]"
+            className="absolute hidden largeTablet:block  top-[15%] smallLaptop:top-[12%] right-4 smallLaptop:right-36 tablet:w-[300px] laptop:w-[350px] desktop:w-[400px]"
           />
         )}
         {isAboutPage && (
@@ -49,7 +51,11 @@ const Intro: React.FC<IntroProps> = ({
           />
         )}
       </Background>
-      <Booking />
+
+      {/* 🛑 ИЗМЕНЕНИЕ: Оборачиваем Booking в div с id="booking-anchor" */}
+      <div id="booking-anchor">
+        <Booking />
+      </div>
     </div>
   );
 };

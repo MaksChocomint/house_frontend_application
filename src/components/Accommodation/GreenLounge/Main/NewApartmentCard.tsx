@@ -41,14 +41,35 @@ const NewApartmentCard: React.FC<ApartmentCardProps> = ({
     }
   };
 
+  // 🛑 ФУНКЦИЯ: Прокрутка с отступом для отображения виджета внизу экрана
+  const handleScrollToBooking = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const targetElement = document.getElementById("booking-anchor");
+
+    if (targetElement) {
+      const targetPosition =
+        targetElement.getBoundingClientRect().top + window.scrollY;
+      const windowHeight = window.innerHeight;
+
+      // Вычисляем позицию для прокрутки, чтобы виджет оказался внизу + 40px отступ
+      const scrollTo =
+        targetPosition - windowHeight + targetElement.offsetHeight + 40;
+
+      const finalScroll = Math.max(0, scrollTo);
+
+      window.scrollTo({
+        top: finalScroll,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <div
       className={`flex flex-col smallLaptop:flex-row gap-6 smallLaptop:gap-16 desktop:gap-24 items-stretch ${
         isMirrored ? "smallLaptop:flex-row-reverse" : ""
       }`}
     >
-      {/* Левая часть с текстом */}
-
       {/* Правая часть с изображениями */}
       <div className="flex flex-col gap-2 desktop:gap-4 w-full smallLaptop:w-[60%] relative">
         <div className="absolute -top-12 right-8 z-[100]">
@@ -116,7 +137,9 @@ const NewApartmentCard: React.FC<ApartmentCardProps> = ({
           </div>
         )}
       </div>
-      <div className="flex flex-col gap-6 tablet:gap-8">
+
+      {/* Левая часть с текстом */}
+      <div className="flex flex-col gap-6 tablet:gap-8 w-full smallLaptop:w-[40%]">
         <div className="flex flex-col gap-2 tablet:gap-4">
           <div
             className="text-3xl desktop:text-4xl text-natural-style font-medium"
@@ -162,7 +185,8 @@ const NewApartmentCard: React.FC<ApartmentCardProps> = ({
           {booking ? (
             <div className="mt-6">
               <a
-                href={`?tl-booking-open=true&room-type=${link}`}
+                href="#booking-anchor" // Меняем ссылку на якорь
+                onClick={handleScrollToBooking} // 🛑 Используем новую функцию прокрутки
                 className="text-lg uppercase bg-home-coziness rounded-full text-white py-5 px-10 smallTablet:px-16"
               >
                 Забронировать

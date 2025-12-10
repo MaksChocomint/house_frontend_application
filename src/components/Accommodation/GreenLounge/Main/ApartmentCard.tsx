@@ -41,10 +41,34 @@ const ApartmentCard: React.FC<ApartmentCardProps> = ({
     }
   };
 
+  // 🛑 НОВАЯ ФУНКЦИЯ: Прокрутка с отступом
+  const handleScrollToBooking = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault(); // Предотвращаем стандартное действие якоря
+    const targetElement = document.getElementById("booking-anchor");
+
+    if (targetElement) {
+      const targetPosition =
+        targetElement.getBoundingClientRect().top + window.scrollY;
+      const windowHeight = window.innerHeight;
+
+      // Определяем, куда прокручивать:
+      // TargetPosition - ВысотаОкна + ВысотаЭлемента (примерно) + небольшой отступ
+      // Здесь мы прокручиваем к точке, где виджет будет внизу экрана.
+      const scrollTo =
+        targetPosition - windowHeight + targetElement.offsetHeight + 40;
+
+      // Если виджет уже почти внизу или прокрутка не нужна, просто прокручиваем к началу виджета
+      const finalScroll = Math.max(0, scrollTo);
+
+      window.scrollTo({
+        top: finalScroll,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <div className="flex flex-col gap-8 items-stretch">
-      {/* Левая часть с текстом */}
-
       {/* Правая часть с изображениями */}
       <div className="flex flex-col gap-2 desktop:gap-4 w-full relative">
         <div className="absolute -top-12 right-8 z-[100]">
@@ -60,7 +84,7 @@ const ApartmentCard: React.FC<ApartmentCardProps> = ({
           className="w-full overflow-hidden relative"
           layout
           style={{
-            aspectRatio: "940/625", // Соотношение оригинальных размеров изображения
+            aspectRatio: "940/625",
             maxWidth: 940,
             maxHeight: 625,
           }}
@@ -68,7 +92,7 @@ const ApartmentCard: React.FC<ApartmentCardProps> = ({
           <Image
             src={imageList[0]}
             alt="main-image"
-            fill // Автоматически заполняет родительский контейнер
+            fill
             className="object-cover"
             priority
           />
@@ -157,7 +181,8 @@ const ApartmentCard: React.FC<ApartmentCardProps> = ({
           {booking ? (
             <div className="mt-6">
               <a
-                href={`?tl-booking-open=true&room-type=${link}`}
+                href="#booking-anchor" // Оставляем якорь для доступности
+                onClick={handleScrollToBooking} // 🛑 Используем новую функцию прокрутки
                 className="text-lg uppercase bg-home-coziness rounded-full text-white py-5 px-10 smallTablet:px-16"
               >
                 Забронировать
