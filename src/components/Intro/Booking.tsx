@@ -60,7 +60,7 @@ const BNOVO_CONFIG: Record<string, any> = {
   dto_nextday: "on",
   dto_value: "2",
   cancel_color: "#FFFFFF",
-  url: "http://localhost:3000/booking",
+  url: "https://flat-point.ru/booking",
   onlyrooms:
     "608959,608960,608961,608962,608963,608964,608965,608967,608968,608969,608970,608971,608972,608973,608974,608975,608978,608979",
   firstroom: "608959",
