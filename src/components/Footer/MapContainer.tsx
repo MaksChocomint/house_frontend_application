@@ -21,7 +21,7 @@ const MapContainer = ({ largeMap }: Props) => {
       >
         <h1 className="text-3xl uppercase font-medium">Flatpoint</h1>
         <div className="tablet:text-xl tablet:text-start text-center">
-          +7 (495) 125-25-27
+          +7 (925) 143-79-52
           <br />
           info@flatpoint.ru
         </div>
