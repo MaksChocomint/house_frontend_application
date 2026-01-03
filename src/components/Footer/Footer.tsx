@@ -41,7 +41,7 @@ const Footer = () => {
           <Link href="/contacts">Контакты</Link>
         </div>
         <div className="flex flex-col justify-between gap-2">
-          <Link href="tel:+74951252527">+7 (925) 143-79-52</Link>
+          <Link href="tel:+79251437952">+7 (925) 143-79-52</Link>
           <Socials />
           {/* <div className="flex gap-4">
             <button className="underline underline-offset-4">RU</button>
