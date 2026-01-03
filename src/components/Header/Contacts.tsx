@@ -10,7 +10,7 @@ const Contacts = () => {
           href="tel:+74951252527"
           className="w-full font-medium text-center py-2 px-4 text-base text-nowrap"
         >
-          +7 (495) 125-25-27
+          +7 (925) 143-79-52
         </Link>
       </div>
     </div>
