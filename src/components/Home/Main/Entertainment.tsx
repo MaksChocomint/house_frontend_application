@@ -12,55 +12,55 @@ import { motion } from "framer-motion";
 import "./Gallery.css";
 import Link from "next/link";
 
+const items = [
+  {
+    id: 1,
+    src: "/main/entertainment/moscow.jpeg",
+    title: "Москва",
+    textColor: "text-white",
+  },
+  {
+    id: 2,
+    src: "/main/entertainment/horse.jpeg",
+    title: "Конно-спортивный клуб Primo Posto",
+    textColor: "text-white",
+  },
+
+  {
+    id: 4,
+    src: "/main/entertainment/vdnh.jpeg",
+    title: "ВДНХ",
+    textColor: "text-white",
+  },
+  {
+    id: 5,
+    src: "/main/entertainment/spa.jpeg",
+    title: "Spa-комплекс La Sours d'Istra",
+    textColor: "text-white",
+  },
+  {
+    id: 6,
+    src: "/main/entertainment/banya.jpeg",
+    title: "Банный комплекс",
+    textColor: "text-white",
+  },
+  {
+    id: 7,
+    src: "/main/entertainment/monastery.jpeg",
+    title: "Воскресенский Ново-Иерусалимский монастырь",
+    textColor: "text-white",
+  },
+  {
+    id: 8,
+    src: "/main/entertainment/ostankino.jpeg",
+    title: "Останкинский парк",
+    textColor: "text-white",
+  },
+];
+
 const Entertainment = () => {
   const { width } = useWindowSize();
   const isMobile = width && width < 768;
-
-  const items = [
-    {
-      id: 1,
-      src: "/main/entertainment/moscow.jpeg",
-      title: "Москва",
-      textColor: "text-white",
-    },
-    {
-      id: 2,
-      src: "/main/entertainment/horse.jpeg",
-      title: "Конно-спортивный клуб Primo Posto",
-      textColor: "text-white",
-    },
-
-    {
-      id: 4,
-      src: "/main/entertainment/vdnh.jpeg",
-      title: "ВДНХ",
-      textColor: "text-white",
-    },
-    {
-      id: 5,
-      src: "/main/entertainment/spa.jpeg",
-      title: "Spa-комплекс La Sours d'Istra",
-      textColor: "text-white",
-    },
-    {
-      id: 6,
-      src: "/main/entertainment/banya.jpeg",
-      title: "Банный комплекс",
-      textColor: "text-white",
-    },
-    {
-      id: 7,
-      src: "/main/entertainment/monastery.jpeg",
-      title: "Воскресенский Ново-Иерусалимский монастырь",
-      textColor: "text-white",
-    },
-    {
-      id: 8,
-      src: "/main/entertainment/ostankino.jpeg",
-      title: "Останкинский парк",
-      textColor: "text-white",
-    },
-  ];
 
   return (
     <Container styles="mt-32 bg-human-detail py-10">
