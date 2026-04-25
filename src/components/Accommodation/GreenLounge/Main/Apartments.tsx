@@ -10,10 +10,10 @@ const Apartments = () => {
     <Container styles="mt-48 flex flex-col gap-32 mb-12">
       <div className="grid grid-cols-1 largeTablet:grid-cols-2 gap-y-36 gap-x-12">
         {/* 🛑 ОПТИМИЗАЦИЯ: Использование метода map для рендеринга */}
-        {apartmentsData.map((apartment, index) => (
+        {apartmentsData.map((apartment) => (
           <ApartmentCard
             // Важно использовать уникальный ключ
-            key={index}
+            key={apartment.link}
             title={apartment.title}
             propsList={apartment.propsList}
             description={apartment.description}

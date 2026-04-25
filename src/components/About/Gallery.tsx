@@ -3,6 +3,7 @@
 import React, { useRef } from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
+import type { Swiper as SwiperType } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
@@ -17,7 +18,7 @@ const images = [
 ];
 
 const Gallery: React.FC = () => {
-  const swiperRef = useRef<any>(null);
+  const swiperRef = useRef<SwiperType | null>(null);
 
   const handleImageClick = (
     index: number,
@@ -26,7 +27,10 @@ const Gallery: React.FC = () => {
     const swiper = swiperRef.current;
 
     if (swiper) {
-      const slidesPerView = swiper.params.slidesPerView;
+      const slidesPerView =
+        typeof swiper.params.slidesPerView === "number"
+          ? swiper.params.slidesPerView
+          : 1;
       const totalSlides = images.length;
 
       if (slidesPerView === 1) {
@@ -99,7 +103,7 @@ const Gallery: React.FC = () => {
           }}
         >
           {images.map((image, index) => (
-            <SwiperSlide key={index}>
+            <SwiperSlide key={image}>
               <div
                 className="relative w-full h-[468px] cursor-pointer"
                 onClick={(event) => handleImageClick(index, event)}

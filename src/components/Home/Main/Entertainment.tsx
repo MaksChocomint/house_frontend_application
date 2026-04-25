@@ -58,9 +58,19 @@ const items = [
   },
 ];
 
+const itemLayoutById: Record<number, string> = {
+  1: "row-start-2 row-end-4 col-start-1 col-end-2",
+  2: "col-start-2 col-end-3 row-start-1 row-end-3",
+  4: "row-start-4 row-end-5 col-start-1 col-end-2",
+  5: "row-start-3 row-end-5 col-start-2 col-end-3",
+  6: "row-start-1 row-end-3 col-start-3 col-end-5",
+  7: "row-start-3 row-end-5 col-start-3 col-end-4",
+  8: "row-start-3 row-end-5 col-start-4 col-end-5",
+};
+
 const Entertainment = () => {
   const { width } = useWindowSize();
-  const isMobile = width && width < 768;
+  const isMobile = width > 0 && width < 768;
 
   return (
     <Container styles="mt-32 bg-human-detail py-10">
@@ -83,21 +93,7 @@ const Entertainment = () => {
             <motion.div
               key={item.id}
               className={`relative rounded-2xl overflow-hidden shadow-lg ${
-                item.id === 1
-                  ? "row-start-2 row-end-4 col-start-1 col-end-2"
-                  : item.id === 2
-                  ? "col-start-2 col-end-3 row-start-1 row-end-3"
-                  : item.id === 3
-                  ? "row-start-1 row-end-3 col-start-3 col-end-5"
-                  : item.id === 4
-                  ? "row-start-4 row-end-5 col-start-1 col-end-2"
-                  : item.id === 5
-                  ? "row-start-3 row-end-5 col-start-2 col-end-3"
-                  : item.id === 6
-                  ? "row-start-1 row-end-3 col-start-3 col-end-5"
-                  : item.id === 7
-                  ? "row-start-3 row-end-5 col-start-3 col-end-4"
-                  : "row-start-3 row-end-5 col-start-4 col-end-5"
+                itemLayoutById[item.id] ?? ""
               }`}
               whileHover={{ scale: 1.05 }}
             >
@@ -105,8 +101,7 @@ const Entertainment = () => {
                 src={item.src}
                 alt={item.title}
                 fill
-                objectFit="cover"
-                className="rounded-2xl"
+                className="rounded-2xl object-cover"
               />
               <motion.div
                 className="absolute inset-0 bg-natural-style bg-opacity-60 flex items-center justify-center opacity-0"
@@ -142,8 +137,7 @@ const Entertainment = () => {
                   src={item.src}
                   alt={item.title}
                   fill
-                  objectFit="cover"
-                  className="rounded-2xl"
+                  className="rounded-2xl object-cover"
                 />
                 <div className="absolute bg-natural-style bg-opacity-60 bottom-0 h-1/6 w-full flex items-center justify-center">
                   <div

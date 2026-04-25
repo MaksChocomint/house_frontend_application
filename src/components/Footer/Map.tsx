@@ -37,24 +37,35 @@ const placemarks = [
   // { id: "Апартаменты Blue Heaven", coordinates: [55.956995, 37.451079] },
 ];
 
+const mapState = {
+  center: [56.063163, 36.760651],
+  zoom: 16,
+  controls: [],
+};
+
+const mapOptions = {
+  suppressMapOpenBlock: true,
+  yandexMapAutoSwitch: false,
+  yandexMapDisableMapOpenBlock: true,
+};
+
+const clustererOptions = {
+  preset: "islands#invertedBrownClusterIcons",
+  groupByCoordinates: false,
+  iconColor: "#b69f80",
+};
+
+const placemarkOptions = {
+  preset: "islands#brownDotIcon",
+  iconColor: "#b69f80",
+};
+
 const YandexMap = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     setIsLoaded(true);
   }, []);
-
-  const mapState = {
-    center: [56.063163, 36.760651], // Coordinates for Moscow
-    zoom: 16, // Adjust zoom level to your liking
-    controls: [],
-  };
-
-  const mapOptions = {
-    suppressMapOpenBlock: true,
-    yandexMapAutoSwitch: false,
-    yandexMapDisableMapOpenBlock: true,
-  };
 
   return (
     <div className="w-full h-full">
@@ -65,24 +76,15 @@ const YandexMap = () => {
             options={mapOptions}
             className="w-full h-full"
           >
-            <Clusterer
-              options={{
-                preset: "islands#invertedBrownClusterIcons",
-                groupByCoordinates: false,
-                iconColor: "#b69f80",
-              }}
-            >
-              {placemarks.map((placemark, index) => (
+            <Clusterer options={clustererOptions}>
+              {placemarks.map((placemark) => (
                 <Placemark
-                  key={index}
+                  key={placemark.id}
                   geometry={placemark.coordinates}
                   properties={{
                     iconCaption: placemark.id, // Updated label for each placemark
                   }}
-                  options={{
-                    preset: "islands#brownDotIcon", // Default dot icon
-                    iconColor: "#b69f80",
-                  }}
+                  options={placemarkOptions}
                 />
               ))}
             </Clusterer>

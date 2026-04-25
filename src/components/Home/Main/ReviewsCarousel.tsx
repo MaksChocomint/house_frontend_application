@@ -1,6 +1,7 @@
 "use client";
 import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import type { Swiper as SwiperType } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
@@ -46,7 +47,7 @@ const reviews = [
 ];
 
 const ReviewsCarousel = () => {
-  const swiperRef = useRef<any>(null);
+  const swiperRef = useRef<SwiperType | null>(null);
 
   const handleSlideClick = (
     index: number,
@@ -55,7 +56,10 @@ const ReviewsCarousel = () => {
     const swiper = swiperRef.current;
 
     if (swiper) {
-      const slidesPerView = swiper.params.slidesPerView;
+      const slidesPerView =
+        typeof swiper.params.slidesPerView === "number"
+          ? swiper.params.slidesPerView
+          : 1;
       const totalSlides = reviews.length;
 
       if (slidesPerView === 1) {

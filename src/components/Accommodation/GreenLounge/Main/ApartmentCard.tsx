@@ -18,6 +18,12 @@ interface ApartmentCardProps {
   booking: boolean;
 }
 
+const mainImageStyle = {
+  aspectRatio: "940/625",
+  maxWidth: 940,
+  maxHeight: 625,
+};
+
 const ApartmentCard: React.FC<ApartmentCardProps> = ({
   title,
   propsList,
@@ -27,18 +33,22 @@ const ApartmentCard: React.FC<ApartmentCardProps> = ({
   paletteImage,
   booking,
 }) => {
-  const [imageList, setImageList] = useState(images);
+  const [imageList, setImageList] = useState(() => [...images]);
   const { width } = useWindowSize();
 
   const handleImageClick = (clickedIndex: number) => {
-    if (clickedIndex !== 0) {
-      const updatedImages = [...imageList];
+    if (clickedIndex === 0) {
+      return;
+    }
+
+    setImageList((currentImages) => {
+      const updatedImages = [...currentImages];
       [updatedImages[0], updatedImages[clickedIndex]] = [
         updatedImages[clickedIndex],
         updatedImages[0],
       ];
-      setImageList(updatedImages);
-    }
+      return updatedImages;
+    });
   };
 
   // 🛑 НОВАЯ ФУНКЦИЯ: Прокрутка с отступом
@@ -83,11 +93,7 @@ const ApartmentCard: React.FC<ApartmentCardProps> = ({
         <motion.div
           className="w-full overflow-hidden relative"
           layout
-          style={{
-            aspectRatio: "940/625",
-            maxWidth: 940,
-            maxHeight: 625,
-          }}
+          style={mainImageStyle}
         >
           <Image
             src={imageList[0]}
@@ -118,7 +124,7 @@ const ApartmentCard: React.FC<ApartmentCardProps> = ({
             className="w-full"
           >
             {imageList.slice(1).map((image, index) => (
-              <SwiperSlide key={index + 1}>
+              <SwiperSlide key={image}>
                 <motion.div
                   className="h-[75px] w-[75px] overflow-hidden cursor-pointer"
                   whileHover={{ scale: 1.1 }}
@@ -139,8 +145,8 @@ const ApartmentCard: React.FC<ApartmentCardProps> = ({
           <div className="flex gap-2 desktop:gap-4 justify-between">
             {imageList.slice(1).map((image, index) => (
               <motion.div
-                key={index + 1}
-                className="h-[50px] w-[50px] laptop: smallLaptop:h-[60px] smallLaptop:w-[60px] laptop:h-[65px] laptop:w-[65px] overflow-hidden cursor-pointer"
+                key={image}
+                className="h-[50px] w-[50px] smallLaptop:h-[60px] smallLaptop:w-[60px] laptop:h-[65px] laptop:w-[65px] overflow-hidden cursor-pointer"
                 whileHover={{ scale: 1.1 }}
                 onClick={() => handleImageClick(index + 1)}
               >
@@ -163,9 +169,9 @@ const ApartmentCard: React.FC<ApartmentCardProps> = ({
             dangerouslySetInnerHTML={{ __html: title }}
           ></div>
           <div className="flex gap-2 flex-wrap">
-            {propsList.map((prop, id) => (
+            {propsList.map((prop) => (
               <div
-                key={id}
+                key={prop}
                 className="text-center text-nowrap rounded-full font-medium bg-transparent border-home-coziness border smallLaptop:text-sm desktop:text-base px-3 py-1"
               >
                 {prop}

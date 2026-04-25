@@ -5,8 +5,14 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { IoIosArrowDown } from "react-icons/io";
 
+export type FaqItem = {
+  id: number;
+  question: string;
+  answer: string;
+};
+
 type Props = {
-  faqItems: { id: number; question: string; answer: string }[];
+  faqItems: readonly FaqItem[];
 };
 
 const Questions = ({ faqItems }: Props) => {

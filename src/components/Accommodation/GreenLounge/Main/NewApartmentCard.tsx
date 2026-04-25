@@ -27,18 +27,22 @@ const NewApartmentCard: React.FC<ApartmentCardProps> = ({
   paletteImage,
   booking,
 }) => {
-  const [imageList, setImageList] = useState(images);
+  const [imageList, setImageList] = useState(() => [...images]);
   const { width } = useWindowSize();
 
   const handleImageClick = (clickedIndex: number) => {
-    if (clickedIndex !== 0) {
-      const updatedImages = [...imageList];
+    if (clickedIndex === 0) {
+      return;
+    }
+
+    setImageList((currentImages) => {
+      const updatedImages = [...currentImages];
       [updatedImages[0], updatedImages[clickedIndex]] = [
         updatedImages[clickedIndex],
         updatedImages[0],
       ];
-      setImageList(updatedImages);
-    }
+      return updatedImages;
+    });
   };
 
   // 🛑 ФУНКЦИЯ: Прокрутка с отступом для отображения виджета внизу экрана
@@ -99,7 +103,7 @@ const NewApartmentCard: React.FC<ApartmentCardProps> = ({
             className="w-full"
           >
             {imageList.slice(1).map((image, index) => (
-              <SwiperSlide key={index + 1}>
+              <SwiperSlide key={image}>
                 <motion.div
                   className="h-[75px] w-[75px] overflow-hidden cursor-pointer"
                   whileHover={{ scale: 1.1 }}
@@ -120,7 +124,7 @@ const NewApartmentCard: React.FC<ApartmentCardProps> = ({
           <div className="flex gap-2 desktop:gap-4">
             {imageList.slice(1).map((image, index) => (
               <motion.div
-                key={index + 1}
+                key={image}
                 className="h-[100px] smallLaptop:h-[75px] desktop:h-[100px] w-[100px] smallLaptop:w-[75px] desktop:w-[100px] overflow-hidden cursor-pointer"
                 whileHover={{ scale: 1.1 }}
                 onClick={() => handleImageClick(index + 1)}
@@ -147,9 +151,9 @@ const NewApartmentCard: React.FC<ApartmentCardProps> = ({
           ></div>
 
           <div className="flex gap-2 flex-wrap">
-            {propsList.map((prop, id) => (
+            {propsList.map((prop) => (
               <div
-                key={id}
+                key={prop}
                 className="text-center text-nowrap rounded-full font-medium bg-transparent border-home-coziness border smallLaptop:text-sm desktop:text-base px-3 py-1"
               >
                 {prop}
